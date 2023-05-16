@@ -1,0 +1,808 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Chivo Mono', monospace;
+  font-family: 'Varela Round', sans-serif;
+  /* background-color: black; */
+}
+
+.centrado{
+  /* es el 100% de la página */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* LOADING PÁGINA: HAMSTER */
+/* https://uiverse.io/Nawsome/wet-mayfly-23 */
+.wheel-and-hamster {
+  --dur: 1s;
+  position: relative;
+  width: 12em;
+  height: 12em;
+  font-size: 14px;
+}
+
+.wheel,
+.hamster,
+.hamster div,
+.spoke {
+  position: absolute;
+}
+
+.wheel,
+.spoke {
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wheel {
+  background: radial-gradient(100% 100% at center,hsla(0,0%,60%,0) 47.8%,hsl(0,0%,60%) 48%);
+  z-index: 2;
+}
+
+.hamster {
+  animation: hamster var(--dur) ease-in-out infinite;
+  top: 50%;
+  left: calc(50% - 3.5em);
+  width: 7em;
+  height: 3.75em;
+  transform: rotate(4deg) translate(-0.8em,1.85em);
+  transform-origin: 50% 0;
+  z-index: 1;
+}
+
+.hamster__head {
+  animation: hamsterHead var(--dur) ease-in-out infinite;
+  background: hsl(30,90%,55%);
+  border-radius: 70% 30% 0 100% / 40% 25% 25% 60%;
+  box-shadow: 0 -0.25em 0 hsl(30,90%,80%) inset,
+        0.75em -1.55em 0 hsl(30,90%,90%) inset;
+  top: 0;
+  left: -2em;
+  width: 2.75em;
+  height: 2.5em;
+  transform-origin: 100% 50%;
+}
+
+.hamster__ear {
+  animation: hamsterEar var(--dur) ease-in-out infinite;
+  background: hsl(0,90%,85%);
+  border-radius: 50%;
+  box-shadow: -0.25em 0 hsl(30,90%,55%) inset;
+  top: -0.25em;
+  right: -0.25em;
+  width: 0.75em;
+  height: 0.75em;
+  transform-origin: 50% 75%;
+}
+
+.hamster__eye {
+  animation: hamsterEye var(--dur) linear infinite;
+  background-color: hsl(0,0%,0%);
+  border-radius: 50%;
+  top: 0.375em;
+  left: 1.25em;
+  width: 0.5em;
+  height: 0.5em;
+}
+
+.hamster__nose {
+  background: hsl(0,90%,75%);
+  border-radius: 35% 65% 85% 15% / 70% 50% 50% 30%;
+  top: 0.75em;
+  left: 0;
+  width: 0.2em;
+  height: 0.25em;
+}
+
+.hamster__body {
+  animation: hamsterBody var(--dur) ease-in-out infinite;
+  background: hsl(30,90%,90%);
+  border-radius: 50% 30% 50% 30% / 15% 60% 40% 40%;
+  box-shadow: 0.1em 0.75em 0 hsl(30,90%,55%) inset,
+        0.15em -0.5em 0 hsl(30,90%,80%) inset;
+  top: 0.25em;
+  left: 2em;
+  width: 4.5em;
+  height: 3em;
+  transform-origin: 17% 50%;
+  transform-style: preserve-3d;
+}
+
+.hamster__limb--fr,
+.hamster__limb--fl {
+  clip-path: polygon(0 0,100% 0,70% 80%,60% 100%,0% 100%,40% 80%);
+  top: 2em;
+  left: 0.5em;
+  width: 1em;
+  height: 1.5em;
+  transform-origin: 50% 0;
+}
+
+.hamster__limb--fr {
+  animation: hamsterFRLimb var(--dur) linear infinite;
+  background: linear-gradient(hsl(30,90%,80%) 80%,hsl(0,90%,75%) 80%);
+  transform: rotate(15deg) translateZ(-1px);
+}
+
+.hamster__limb--fl {
+  animation: hamsterFLLimb var(--dur) linear infinite;
+  background: linear-gradient(hsl(30,90%,90%) 80%,hsl(0,90%,85%) 80%);
+  transform: rotate(15deg);
+}
+
+.hamster__limb--br,
+.hamster__limb--bl {
+  border-radius: 0.75em 0.75em 0 0;
+  clip-path: polygon(0 0,100% 0,100% 30%,70% 90%,70% 100%,30% 100%,40% 90%,0% 30%);
+  top: 1em;
+  left: 2.8em;
+  width: 1.5em;
+  height: 2.5em;
+  transform-origin: 50% 30%;
+}
+
+.hamster__limb--br {
+  animation: hamsterBRLimb var(--dur) linear infinite;
+  background: linear-gradient(hsl(30,90%,80%) 90%,hsl(0,90%,75%) 90%);
+  transform: rotate(-25deg) translateZ(-1px);
+}
+
+.hamster__limb--bl {
+  animation: hamsterBLLimb var(--dur) linear infinite;
+  background: linear-gradient(hsl(30,90%,90%) 90%,hsl(0,90%,85%) 90%);
+  transform: rotate(-25deg);
+}
+
+.hamster__tail {
+  animation: hamsterTail var(--dur) linear infinite;
+  background: hsl(0,90%,85%);
+  border-radius: 0.25em 50% 50% 0.25em;
+  box-shadow: 0 -0.2em 0 hsl(0,90%,75%) inset;
+  top: 1.5em;
+  right: -0.5em;
+  width: 1em;
+  height: 0.5em;
+  transform: rotate(30deg) translateZ(-1px);
+  transform-origin: 0.25em 0.25em;
+}
+
+.spoke {
+  animation: spoke var(--dur) linear infinite;
+  background: radial-gradient(100% 100% at center,hsl(0,0%,60%) 4.8%,hsla(0,0%,60%,0) 5%),
+        linear-gradient(hsla(0,0%,55%,0) 46.9%,hsl(0,0%,65%) 47% 52.9%,hsla(0,0%,65%,0) 53%) 50% 50% / 99% 99% no-repeat;
+}
+
+/* Animations */
+@keyframes hamster {
+  from, to {
+    transform: rotate(4deg) translate(-0.8em,1.85em);
+  }
+  
+  50% {
+    transform: rotate(0) translate(-0.8em,1.85em);
+  }
+}
+
+@keyframes hamsterHead {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(0);
+  }
+  
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: rotate(8deg);
+  }
+}
+
+@keyframes hamsterEye {
+  from, 90%, to {
+    transform: scaleY(1);
+  }
+  
+  95% {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes hamsterEar {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(0);
+  }
+  
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: rotate(12deg);
+  }
+}
+
+@keyframes hamsterBody {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(0);
+  }
+  
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: rotate(-2deg);
+  }
+}
+
+@keyframes hamsterFRLimb {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(50deg) translateZ(-1px);
+  }
+  
+    12.5%, 37.5%, 62.5%, 87.5% {
+      transform: rotate(-30deg) translateZ(-1px);
+    }
+  }
+
+@keyframes hamsterFLLimb {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(-30deg);
+  }
+  
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: rotate(50deg);
+  }
+}
+
+@keyframes hamsterBRLimb {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(-60deg) translateZ(-1px);
+  }
+
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: rotate(20deg) translateZ(-1px);
+  }
+}
+
+@keyframes hamsterBLLimb {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(20deg);
+  }
+  
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: rotate(-60deg);
+  }
+}
+
+@keyframes hamsterTail {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(30deg) translateZ(-1px);
+  }
+  
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: rotate(10deg) translateZ(-1px);
+  }
+}
+
+@keyframes spoke {
+  from {
+    transform: rotate(0);
+  }
+  
+  to {
+    transform: rotate(-1turn);
+  }
+}
+/* FIN DEL LOADER HAMSTER */
+
+.hidden{
+  overflow: hidden;
+}
+
+/* ############## HEADER ############## */
+
+.fixed{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  padding: 5px;
+}
+
+.headerContainer{
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+h1{
+  text-align: center;
+  font-size: 5rem;
+  /* color: #E15C0B; */
+  color: #ec741d;
+  /* margin-top: 30px; */
+}
+
+/* header nav */
+.lista a{
+  margin: 50px;
+  margin-right: 111px;
+}
+
+body header nav ul a{
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+}
+
+.somos{
+  font-weight: bold;
+  font-style: oblique;
+  padding-bottom: 1000px;
+}
+
+.somos2rem{
+  font-size: 2rem;
+}
+
+.orange{
+  color: #ec741d;
+}
+
+.center{
+  width: 500px;
+  height: 500px;
+  /* margin-right: auto; */
+  /* width: 40%; */
+}
+
+.articleContainer{
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+}
+
+/* acordeon / accordion cambio de colores bootstrap */
+.accordion-button:not(.collapsed) {
+  background-color: #ec741d;
+}
+.accordion-button:focus {
+  /* border-top-left-radius: var(--bs-accordion-inner-border-radius); */
+  border-top-right-radius: var(--bs-accordion-inner-border-radius);
+}
+
+.centerText{
+  text-align: center;
+}
+
+.negrita{
+  font-weight: bold;
+}
+
+.padding10{
+  padding: 10px;
+}
+
+h2{
+  padding: 10px;
+  top: 0;
+}
+
+h3{
+  padding-right: 0;
+  margin-right: 0;
+  top: 0;
+}
+
+.alineaIzq{
+  text-align: start;
+}
+
+.alineaDer{
+  text-align: end;
+}
+
+.sticky{
+  position: sticky;
+  top: 29px;
+}
+
+.marginLeft50{
+  margin-left: 50px;
+}
+
+.margin050{
+  margin: 0 50px;
+}
+
+.padding0100{
+  padding: 0 100px;
+}
+
+.marginBottom50{
+  margin-bottom: 50px;
+}
+
+.marginBottom20{
+  margin-bottom: 20px;
+}
+
+.marginTop20{
+  margin-top: 20px;
+}
+
+.marginLeft20{
+  margin-left: 20px;
+}
+
+.border{
+  border-style: groove;
+  padding: 20px;
+  background-color: #F48B21; 
+  margin-bottom: 30px;
+  margin-top: 8px;
+}
+
+.tituloVideo{
+  background-color: white;
+  padding-bottom: 8px;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.videoContainer{
+  display: flex;
+  justify-content: center;
+}
+
+.videos{
+  margin-top: 8px;
+  height: 500px;
+  background-color: #F48B21; 
+  border-style: groove;
+}
+
+.gif{
+  padding: 0;
+  width: 30px;
+  height: 30px;
+}
+
+/* ############## FOOTER ############## */
+
+#footer{
+  /* background-color: #E15D0E; */
+  /* background-color: #ec741d; */
+  /* background-image: url(../imgs/footerYuppies.png); */
+  background-color: #ec741d;
+  background-size: cover;
+}
+
+.footContainer{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 10px 0;
+  column-gap: 20px;
+}
+
+.irArribaContainer{
+  width: 50%;
+}
+
+.footerText{
+  margin-top: 20px;
+  font-style: oblique;
+  color: #313131;
+}
+
+
+.footContainerIndex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 20px;
+}
+
+.logo{
+  width: 50px;
+  height: 50px;
+}
+
+.logoBigger{
+  width: 100px;
+  height: 100px;
+}
+
+#footer div h4{
+  padding-bottom: 10px;
+}
+
+h4{
+  color: #000000;
+  font-size: medium;
+}
+
+.logoContainer{
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  align-content: center;
+}
+
+.aContainer{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.borderLeft{
+  border-left: solid 1px black;
+  padding: 50px;
+}
+
+/* defini una clase directamente para los a del footer*/
+.links{
+  text-decoration: none;
+  color: black;
+}
+
+/* iconos de las redes en el footer */
+.iconos{
+  display: flex;
+  width: 30px;
+  height: 30px;
+}
+
+.inline{
+  display: inline;
+}
+
+/* .block{ */
+  /* display: block; */
+/* } */
+
+.derechos{
+  color: white;
+  margin-top: 20px;
+}
+
+/* ############## FORM ############## */
+
+.formulario{
+  background-image: url(../imgs/yuppiesForm.png);
+  background-size: cover;
+  background-position: right;
+  margin: 30px;
+}
+
+.formulario div{
+  padding: 5px;
+}
+
+.marginLeft50{
+  margin-left: 50px;
+}
+
+.marginTop50{
+  padding-top: 50px;
+}
+
+.paddingBottom20{
+  padding-bottom: 20px;
+}
+
+.paddingBottom60{
+  padding-bottom: 60px;
+}
+
+/* ############## SERVICIOS ############## */
+
+.lista li{
+  padding-left: 20px;
+  list-style: inside;
+}
+
+.botones-container{
+  display: flex;
+}
+
+/* INPUT IMPORTADO */
+.input {
+  padding: 10px;
+  height: 40px;
+  border: 2px solid #0B2447;
+  border-top: none;
+  border-bottom: none;
+  font-size: 16px;
+  /* background: transparent; */
+  background: white;
+  outline: none;
+  box-shadow: 7px 7px 0px 0px #0B2447;
+  transition: all 0.5s;
+}
+
+.input:focus {
+  box-shadow: none;
+  transition: all 0.5s;
+}
+
+.label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #0B2447;
+  transition: all 0.5s;
+  transform: scale(0);
+  z-index: -1;
+}
+
+.input-container .topline {
+  position: absolute;
+  content: "";
+  background-color: #0B2447;
+  width: 0%;
+  height: 2px;
+  right: 0;
+  top: 0;
+  transition: all 0.5s;
+}
+
+.input-container input[type="text"]:focus ~ .topline {
+  width: 35%;
+  transition: all 0.5s;
+}
+
+.input-container .underline {
+  position: absolute;
+  content: "";
+  background-color: #0B2447;
+  width: 0%;
+  height: 2px;
+  right: 0;
+  bottom: 0;
+  transition: all 0.5s;
+}
+
+.input-container input[type="text"]:focus ~ .underline {
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.input-container input[type="text"]:focus ~ .label {
+  top: -10px;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+
+.form {
+  --width-of-input: 200px;
+  --border-height: 1px;
+  --border-before-color: rgb(255, 255, 255);
+  --border-after-color: #ec741d;
+  --input-hovered-color: #4985e01f;
+  position: relative;
+  width: var(--width-of-input);
+}
+/* styling of Input */
+.input {
+  color: #000000;
+  font-size: 0.9rem;
+  background-color: rgb(255, 255, 255);;
+  width: 100%;
+  box-sizing: border-box;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+  border-bottom: var(--border-height) solid var(--border-before-color);
+}
+/* styling of animated border */
+.input-border {
+  position: absolute;
+  background: var(--border-after-color);
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s;
+}
+/* Hover on Input */
+input:hover {
+  /* background: var(--input-hovered-color); */
+  background: white;
+}
+
+input:focus {
+  outline: none;
+}
+/* here is code of animated border */
+input:focus ~ .input-border {
+  width: 100%;
+}
+/* === if you want to do animated border on typing === */
+/* remove input:focus code and uncomment below code */
+/* input:valid ~ .input-border{
+  width: 100%;
+} */
+/* FIN DEL INPUT IMPORTADO */
+
+
+/* botón "ROSA" */
+/* botones importados de uiverse.io*/
+/* https://uiverse.io/Madflows/terrible-catfish-72 */
+button{
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  /* font-family: inherit; */
+  font-family: 'Chivo Mono', monospace;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 15px;
+}
+
+button.learn-more {
+  font-weight: 600;
+  color: #07022e; 
+  text-transform: uppercase;
+  padding: 1.25em 2em;
+  /* background: #fff0f0; */
+  background: white;
+  border: 2px solid #b18597;
+  border-radius: 0.75em;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+button.learn-more::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background: #f1ccb1; */
+  background: white;
+
+  border-radius: inherit;
+  -webkit-box-shadow: 0 0 0 2px #4985e01f, 0 0.625em 0 0 #ffe3e2; 
+  box-shadow: 0 0 0 2px #4985e01f, 0 0.625em 0 0 #ec741d;
+  -webkit-transform: translate3d(0, 0.75em, -1em);
+  transform: translate3d(0, 0.75em, -1em);
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+button.learn-more:hover {
+  /* background: #ffe9e9; */
+  background: white;
+  -webkit-transform: translate(0, 0.25em);
+  transform: translate(0, 0.25em);
+}
+
+button.learn-more:hover::before {
+  -webkit-box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #e2ffe7;
+  box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ec741d;
+  /*  */
+  -webkit-transform: translate3d(0, 0.5em, -1em);
+  transform: translate3d(0, 0.5em, -1em);
+}
+
+button.learn-more:active {
+  background: #ffe9e9;
+  -webkit-transform: translate(0em, 0.75em);
+  transform: translate(0em, 0.75em);
+}
+
+button.learn-more:active::before {
+  -webkit-box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+  box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+  -webkit-transform: translate3d(0, 0, -1em);
+  transform: translate3d(0, 0, -1em);
+}
+
+

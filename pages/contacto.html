@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YUPPIES</title>
+    <!-- Cambio de ícono en chrome -->
+    <link rel="shortcut icon" href="../imgs/favicon_io/favicon-32x32.png" type="image/x-icon">
+    <!-- Font Varela Round-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital@1&family=Varela+Round&display=swap" rel="stylesheet">
+    <!-- Link del css -->
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+    <header id="inicio">
+        <div class="headerContainer">
+            <img src="../imgs/logoRedondo.png" alt="yuppies" class="logoBigger">
+            <h1>Yuppies</h1> 
+            <h2>Gestión de expertos</h2>
+        </div>
+        <nav>
+            <ul class="lista fixed">
+                <a href="../index.html">Inicio</a>    
+                <a href="./quienesSomos.html">Quiénes somos</a>   
+                <a href="./servicios.html">Servicios</a>  
+                <a href="./autogestion.html">Autogestión</a>  
+                <a href="#inicio">Contacto</a>    
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="margin050">
+            <h2 class="centerText">Página de contacto:</h2>
+            <h3>¿Cuándo acudir a Yuppies?</h3>
+            <p>
+            Cuando se te presenta un problema o un conflicto, una situación de desconocimiento, nuevos escenarios que tienes necesidad de resolver o simplemente porque quieres mejorar.
+            </p>
+        </div>
+        <form class="formulario">
+            <fieldset class="paddingBottom20">
+                <div class="form marginLeft20">
+                    <label for="name">Nombre:</label>
+                    <input type="text" name="name" id="name" placeholder="Ingrese su nombre" class="input block">
+                    <span class="input-border"></span>
+                </div>
+
+                <div class="form marginLeft20">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" class="input block" placeholder="Ingrese su apellido" required>
+                    <span class="input-border"></span>
+                </div>
+
+                <div class="form marginLeft20">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" class="input block" placeholder="Ingrese su email" required>
+                    <span class="input-border"></span>
+                </div>
+
+                <div class="form marginLeft20">
+                    <label for="consulta">Consulta:</label>
+                    <input class="input" placeholder="Type your text" required="" type="text">
+                    <span class="input-border"></span>
+                </div>
+                <div class="botones-container marginTop20 marginLeft20">
+                    <button type="submit" class="learn-more"> Enviar consulta
+                    </button>
+                    <button type="reset" class="learn-more marginLeft20"> Limpiar
+                    </button>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+
+    <footer id="footer">
+        <div class="footContainer marginLeft50">
+            <img src="../imgs/logoYuppies.png" alt="yuppies" class="logo" >
+            <a href="../index.html#footer" class="links negrita"> Comunicate con nosotros</a>
+        </div>
+    </footer>
+
+</body>
+</html>
