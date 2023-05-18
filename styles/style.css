@@ -3,9 +3,9 @@
   padding: 0;
   font-family: 'Chivo Mono', monospace;
   font-family: 'Varela Round', sans-serif;
-  /* background-color: black; */
 }
 
+/* para el loader hamster */
 .centrado{
   /* es el 100% de la página */
   height: 100vh;
@@ -14,7 +14,12 @@
   align-items: center;
 }
 
-/* LOADING PÁGINA: HAMSTER */
+.hidden{
+  overflow: hidden;
+}
+
+/* ######### FIN LOADER HAMSTER ########### */
+/* LOADING PÁGINA: HAMSTER IMPORTADO*/
 /* https://uiverse.io/Nawsome/wet-mayfly-23 */
 .wheel-and-hamster {
   --dur: 1s;
@@ -288,22 +293,10 @@
     transform: rotate(-1turn);
   }
 }
-/* FIN DEL LOADER HAMSTER */
+/* ######### FIN LOADER HAMSTER ########### */
 
-.hidden{
-  overflow: hidden;
-}
 
-/* ############## HEADER ############## */
-
-.fixed{
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: white;
-  padding: 5px;
-}
-
+/* ############## HEADER ################## */
 .headerContainer{
   margin-top: 50px;
   display: flex;
@@ -317,6 +310,16 @@ h1{
   /* color: #E15C0B; */
   color: #ec741d;
   /* margin-top: 30px; */
+  font-weight:bold;
+}
+
+/* nav */
+.fixed{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  padding: 5px;
 }
 
 /* header nav */
@@ -331,40 +334,17 @@ body header nav ul a{
   font-size: 1rem;
 }
 
-.somos{
-  font-weight: bold;
-  font-style: oblique;
-  padding-bottom: 1000px;
+.cursor{
+  width: 50px;
+  height: 50px;
 }
+/* ############ FIN DE HEADER ############ */
 
-.somos2rem{
-  font-size: 2rem;
-}
 
+/* ############# CONFIG GRAL ############# */
+/* TEXTOS */
 .orange{
   color: #ec741d;
-}
-
-.center{
-  width: 500px;
-  height: 500px;
-  /* margin-right: auto; */
-  /* width: 40%; */
-}
-
-.articleContainer{
-  display: flex;
-  justify-content: center;
-  column-gap: 30px;
-}
-
-/* acordeon / accordion cambio de colores bootstrap */
-.accordion-button:not(.collapsed) {
-  background-color: #ec741d;
-}
-.accordion-button:focus {
-  /* border-top-left-radius: var(--bs-accordion-inner-border-radius); */
-  border-top-right-radius: var(--bs-accordion-inner-border-radius);
 }
 
 .centerText{
@@ -375,11 +355,12 @@ body header nav ul a{
   font-weight: bold;
 }
 
-.padding10{
-  padding: 10px;
+.alineaIzq{
+  text-align: start;
 }
 
 h2{
+  font-weight:bold;
   padding: 10px;
   top: 0;
 }
@@ -390,62 +371,121 @@ h3{
   top: 0;
 }
 
-.alineaIzq{
-  text-align: start;
+p{
+  margin-bottom: 0;
+}
+/* FIN TEXTOS */
+
+/* IIMÁGENES */
+.cotaImagen500{
+  height: 500px;
+  width: 500px;
 }
 
-.alineaDer{
-  text-align: end;
+.cotaImagenMain{
+  height: 500px;
+  width: 280px;
 }
 
-.sticky{
-  position: sticky;
-  top: 29px;
+.imagesContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
+  column-gap: 20px;
 }
 
-.marginLeft50{
-  margin-left: 50px;
+.offerContainer{
+  display: flex;
+  justify-content: center;
+}
+/* FIN IMÁGENES */
+
+/* PADDING */
+.padding10{
+  padding: 10px;
 }
 
-.margin050{
-  margin: 0 50px;
+.padding010{
+  padding: 0 10px;
 }
 
 .padding0100{
   padding: 0 100px;
 }
 
-.marginBottom50{
-  margin-bottom: 50px;
+.paddingBottom20{
+  padding-bottom: 20px;
 }
 
-.marginBottom20{
-  margin-bottom: 20px;
+.paddingBottom60{
+  padding-bottom: 60px;
+}
+/* FIN PADDING */
+
+/* MARGIN */
+.marginLeft20{
+  margin-left: 20px;
+}
+
+.marginLeft50{
+  margin-left: 50px;
+}
+
+.marginRight200{
+  margin-right: 200px;
+}
+
+.margin050{
+  margin: 0 50px;
+}
+
+.marginTop10{
+  margin-top: 10px;
 }
 
 .marginTop20{
   margin-top: 20px;
 }
 
-.marginLeft20{
-  margin-left: 20px;
+.marginTop50{
+  margin-top: 50px;
 }
+.marginBottom20{
+  margin-bottom: 20px;
+}
+
+.marginBottom50{
+  margin-bottom: 50px;
+}
+/* FIN MARGIN */
 
 .border{
   border-style: groove;
-  padding: 20px;
-  background-color: #F48B21; 
+  padding: 10px;
+  background-color: white; 
   margin-bottom: 30px;
   margin-top: 8px;
 }
+/* ########### FIN CONFIG GRAL ########### */
 
-.tituloVideo{
-  background-color: white;
-  padding-bottom: 8px;
-  margin-right: 0;
-  padding-right: 0;
+
+/* ############### ACCORDION ############### */
+/* acordeon / accordion custom colores bootstrap index */
+.accordion-button:not(.collapsed) {
+  background-color: #ec741d;
+  --bs-accordion-btn-focus-box-shadow: white;
+  color: black;
 }
 
+.accordion-button:focus {
+  border: solid 3px #ec741d;
+  --bs-accordion-btn-focus-box-shadow: white;
+}
+/* ########### FIN ACCORDION ############ */
+
+
+/* ############## VIDEOS ################ */
 .videoContainer{
   display: flex;
   justify-content: center;
@@ -454,32 +494,61 @@ h3{
 .videos{
   margin-top: 8px;
   height: 500px;
-  background-color: #F48B21; 
+  background-color: #ec741d; 
   border-style: groove;
 }
+/* ############ FIN VIDEOS ################ */
 
-.gif{
-  padding: 0;
-  width: 30px;
-  height: 30px;
+
+/* ########## PAG QUIENES SOMOS ########### */
+.somos{
+  font-weight: bold;
+  font-style: oblique;
 }
 
-/* ############## FOOTER ############## */
+.somos2rem{
+  font-size: 2rem;
+}
+/* ######## FIN PAG QUIENES SOMOS ######### */
 
+
+/* ############# PAG SERVICIOS ############# */
+.lista li{
+  padding-left: 20px;
+  list-style: inside;
+}
+
+.botones-container{
+  display: flex;
+}
+
+.servicioContainer{
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+}
+/* ########### FIN PAG SERVICIOS ########### */
+
+
+/* ################ FOOTER ################ */
 #footer{
   /* background-color: #E15D0E; */
   /* background-color: #ec741d; */
-  /* background-image: url(../imgs/footerYuppies.png); */
   background-color: #ec741d;
   background-size: cover;
 }
 
-.footContainer{
+.footContainerIndex{
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
-  column-gap: 20px;
+  align-content: center;
+  padding: 0 20px;
+}
+
+.logoBigger{
+  width: 100px;
+  height: 100px;
 }
 
 .irArribaContainer{
@@ -489,26 +558,27 @@ h3{
 .footerText{
   margin-top: 20px;
   font-style: oblique;
-  color: #313131;
+  color: white;
 }
 
-
-.footContainerIndex{
+.logoFooterContainer{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  /* align-items: center; */
   align-content: center;
-  padding: 20px;
 }
 
-.logo{
+.logoFooter{
   width: 50px;
   height: 50px;
 }
 
-.logoBigger{
-  width: 100px;
-  height: 100px;
+.footContainer{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 10px 0;
+  column-gap: 20px;
 }
 
 #footer div h4{
@@ -520,13 +590,14 @@ h4{
   font-size: medium;
 }
 
-.logoContainer{
-  display: flex;
-  justify-content: center;
-  /* align-items: center; */
-  align-content: center;
+.borderLeft{
+  border-left: solid 1px black;
+  padding: 0 50px;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
+/* links comunícate con nosotros */
 .aContainer{
   display: flex;
   flex-direction: column;
@@ -536,12 +607,7 @@ h4{
   justify-items: center;
 }
 
-.borderLeft{
-  border-left: solid 1px black;
-  padding: 50px;
-}
-
-/* defini una clase directamente para los a del footer*/
+/* clase para los a del footer*/
 .links{
   text-decoration: none;
   color: black;
@@ -554,25 +620,25 @@ h4{
   height: 30px;
 }
 
-.inline{
-  display: inline;
-}
-
-/* .block{ */
-  /* display: block; */
-/* } */
-
 .derechos{
   color: white;
   margin-top: 20px;
 }
 
-/* ############## FORM ############## */
+.inline{
+  display: inline;
+}
+/* ############## FIN FOOTER ############## */
 
+
+/* ############## FORM #################### */
 .formulario{
+  background-color: #ec741d;
   background-image: url(../imgs/yuppiesForm.png);
-  background-size: cover;
-  background-position: right;
+  /* background-size: cover; */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   margin: 30px;
 }
 
@@ -580,34 +646,8 @@ h4{
   padding: 5px;
 }
 
-.marginLeft50{
-  margin-left: 50px;
-}
-
-.marginTop50{
-  padding-top: 50px;
-}
-
-.paddingBottom20{
-  padding-bottom: 20px;
-}
-
-.paddingBottom60{
-  padding-bottom: 60px;
-}
-
-/* ############## SERVICIOS ############## */
-
-.lista li{
-  padding-left: 20px;
-  list-style: inside;
-}
-
-.botones-container{
-  display: flex;
-}
-
-/* INPUT IMPORTADO */
+/* ############# INPUT IMPORTADO ############# */
+/* https://uiverse.io/eslam-hany/strange-goose-48#fromHistory */
 .input {
   padding: 10px;
   height: 40px;
@@ -615,7 +655,6 @@ h4{
   border-top: none;
   border-bottom: none;
   font-size: 16px;
-  /* background: transparent; */
   background: white;
   outline: none;
   box-shadow: 7px 7px 0px 0px #0B2447;
@@ -719,15 +758,10 @@ input:focus {
 input:focus ~ .input-border {
   width: 100%;
 }
-/* === if you want to do animated border on typing === */
-/* remove input:focus code and uncomment below code */
-/* input:valid ~ .input-border{
-  width: 100%;
-} */
-/* FIN DEL INPUT IMPORTADO */
+/* ########### FIN INPUT IMPORTADO ########### */
 
 
-/* botón "ROSA" */
+/* ############## Botón "ROSA" ############## */
 /* botones importados de uiverse.io*/
 /* https://uiverse.io/Madflows/terrible-catfish-72 */
 button{
@@ -767,7 +801,6 @@ button.learn-more::before {
   left: 0;
   right: 0;
   bottom: 0;
-  /* background: #f1ccb1; */
   background: white;
 
   border-radius: inherit;
@@ -778,7 +811,6 @@ button.learn-more::before {
   transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
 }
 button.learn-more:hover {
-  /* background: #ffe9e9; */
   background: white;
   -webkit-transform: translate(0, 0.25em);
   transform: translate(0, 0.25em);
@@ -787,7 +819,6 @@ button.learn-more:hover {
 button.learn-more:hover::before {
   -webkit-box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #e2ffe7;
   box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ec741d;
-  /*  */
   -webkit-transform: translate3d(0, 0.5em, -1em);
   transform: translate3d(0, 0.5em, -1em);
 }
@@ -804,5 +835,85 @@ button.learn-more:active::before {
   -webkit-transform: translate3d(0, 0, -1em);
   transform: translate3d(0, 0, -1em);
 }
+/* ############ FIN Botón "ROSA" ############ */
 
 
+/* CUADRO DE TEXTO */
+/* https://uiverse.io/ahmed150up/chilly-rattlesnake-8 */
+.card {
+  width: 260px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat-header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  font-size: 18px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.chat-window {
+  height: 220px;
+  overflow-y: scroll;
+}
+
+.message-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.message-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.send-button {
+  border: none;
+  outline: none;
+  background-color: #333;
+  color: #fff;
+  font-size: 14px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* input text area */
+.textArea{
+  padding: 10px;
+  border-top: none;
+  border-bottom: none;
+  font-size: 16px;
+  background: white;
+  outline: none;
+  resize: none;
+  box-shadow: 7px 7px 0px 0px #0B2447;
+  transition: all 0.5s;
+}
+
+.textArea:focus {
+  box-shadow: none;
+  transition: all 0.5s;
+}
+/* ############## FIN FORM ################## */
