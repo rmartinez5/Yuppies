@@ -24,6 +24,27 @@
 
 /* ############## HEADER ################## */
 /* headerv3: hover subrayado, animación y shadow */
+.logoHeader{
+  width: 50px;
+  height: 50px;
+}
+
+/* la imagen del main es muy ancha, tengo que ajustar su posición para que se vea el logo y que se acomode bien debajo/* ajustar los valores para mover la imagen */
+.imagenMain{
+  /* position: relative; */
+  top: 10px; 
+  /* IMPORTANTE: esto no cambia el tamaño de la imagen, solo lo desplaza pero el tamaño se conserva */
+  /* left: -500px; */
+  box-shadow: 0 0 15px #383838;
+}
+
+.imagenMainContainer{
+  background-color: #ec741d;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
 /* navbar: cambio el color de bootstrap */
 .navColor{
   background-color: white;
@@ -33,7 +54,6 @@
 
 /* navbar: agrego sombra */
 .navShadow{
-  /* box-shadow: 0 0 15px rgb(56, 56, 56); */
   box-shadow: 0 0 15px #383838;
 }
 
@@ -108,7 +128,7 @@ p{
 /* FIN TEXTOS */
 
 /* IMÁGENES */
-.cotaImagenMain{
+.cotaImagenSection{
   height: 500px;
   width: 280px;
 }
@@ -139,8 +159,6 @@ p{
   justify-content: center;
   align-items: center;
   align-content: center;
-  column-gap: 10px;
-  /* en vista mobile, este container se transforma en column*/
   row-gap: 20px;
 }
 
@@ -302,6 +320,11 @@ p{
   row-gap: 25px;
 }
 
+.rowFooter{
+  row-gap: 0;
+  /* column-gap: 0; */
+}
+
 /* logo del footer mas grande */
 .logoBigger{
   width: 150px;
@@ -323,11 +346,6 @@ p{
 
 div.logoFooterContainer{
   height: 100%;
-}
-
-.logoHeader{
-  width: 50px;
-  height: 50px;
 }
 
 .logoFooter{
@@ -418,12 +436,11 @@ div.carousel-item.active.autogestion{
 /* ############## FORM #################### */
 .formulario{
   background-color: #ec741d;
-  background-image: url(../imgs/yuppiesForm.png);
-  /* background-size: cover; */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   margin: 30px;
+  width: 400px;
 }
 
 .formulario div{
@@ -740,5 +757,12 @@ button.learn-more:active::before {
     /* justify-content: start; */
   }
 
+  /* footer: cambio a borde superior en lugar de borde izquierdo */
+  /* aumento separación entre filas*/
+  .borderTop{
+    border-left: none;
+    border-top: solid 1px black;
+    margin-top: 20px;
+  }
 }
 /* ########## FIN MEDIA QUERYS ############### */
