@@ -4,76 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YUPPIES</title>
+    <title>Yuppies</title>
     <!-- Cambio de ícono en chrome -->
     <link rel="shortcut icon" href="./imgs/favicon_io/favicon-32x32.png" type="image/x-icon">
     <!-- Google Font: Varela Round-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital@1&family=Varela+Round&display=swap" rel="stylesheet">
-    <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-
-    <!-- Link del css -->
-    <link rel="stylesheet" href="./styles/style.css">
+    <!-- link bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">    
+    <!-- link css -->
+    <link rel="stylesheet" href="../styles/style.css">
 </head>
-
 <body class="hidden">
-    <!-- LOADER -->
-    <!-- https://uiverse.io/Nawsome/wet-mayfly-23 -->
-    <div id="onload" class="centrado">
-        <div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">
-            <div class="wheel"></div>
-            <div class="hamster">
-                <div class="hamster__body">
-                    <div class="hamster__head">
-                        <div class="hamster__ear"></div>
-                        <div class="hamster__eye"></div>
-                        <div class="hamster__nose"></div>
-                    </div>
-                    <div class="hamster__limb hamster__limb--fr"></div>
-                    <div class="hamster__limb hamster__limb--fl"></div>
-                    <div class="hamster__limb hamster__limb--br"></div>
-                    <div class="hamster__limb hamster__limb--bl"></div>
-                    <div class="hamster__tail"></div>
-                </div>
-            </div>
-            <div class="spoke"></div>
-        </div>
-    </div>
+    <!-- LOADER <3 -->
+    <div id="loader"></div>
     <!-- FIN DEL LOADER -->
-
     <header id="inicio">
-        <div class="headerContainer">
-            <img src="./imgs/logoRedondo.png" alt="yuppies" class="logoBigger">
-            <h1>Yuppies</h1> 
-            <h2>Gestión de expertos</h2>
-        </div>
-        <nav class="marginBottom50">
-            <ul id="nav" class="lista fixed">
-                <a href="#inicio">Inicio</a>    
-                <a href="./pages/quienesSomos.html">Quiénes somos</a>   
-                <a href="./pages/servicios.html">Servicios</a>  
-                <a href="./pages/autogestion.html">Autogestión</a>  
-                <a href="./pages/contacto.html">Contacto</a>    
-            </ul>
+        <nav class="navbar fixed-top navbar-light navColor navShadow" id="navBar">
+            <div><a href="#footer"><img src="../imgs/logoRedondo.png" alt="yuppies" class="logoFooter"></a></div>
+            <a class="navbar-brand navAEffect" href="#inicio">Inicio</a>
+            <a class="navbar-brand navAEffect" href="./pages/quienesSomos.html">Quiénes somos</a>
+            <a class="navbar-brand navAEffect" href="./pages/servicios.html">Servicios</a>
+            <a class="navbar-brand navAEffect" href="./pages/autogestion.html">Autogestión</a>
+            <a class="navbar-brand navAEffect" href="./pages/contacto.html">Contacto</a>
         </nav>
-    </header>
-
-    <main>
+    <header>
+        
+    <main id="content" class="marginTop100 paddingBottom50">
         <h2 class="centerText">Yuppies es la solución más práctica y efectiva a las necesidades de tu negocio</h2>
-        <div class="imagesContainer">
-            <img src="./imgs/historias/tools.jpg" alt="" class="cotaImagenMain">
-            <img src="./imgs/historias/control.jpg" alt="" class="cotaImagenMain">
-            <img src="./imgs/historias/correcciones.jpg" alt="" class="cotaImagenMain">
-            <img src="./imgs/historias/control2.jpg" alt="" class="cotaImagenMain">
-        </div>
     </main>
 
+    <section>
+        
+        <div class="imagesContainer marginTop50">
+            <img src="./imgs/historias/tools.jpg" alt="" class="cotaImagenMain imageBorder">
+            <img src="./imgs/historias/control.jpg" alt="" class="cotaImagenMain imageBorder">
+            <img src="./imgs/historias/correcciones.jpg" alt="" class="cotaImagenMain imageBorder">
+            <img src="./imgs/historias/control2.jpg" alt="" class="cotaImagenMain imageBorder">
+        </div>
+    </section>
 
     <!-- ACORDEON / ACCORDION -->
     <section>
-        <div class="imagesContainer marginTop50">
+        <div class="imagesContainer marginTop70">
             <p class="orange negrita">Click</p>
             <img src="./imgs/gifs/clickOrange.gif" alt="cursor" class="cursor ">
         </div>
@@ -120,46 +94,54 @@
     </section>
 
     <footer id="footer" class="marginTop50">
-        <div class="footContainerIndex">
-            <!-- logo -->
-            <div class="logoFooterContainer">
-                <img src="./imgs/logoYuppies.png" class="logoBigger " alt="yuppies gestión de expertos">
-            </div>
-            <div class="padding10 borderLeft irArribaContainer">
-                <a href="#inicio" class="links negrita">Ir arriba</a>
-                <p class="footerText">El proposito define la razón principal por la que una compañía u organización está en el mundo; la misión describe lo que esta compañía u organizión hace para cumplir su propósito y los valores describen la forma en que las personas están juntas cuando se dedican a realizar su misión.</p>
-            </div>
-            <div class="borderLeft">
-                <!-- título redes -->
-                <h4 class="negrita">Comunicate con nosotros:</h4>
-                <!-- whatsapp -->
-                <div class="aContainer">
-                    <a href="https://api.whatsapp.com/send?phone=5493794278325&text=Hola%2C+quiero+obtener+m%C3%A1s+informaci%C3%B3n+de+Yuppies+" target="_blank" class="links block"> 
-                        <img src="./imgs/iconos/whatsapp1.png" alt="whatsapp" class="iconos inline"> +54 9 379 427-8325
-                    </a>
-                    <a href="./pages/contacto.html" target="_blank" class="links block"> 
-                        <img src="./imgs/iconos/form6.png" alt="form" class="iconos inline"> Formulario web
-                    </a>
-                    <!-- email -->
-                    <a href="mailto:yuppies1930@gmail.com" target="_blank" class="links block"> 
-                        <img src="./imgs/iconos/email6.png" alt="email" class="iconos inline"> yuppies1930@gmail.com
-                    </a>
-                    <!-- instagram -->
-                    <a href="https://www.instagram.com/yuppies1930/" target="_blank" class="links block"> 
-                        <img src="./imgs/iconos/instagram1.png" alt="instagram" class="iconos inline"> @yuppies1930
-                    </a>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-4">
+                    <div class="logoFooterContainer">
+                        <img src="./imgs/logoRedondo.png" class="logoBigger" alt="yuppies gestión de expertos">
+                    </div>
                 </div>
-                <!-- derechos de autor iconos -->
-                <div class="derechos paddingBottom20"> Iconos diseñados por <a href="https://www.freepik.com" title="Freepik" class="links derechos">Freepik:</a> <a href="https://www.flaticon.es/" class="links derechos" title="Flaticon">www.flaticon.es</a> </div>
+                <div class="col-4">
+                    <div class="irArribaContainer borderLeft">
+                        <a href="#inicio" class="links negrita paddingBottom10">Ir arriba ↑</a>
+                        <p>Experto #PYME 🤓</p>
+                        <p>🔍 #auditoriaexterna</p>
+                        <p>🦺 #controldestock</p>
+                        <p>📋 #inventario</p>
+                        <p>💡 Implantación de #Mejoras</p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <!-- whatsapp -->
+                    <div class="aContainer borderLeft">
+                        <h4 class="negrita marginLeft50">Comunicate con nosotros:</h4>
+                        <a href="https://api.whatsapp.com/send?phone=5493794278325&text=Hola%2C+quiero+obtener+m%C3%A1s+informaci%C3%B3n+de+Yuppies+" target="_blank" class="links block marginLeft50"> 
+                            <img src="./imgs/iconos/whatsapp1.png" alt="whatsapp" class="iconos inline"> +54 9 379 427-8325
+                        </a>
+                        <a href="./pages/contacto.html" target="_blank" class="links block marginLeft50"> 
+                            <img src="./imgs/iconos/form6.png" alt="form" class="iconos inline"> Formulario web
+                        </a>
+                        <!-- email -->
+                        <a href="mailto:yuppies1930@gmail.com" target="_blank" class="links block marginLeft50"> 
+                            <img src="./imgs/iconos/email6.png" alt="email" class="iconos inline"> yuppies1930@gmail.com
+                        </a>
+                        <!-- instagram -->
+                        <a href="https://www.instagram.com/yuppies1930/" target="_blank" class="links block marginLeft50"> 
+                            <img src="./imgs/iconos/instagram1.png" alt="instagram" class="iconos inline"> @yuppies1930
+                        </a>
+                    </div>
+                    <!-- derechos de autor iconos -->
+                    <div class="derechos"> Iconos diseñados por <a href="https://www.freepik.com" title="Freepik" class="links derechos">Freepik:</a> <a href="https://www.flaticon.es/" class="links derechos" title="Flaticon">www.flaticon.es</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- jquery para el loader -->
+    <!-- js bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <!-- jquery para scroll -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="./js/codigo.js"></script>
-    <!-- JS para bootstrap  -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-
 </body>
 </html>
