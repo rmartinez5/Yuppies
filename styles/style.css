@@ -29,12 +29,8 @@
   height: 50px;
 }
 
-/* la imagen del main es muy ancha, tengo que ajustar su posición para que se vea el logo y que se acomode bien debajo/* ajustar los valores para mover la imagen */
 .imagenMain{
-  /* position: relative; */
   top: 10px; 
-  /* IMPORTANTE: esto no cambia el tamaño de la imagen, solo lo desplaza pero el tamaño se conserva */
-  /* left: -500px; */
   box-shadow: 0 0 15px #383838;
 }
 
@@ -142,13 +138,8 @@ p{
 }
 
 /* achicar imágenes en forma proporcional */
-.scaled-4{
-  transform: scale(0.4); 
-  /* Igual que: scaleX(0.4) scaleY(0.4) */
-}
-
-.scaled-5{
-  transform: scale(0.5); 
+.scaled-8{
+  transform: scale(0.8); 
   /* Igual que: scaleX(0.5) scaleY(0.5) */
 }
 
@@ -202,6 +193,10 @@ p{
 /* FIN PADDING */
 
 /* MARGIN */
+.margin20{
+  margin: 20px;
+}
+
 .marginLeft20{
   margin-left: 20px;
 }
@@ -275,10 +270,7 @@ p{
 
 .videos{
   margin-top: 8px;
-  height: 500px;
-  background-color: #ec741d; 
 }
-
 /* ############ FIN VIDEOS ################ */
 
 
@@ -352,8 +344,7 @@ div.carousel-item.active{
 }
 
 .footerContainerNoIndex{
-  padding: 0;
-  margin: 0;
+  padding: 15px 0;
   justify-content: center;
   align-items: center;
 }
@@ -749,6 +740,12 @@ button.learn-more:active::before {
   En mobile, como navbar mas chico, hay más separación, achico un poco */
   .marginTop100{
     margin-top: 70px;
+  }
+
+  /* pag servicios */
+  .servicioContainer{
+    flex-direction: column;
+    row-gap: 15px;
   }
 
   /* footer: los botones que se dispongan en columnas en lugar de fila */
