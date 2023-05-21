@@ -257,7 +257,6 @@ p{
   margin-top: 8px;
   height: 500px;
   background-color: #ec741d; 
-  border-style: groove;
 }
 /* ############ FIN VIDEOS ################ */
 
@@ -309,6 +308,7 @@ p{
 
 .row{
   margin-right: 0;
+  row-gap: 25px;
 }
 
 .logoBigger{
