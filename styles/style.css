@@ -297,15 +297,6 @@ p{
   background-size: cover;
 }
 
-/* .container-fluid{
-  padding: 0;
-  margin: 0;
-} */
-
-/* *, ::after, ::before{
-  box-sizing: 0;
-} */
-
 .row{
   margin-right: 0;
   row-gap: 25px;
@@ -691,3 +682,24 @@ button.learn-more:active::before {
   transition: all 0.5s;
 }
 /* ############## FIN FORM ################## */
+
+
+/* ############ MEDIA QUERYS ################ */
+/* Condición: para vistas HASTA 600px */
+@media screen and (max-width: 600px){
+  header nav .logoFooter{
+    display: none;
+  }
+  .fuenteMobile{
+    font-size: 10px;
+  }
+  .navbar a{
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+}
+
+
+/* ########## FIN MEDIA QUERYS ############### */
