@@ -1,3 +1,4 @@
+/* TODO! */
 *{
   margin: 0;
   padding: 0;
@@ -5,6 +6,8 @@
   font-family: 'Varela Round', sans-serif;
 }
 
+/* USAR UN GIF DE LOADER */
+/* fuente: https://www.youtube.com/watch?v=b9zyKCsUJfY */
 #loader{
   position: fixed;
   width: 100%;
@@ -14,28 +17,32 @@
   background: white url(../imgs/gifs/sharksLoader.gif) no-repeat center center;
 }
 
+/* durante el loader, que oculte el contenido de la página */
 .hidden{
   overflow: hidden;
 }
 
 /* ############## HEADER ################## */
 /* headerv3: hover subrayado, animación y shadow */
+/* navbar: cambio el color de bootstrap */
 .navColor{
   background-color: white;
-  justify-content: space-around;
+  justify-content: space-evenly;
   transition: .3s;
 }
 
+/* navbar: agrego sombra */
 .navShadow{
   /* box-shadow: 0 0 15px rgb(56, 56, 56); */
   box-shadow: 0 0 15px #383838;
 }
 
+/* navbar: animacion underline when hover */
+/* fuente: https://www.youtube.com/watch?v=wQx6fIkmJpM */
 .navAEffect{
   transition: .3;
   text-shadow: 0 0 .2px rgb(32, 32, 32);
 }
-
 .navAEffect:after{
   content: '';
   position: absolute;
@@ -48,13 +55,16 @@
   transform-origin: bottom right;
   transition: transform 0.3s ease-out;
 }
-
 .navAEffect,
 .navAEffect:hover:after{
   transform: scale(1);
   transform-origin: bottom left;
 }
+/* ############ FIN DE HEADER ############ */
 
+
+/* ############# CONFIG GRAL ############# */
+/* TEXTOS */
 h1{
   text-align: center;
   font-size: 5rem;
@@ -62,35 +72,6 @@ h1{
   color: #ec741d;
   /* margin-top: 30px; */
   font-weight:bold;
-}
-
-.cursor{
-  width: 50px;
-  height: 50px;
-}
-/* ############ FIN DE HEADER ############ */
-
-
-/* ############# MAIN ############# */
-
-/* ############ FIN DE MAIN ############ */
-
-/* ############# CONFIG GRAL ############# */
-/* TEXTOS */
-.orange{
-  color: #ec741d;
-}
-
-.centerText{
-  text-align: center;
-}
-
-.negrita{
-  font-weight: bold;
-}
-
-.alineaIzq{
-  text-align: start;
 }
 
 h2{
@@ -108,17 +89,44 @@ h3{
 p{
   margin-bottom: 0;
 }
+
+.orange{
+  color: #ec741d;
+}
+
+.centerText{
+  text-align: center;
+}
+
+.negrita{
+  font-weight: bold;
+}
+
+.alineaIzq{
+  text-align: start;
+}
 /* FIN TEXTOS */
 
-/* IIMÁGENES */
+/* IMÁGENES */
+.cotaImagenMain{
+  height: 500px;
+  width: 280px;
+}
+
 .cotaImagen500{
   height: 500px;
   width: 500px;
 }
 
-.cotaImagenMain{
-  height: 500px;
-  width: 280px;
+/* achicar imágenes en forma proporcional */
+.scaled-4{
+  transform: scale(0.4); 
+  /* Igual que: scaleX(0.4) scaleY(0.4) */
+}
+
+.scaled-5{
+  transform: scale(0.5); 
+  /* Igual que: scaleX(0.5) scaleY(0.5) */
 }
 
 .imageBorder{
@@ -147,12 +155,8 @@ p{
   padding: 10px;
 }
 
-.padding010{
-  padding: 0 10px;
-}
-
-.padding050{
-  padding: 0 50px;
+.padding20{
+  padding: 20px;
 }
 
 .padding0100{
@@ -163,16 +167,16 @@ p{
   padding-top: 10;
 }
 
+.paddingTop20{
+  padding-top: 20;
+}
+
 .paddingBottom10{
   padding-bottom: 10px;
 }
 
 .paddingBottom20{
   padding-bottom: 20px;
-}
-
-.paddingBottom60{
-  padding-bottom: 60px;
 }
 /* FIN PADDING */
 
@@ -205,10 +209,6 @@ p{
   margin-top: 70px;
 }
 
-.marginTop90{
-  margin-top: 90px;
-}
-
 .marginTop100{
   margin-top: 100px;
 }
@@ -222,12 +222,11 @@ p{
 }
 /* FIN MARGIN */
 
-.border{
-  border-style: groove;
-  padding: 10px;
-  background-color: white; 
-  margin-bottom: 30px;
-  margin-top: 8px;
+
+/* cursor arriba del accodion */
+.cursor{
+  width: 50px;
+  height: 50px;
 }
 /* ########### FIN CONFIG GRAL ########### */
 
@@ -297,16 +296,46 @@ p{
   background-size: cover;
 }
 
+/* custom clase bootstrap */
 .row{
   margin-right: 0;
   row-gap: 25px;
 }
 
+/* logo del footer mas grande */
 .logoBigger{
   width: 150px;
   height: 150px;
 }
 
+.logoFooterContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerContainerNoIndex{
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+div.logoFooterContainer{
+  height: 100%;
+}
+
+.logoHeader{
+  width: 50px;
+  height: 50px;
+}
+
+.logoFooter{
+  width: 50px;
+  height: 50px;
+}
+
+/* custom clase bootstrap */
 div.col-4{
   padding-top: 20px;
   display: flex;
@@ -314,7 +343,7 @@ div.col-4{
 }
 
 .irArribaContainer{
-  padding-top: 10px;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   align-content: start;
@@ -328,22 +357,6 @@ div.col-4{
   color: #000000;
 }
 
-div.logoFooterContainer{
-  height: 100%;
-}
-
-.logoFooterContainer{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.logoFooter{
-  width: 50px;
-  height: 50px;
-}
-
 .paddingBottom10,
 #footer div h4{
   padding-bottom: 10px;
@@ -354,22 +367,20 @@ h4{
   font-size: medium;
 }
 
+/* borde izquierdo en footer */
 .borderLeft{
   border-left: solid 1px black;
   padding-left:50px;
 }
 
-/* links comunícate con nosotros */
+/* links comunicate con nosotros */
 div.aContainer{
-  padding-top: 10px;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
-  /* height: 100%; */
   align-content: start;
   align-items: start;
   justify-items: end;
-  /* lo comento por las dudas, probar sacarlo */
-  /* width: 100%; */
 }
 
 /* clase para los a del footer*/
@@ -385,14 +396,22 @@ div.aContainer{
   height: 30px;
 }
 
+/* derechos de autor iconos footer */
 .derechos{
   color: white;
   margin-top: 20px;
 }
 
+/* comodin */
 .inline{
   display: inline;
 }
+
+div.carousel-item.active.autogestion{
+  padding-top: 0;
+  margin-top: 0;
+}
+
 /* ############## FIN FOOTER ############## */
 
 
@@ -567,7 +586,6 @@ button.learn-more::before {
   right: 0;
   bottom: 0;
   background: white;
-
   border-radius: inherit;
   -webkit-box-shadow: 0 0 0 2px #4985e01f, 0 0.625em 0 0 #ffe3e2; 
   box-shadow: 0 0 0 2px #4985e01f, 0 0.625em 0 0 #ec741d;
@@ -603,7 +621,7 @@ button.learn-more:active::before {
 /* ############ FIN Botón "ROSA" ############ */
 
 
-/* CUADRO DE TEXTO */
+/* CUADRO DE TEXTO IMPORTADO */
 /* https://uiverse.io/ahmed150up/chilly-rattlesnake-8 */
 .card {
   width: 260px;
@@ -687,19 +705,40 @@ button.learn-more:active::before {
 /* ############ MEDIA QUERYS ################ */
 /* Condición: para vistas HASTA 600px */
 @media screen and (max-width: 600px){
-  header nav .logoFooter{
+  /* navbar: que no se vea el logo*/
+  header nav .logoHeader{
     display: none;
   }
-  .fuenteMobile{
-    font-size: 10px;
+
+  /* navbar: aunque el logo no se muestre, quedaba un margin extra debido a este elemento, así que lo compenso con un margin negativo */
+  .navbar{
+    margin-left: -10px;
   }
+
+  /* navbar: achico la fuente para que quede en una sola fila */
+  .fuenteMobile{
+    font-size: 12px;
+  }
+
+  /* navbar: que haya menos margen/separacion entre los elementos */
+  .navbar div,
   .navbar a{
     display: flex;
     margin: 0;
-    padding: 0;
+  }
+
+  /* los titulos de las páginas tienen un margen de 100 en desktop.
+  En mobile, como navbar mas chico, hay más separación, achico un poco */
+  .marginTop100{
+    margin-top: 70px;
+  }
+
+  /* footer: los botones que se dispongan en columnas en lugar de fila */
+  .botones-container{
+    flex-direction: column;
+    margin-right: 30px;
+    /* justify-content: start; */
   }
 
 }
-
-
 /* ########## FIN MEDIA QUERYS ############### */

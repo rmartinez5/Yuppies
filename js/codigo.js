@@ -1,3 +1,5 @@
+// loader
+// fuente: https://www.youtube.com/watch?v=nq0vAO6SDlI
 window.onload = function(){
     // $('#onload').fadeOut();
     // $('#nav').addClass('fixed');
@@ -6,6 +8,9 @@ window.onload = function(){
 
 }
 
+// SCROLL down: no navbar
+// SCROLL up: si navbar
+// fuente: https://www.youtube.com/watch?v=OqSRBkEZJow&t=246s
 let theEnd =0,
     navbar = document.getElementById('navBar');
 
