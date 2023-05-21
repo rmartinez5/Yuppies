@@ -86,16 +86,11 @@
 /* ############# CONFIG GRAL ############# */
 /* TEXTOS */
 h1{
-  text-align: center;
-  font-size: 5rem;
-  /* color: #E15C0B; */
-  color: #ec741d;
-  /* margin-top: 30px; */
-  font-weight:bold;
+  font-size: 30px;
 }
 
 h2{
-  font-weight:bold;
+  font-size: 20px;
   padding: 10px;
   top: 0;
 }
@@ -114,8 +109,16 @@ p{
   color: #ec741d;
 }
 
+.black{
+  color: #000000;
+}
+
 .centerText{
   text-align: center;
+}
+
+.cursiva{
+  font-style: oblique;
 }
 
 .negrita{
@@ -275,19 +278,31 @@ p{
   height: 500px;
   background-color: #ec741d; 
 }
+
 /* ############ FIN VIDEOS ################ */
 
 
-/* ########## PAG QUIENES SOMOS ########### */
-.somos{
-  font-weight: bold;
-  font-style: oblique;
+/* ########### PAG AUTOGESTION ############ */
+/* CAROUSEL */
+/* el fondo es blanco, los botones no se ven, así que invierto sus colores*/
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  filter: invert(108%);
 }
 
-.somos2rem{
-  font-size: 2rem;
+div.carousel-item.active{
+  padding-top: 0;
+  margin-top: 0;
+  /* background-color: #ec741d; */
 }
-/* ######## FIN PAG QUIENES SOMOS ######### */
+
+/* ME QUEDA MUCHO MARGEN entre la imagen y container */
+/* CORREGIR */
+.carouselContainer{
+  padding: 0;
+  box-shadow: 0 0 10px rgb(39, 41, 37);
+}
+/* FIN CAROUSEL */
+/* ######### FIN PAG AUTOGESTION ########### */
 
 
 /* ############# PAG SERVICIOS ############# */
@@ -322,7 +337,6 @@ p{
 
 .rowFooter{
   row-gap: 0;
-  /* column-gap: 0; */
 }
 
 /* logo del footer mas grande */
@@ -380,11 +394,6 @@ div.col-4{
   padding-bottom: 10px;
 }
 
-h4{
-  color: #000000;
-  font-size: medium;
-}
-
 /* borde izquierdo en footer */
 .borderLeft{
   border-left: solid 1px black;
@@ -424,12 +433,6 @@ div.aContainer{
 .inline{
   display: inline;
 }
-
-div.carousel-item.active.autogestion{
-  padding-top: 0;
-  margin-top: 0;
-}
-
 /* ############## FIN FOOTER ############## */
 
 
@@ -437,10 +440,8 @@ div.carousel-item.active.autogestion{
 .formulario{
   background-color: #ec741d;
   background-size: contain;
-  background-repeat: no-repeat;
   background-position: center;
-  margin: 30px;
-  width: 400px;
+  /* width: 400px; */
 }
 
 .formulario div{
