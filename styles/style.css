@@ -72,13 +72,7 @@ h1{
 
 
 /* ############# MAIN ############# */
-main{
-  /* background: linear-gradient(0.5turn, white, #ec741d,  white); */
-  /* background-image: url(../imgs/sobre2.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: top; */
-}
+
 /* ############ FIN DE MAIN ############ */
 
 /* ############# CONFIG GRAL ############# */
@@ -158,10 +152,6 @@ p{
 .padding0100{
   padding: 0 100px;
 }
-
-/* .padding0200{
-  padding: 0 200px;
-} */
 
 .paddingTop50{
   padding-top: 1200;
@@ -387,10 +377,6 @@ div.aContainer{
   display: flex;
   width: 30px;
   height: 30px;
-}
-
-div.derechos{
-/* padding-left: 50px; */
 }
 
 .derechos{
