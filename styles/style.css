@@ -132,9 +132,9 @@ p{
   width: 280px;
 }
 
-.cotaImagen500{
-  height: 500px;
-  width: 500px;
+.imagenResponsive{
+  max-width: 100%; 
+  height: auto;
 }
 
 /* achicar imágenes en forma proporcional */
@@ -268,9 +268,6 @@ p{
   justify-content: center;
 }
 
-.videos{
-  margin-top: 8px;
-}
 /* ############ FIN VIDEOS ################ */
 
 
@@ -310,7 +307,7 @@ div.carousel-item.active{
 .servicioContainer{
   display: flex;
   justify-content: center;
-  column-gap: 20px;
+  column-gap: 10px;
 }
 /* ########### FIN PAG SERVICIOS ########### */
 
@@ -745,7 +742,6 @@ button.learn-more:active::before {
   /* pag servicios */
   .servicioContainer{
     flex-direction: column;
-    row-gap: 15px;
   }
 
   /* footer: los botones que se dispongan en columnas en lugar de fila */
