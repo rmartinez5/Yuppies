@@ -1,0 +1,26 @@
+/* ############# PAG SERVICIOS ############# */
+.lista li{
+    padding-left: 20px;
+    list-style: inside;
+}
+
+.botones-container{
+    display: flex;
+}
+
+.servicioContainer{
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+}
+/* ########### FIN PAG SERVICIOS ########### */
+
+/* ############ MEDIA QUERYS ################ */
+/* Condición: para vistas HASTA 600px */
+@media screen and (max-width: 600px){
+  /* pag servicios */
+    .servicioContainer{
+        flex-direction: column;
+    }
+}
+/* ########## FIN MEDIA QUERYS ############### */

@@ -1,0 +1,131 @@
+/* ################ FOOTER ################ */
+#footer{
+    background-color: #ec741d;
+    background-size: cover;
+}
+
+/* custom clase bootstrap */
+.row{
+    margin-right: 0;
+    row-gap: 25px;
+}
+
+.rowFooter{
+    row-gap: 0;
+}
+
+/* logo del footer mas grande */
+.logoBigger{
+    width: 150px;
+    height: 150px;
+}
+
+.logoFooterContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerContainerNoIndex{
+    padding: 15px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+div.logoFooterContainer{
+    height: 100%;
+}
+
+.logoFooter{
+    width: 50px;
+    height: 50px;
+}
+
+/* custom clase bootstrap */
+div.col-4{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.irArribaContainer{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: start;
+    align-items: start;
+    justify-content: start;
+    justify-items: start;
+}
+
+.footerText{
+    margin-top: 20px;
+    color: #000000;
+}
+
+.paddingBottom10,
+#footer div h4{
+    padding-bottom: 10px;
+}
+
+/* borde izquierdo en footer */
+.borderLeft{
+    border-left: solid 1px black;
+    padding-left:50px;
+}
+
+/* links comunicate con nosotros */
+div.aContainer{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: start;
+    align-items: start;
+    justify-items: end;
+}
+
+/* clase para los a del footer*/
+.links{
+    text-decoration: none;
+    color: black;
+}
+
+/* iconos de las redes en el footer */
+.iconos{
+    display: flex;
+    width: 30px;
+    height: 30px;
+}
+
+/* derechos de autor iconos footer */
+.derechos{
+    color: white;
+    margin-top: 20px;
+}
+
+/* comodin */
+.inline{
+    display: inline;
+}
+  /* ############## FIN FOOTER ############## */
+
+
+/* ############ MEDIA QUERYS ################ */
+/* Condición: para vistas HASTA 600px */
+@media screen and (max-width: 600px){
+     /* footer: los botones que se dispongan en columnas en lugar de fila */
+    .botones-container{
+        flex-direction: column;
+        margin-right: 30px;
+        /* justify-content: start; */
+    }
+
+    /* footer: cambio a borde superior en lugar de borde izquierdo */
+    /* aumento separación entre filas*/
+    .borderTop{
+        border-left: none;
+        border-top: solid 1px black;
+        margin-top: 20px;
+    }
+}
+/* ########## FIN MEDIA QUERYS ############### */

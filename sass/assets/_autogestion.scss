@@ -1,0 +1,21 @@
+/* ########### PAG AUTOGESTION ############ */
+/* CAROUSEL */
+/* el fondo es blanco, los botones no se ven, así que invierto sus colores*/
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    filter: invert(108%);
+}
+
+div.carousel-item.active{
+    padding-top: 0;
+    margin-top: 0;
+    /* background-color: #ec741d; */
+}
+
+  /* ME QUEDA MUCHO MARGEN entre la imagen y container */
+  /* CORREGIR */
+.carouselContainer{
+    padding: 0;
+    box-shadow: 0 0 10px rgb(39, 41, 37);
+}
+  /* FIN CAROUSEL */
+  /* ######### FIN PAG AUTOGESTION ########### */

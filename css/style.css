@@ -1,14 +1,15 @@
+@charset "UTF-8";
 /* TODO! */
-*{
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Chivo Mono', monospace;
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Chivo Mono", monospace;
+  font-family: "Varela Round", sans-serif;
 }
 
 /* USAR UN GIF DE LOADER */
 /* fuente: https://www.youtube.com/watch?v=b9zyKCsUJfY */
-#loader{
+#loader {
   position: fixed;
   width: 100%;
   height: 100vh;
@@ -18,23 +19,23 @@
 }
 
 /* durante el loader, que oculte el contenido de la página */
-.hidden{
+.hidden {
   overflow: hidden;
 }
 
 /* ############## HEADER ################## */
 /* headerv3: hover subrayado, animación y shadow */
-.logoHeader{
+.logoHeader {
   width: 50px;
   height: 50px;
 }
 
-.imagenMain{
-  top: 10px; 
+.imagenMain {
+  top: 10px;
   box-shadow: 0 0 15px #383838;
 }
 
-.imagenMainContainer{
+.imagenMainContainer {
   background-color: #ec741d;
   display: flex;
   justify-content: center;
@@ -42,25 +43,26 @@
 }
 
 /* navbar: cambio el color de bootstrap */
-.navColor{
+.navColor {
   background-color: white;
   justify-content: space-evenly;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 /* navbar: agrego sombra */
-.navShadow{
+.navShadow {
   box-shadow: 0 0 15px #383838;
 }
 
 /* navbar: animacion underline when hover */
 /* fuente: https://www.youtube.com/watch?v=wQx6fIkmJpM */
-.navAEffect{
-  transition: .3;
-  text-shadow: 0 0 .2px rgb(32, 32, 32);
+.navAEffect {
+  transition: 0.3;
+  text-shadow: 0 0 0.2px rgb(32, 32, 32);
 }
-.navAEffect:after{
-  content: '';
+
+.navAEffect:after {
+  content: "";
   position: absolute;
   width: 100%;
   height: 2px;
@@ -71,84 +73,84 @@
   transform-origin: bottom right;
   transition: transform 0.3s ease-out;
 }
+
 .navAEffect,
-.navAEffect:hover:after{
+.navAEffect:hover:after {
   transform: scale(1);
   transform-origin: bottom left;
 }
+
 /* ############ FIN DE HEADER ############ */
-
-
 /* ############# CONFIG GRAL ############# */
 /* TEXTOS */
-h1{
+h1 {
   font-size: 30px;
 }
 
-h2{
+h2 {
   font-size: 20px;
   padding: 10px;
   top: 0;
 }
 
-h3{
+h3 {
   padding-right: 0;
   margin-right: 0;
   top: 0;
 }
 
-p{
+p {
   margin-bottom: 0;
 }
 
-.orange{
+.orange {
   color: #ec741d;
 }
 
-.black{
+.black {
   color: #000000;
 }
 
-.centerText{
+.centerText {
   text-align: center;
 }
 
-.cursiva{
+.cursiva {
   font-style: oblique;
 }
 
-.negrita{
+.negrita {
   font-weight: bold;
 }
 
-.alineaIzq{
+.alineaIzq {
   text-align: start;
 }
-/* FIN TEXTOS */
 
+/* FIN TEXTOS */
 /* IMÁGENES */
-.cotaImagenSection{
+.cotaImagenSection {
   height: 500px;
   width: 280px;
 }
 
-.imagenResponsive{
-  max-width: 100%; 
+.imagenResponsive {
+  max-width: 100%;
   height: auto;
 }
 
 /* achicar imágenes en forma proporcional */
-.scaled-8{
-  transform: scale(0.8); 
+.scaled-8 {
+  transform: scale(0.8);
   /* Igual que: scaleX(0.5) scaleY(0.5) */
 }
 
-.imageBorder{
+.imageBorder {
   padding: 0;
   box-shadow: 0 0 10px rgb(39, 41, 37);
 }
 
-.imagesContainer{
+.imagesContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,97 +158,95 @@ p{
   row-gap: 20px;
 }
 
-.offerContainer{
+.offerContainer {
   display: flex;
   justify-content: center;
 }
-/* FIN IMÁGENES */
 
+/* FIN IMÁGENES */
 /* PADDING */
-.padding10{
+.padding10 {
   padding: 10px;
 }
 
-.padding20{
+.padding20 {
   padding: 20px;
 }
 
-.padding0100{
+.padding0100 {
   padding: 0 100px;
 }
 
-.paddingTop10{
+.paddingTop10 {
   padding-top: 10;
 }
 
-.paddingTop20{
+.paddingTop20 {
   padding-top: 20;
 }
 
-.paddingBottom10{
+.paddingBottom10 {
   padding-bottom: 10px;
 }
 
-.paddingBottom20{
+.paddingBottom20 {
   padding-bottom: 20px;
 }
-/* FIN PADDING */
 
+/* FIN PADDING */
 /* MARGIN */
-.margin20{
+.margin20 {
   margin: 20px;
 }
 
-.marginLeft20{
+.marginLeft20 {
   margin-left: 20px;
 }
 
-.marginLeft50{
+.marginLeft50 {
   margin-left: 50px;
 }
 
-.margin050{
+.margin050 {
   margin: 0 50px;
 }
 
-.marginTop10{
+.marginTop10 {
   margin-top: 10px;
 }
 
-.marginTop20{
+.marginTop20 {
   margin-top: 20px;
 }
 
-.marginTop50{
+.marginTop50 {
   margin-top: 50px;
 }
 
-.marginTop70{
+.marginTop70 {
   margin-top: 70px;
 }
 
-.marginTop100{
+.marginTop100 {
   margin-top: 100px;
 }
 
-.marginBottom20{
+.marginBottom20 {
   margin-bottom: 20px;
 }
 
-.marginBottom50{
+.marginBottom50 {
   margin-bottom: 50px;
 }
+
 /* FIN MARGIN */
-
-
 /* cursor arriba del accodion */
-.cursor{
+.cursor {
   width: 50px;
   height: 50px;
 }
+
 /* ########### FIN CONFIG GRAL ########### */
-
-
 /* ############### ACCORDION ############### */
 /* acordeon / accordion custom colores bootstrap index */
 .accordion-button:not(.collapsed) {
@@ -259,18 +259,43 @@ p{
   border: solid 3px #ec741d;
   --bs-accordion-btn-focus-box-shadow: white;
 }
+
 /* ########### FIN ACCORDION ############ */
-
-
 /* ############## VIDEOS ################ */
-.videoContainer{
+.videoContainer {
   display: flex;
   justify-content: center;
 }
 
 /* ############ FIN VIDEOS ################ */
-
-
+/* ############ MEDIA QUERYS ################ */
+/* Condición: para vistas HASTA 600px */
+@media screen and (max-width: 600px) {
+  /* navbar: que no se vea el logo*/
+  header nav .logoHeader {
+    display: none;
+  }
+  /* navbar: aunque el logo no se muestre, quedaba un margin extra debido a este elemento, así que lo compenso con un margin negativo */
+  .navbar {
+    margin-left: -10px;
+  }
+  /* navbar: achico la fuente para que quede en una sola fila */
+  .fuenteMobile {
+    font-size: 12px;
+  }
+  /* navbar: que haya menos margen/separacion entre los elementos */
+  .navbar div,
+  .navbar a {
+    display: flex;
+    margin: 0;
+  }
+  /* los titulos de las páginas tienen un margen de 100 en desktop.
+  En mobile, como navbar mas chico, hay más separación, achico un poco */
+  .marginTop100 {
+    margin-top: 70px;
+  }
+}
+/* ########## FIN MEDIA QUERYS ############### */
 /* ########### PAG AUTOGESTION ############ */
 /* CAROUSEL */
 /* el fondo es blanco, los botones no se ven, así que invierto sus colores*/
@@ -278,7 +303,7 @@ p{
   filter: invert(108%);
 }
 
-div.carousel-item.active{
+div.carousel-item.active {
   padding-top: 0;
   margin-top: 0;
   /* background-color: #ec741d; */
@@ -286,83 +311,90 @@ div.carousel-item.active{
 
 /* ME QUEDA MUCHO MARGEN entre la imagen y container */
 /* CORREGIR */
-.carouselContainer{
+.carouselContainer {
   padding: 0;
   box-shadow: 0 0 10px rgb(39, 41, 37);
 }
+
 /* FIN CAROUSEL */
 /* ######### FIN PAG AUTOGESTION ########### */
-
-
 /* ############# PAG SERVICIOS ############# */
-.lista li{
+.lista li {
   padding-left: 20px;
   list-style: inside;
 }
 
-.botones-container{
+.botones-container {
   display: flex;
 }
 
-.servicioContainer{
+.servicioContainer {
   display: flex;
   justify-content: center;
   column-gap: 10px;
 }
+
 /* ########### FIN PAG SERVICIOS ########### */
-
-
+/* ############ MEDIA QUERYS ################ */
+/* Condición: para vistas HASTA 600px */
+@media screen and (max-width: 600px) {
+  /* pag servicios */
+  .servicioContainer {
+    flex-direction: column;
+  }
+}
+/* ########## FIN MEDIA QUERYS ############### */
 /* ################ FOOTER ################ */
-#footer{
+#footer {
   background-color: #ec741d;
   background-size: cover;
 }
 
 /* custom clase bootstrap */
-.row{
+.row {
   margin-right: 0;
   row-gap: 25px;
 }
 
-.rowFooter{
+.rowFooter {
   row-gap: 0;
 }
 
 /* logo del footer mas grande */
-.logoBigger{
+.logoBigger {
   width: 150px;
   height: 150px;
 }
 
-.logoFooterContainer{
+.logoFooterContainer {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.footerContainerNoIndex{
+.footerContainerNoIndex {
   padding: 15px 0;
   justify-content: center;
   align-items: center;
 }
 
-div.logoFooterContainer{
+div.logoFooterContainer {
   height: 100%;
 }
 
-.logoFooter{
+.logoFooter {
   width: 50px;
   height: 50px;
 }
 
 /* custom clase bootstrap */
-div.col-4{
+div.col-4 {
   padding-top: 20px;
   display: flex;
   flex-direction: column;
 }
 
-.irArribaContainer{
+.irArribaContainer {
   padding-top: 20px;
   display: flex;
   flex-direction: column;
@@ -372,24 +404,24 @@ div.col-4{
   justify-items: start;
 }
 
-.footerText{
+.footerText {
   margin-top: 20px;
   color: #000000;
 }
 
 .paddingBottom10,
-#footer div h4{
+#footer div h4 {
   padding-bottom: 10px;
 }
 
 /* borde izquierdo en footer */
-.borderLeft{
+.borderLeft {
   border-left: solid 1px black;
-  padding-left:50px;
+  padding-left: 50px;
 }
 
 /* links comunicate con nosotros */
-div.aContainer{
+div.aContainer {
   padding-top: 20px;
   display: flex;
   flex-direction: column;
@@ -399,40 +431,57 @@ div.aContainer{
 }
 
 /* clase para los a del footer*/
-.links{
+.links {
   text-decoration: none;
   color: black;
 }
 
 /* iconos de las redes en el footer */
-.iconos{
+.iconos {
   display: flex;
   width: 30px;
   height: 30px;
 }
 
 /* derechos de autor iconos footer */
-.derechos{
+.derechos {
   color: white;
   margin-top: 20px;
 }
 
 /* comodin */
-.inline{
+.inline {
   display: inline;
 }
+
 /* ############## FIN FOOTER ############## */
-
-
+/* ############ MEDIA QUERYS ################ */
+/* Condición: para vistas HASTA 600px */
+@media screen and (max-width: 600px) {
+  /* footer: los botones que se dispongan en columnas en lugar de fila */
+  .botones-container {
+    flex-direction: column;
+    margin-right: 30px;
+    /* justify-content: start; */
+  }
+  /* footer: cambio a borde superior en lugar de borde izquierdo */
+  /* aumento separación entre filas*/
+  .borderTop {
+    border-left: none;
+    border-top: solid 1px black;
+    margin-top: 20px;
+  }
+}
+/* ########## FIN MEDIA QUERYS ############### */
 /* ############## FORM #################### */
-.formulario{
+.formulario {
   background-color: #ec741d;
   background-size: contain;
   background-position: center;
   /* width: 400px; */
 }
 
-.formulario div{
+.formulario div {
   padding: 5px;
 }
 
@@ -477,7 +526,7 @@ div.aContainer{
   transition: all 0.5s;
 }
 
-.input-container input[type="text"]:focus ~ .topline {
+.input-container input[type=text]:focus ~ .topline {
   width: 35%;
   transition: all 0.5s;
 }
@@ -493,12 +542,12 @@ div.aContainer{
   transition: all 0.5s;
 }
 
-.input-container input[type="text"]:focus ~ .underline {
+.input-container input[type=text]:focus ~ .underline {
   width: 100%;
   transition: all 0.5s;
 }
 
-.input-container input[type="text"]:focus ~ .label {
+.input-container input[type=text]:focus ~ .label {
   top: -10px;
   transform: scale(1);
   transition: all 0.5s;
@@ -513,11 +562,12 @@ div.aContainer{
   position: relative;
   width: var(--width-of-input);
 }
+
 /* styling of Input */
 .input {
   color: #000000;
   font-size: 0.9rem;
-  background-color: rgb(255, 255, 255);;
+  background-color: rgb(255, 255, 255);
   width: 100%;
   box-sizing: border-box;
   padding-inline: 0.5em;
@@ -525,6 +575,7 @@ div.aContainer{
   border: none;
   border-bottom: var(--border-height) solid var(--border-before-color);
 }
+
 /* styling of animated border */
 .input-border {
   position: absolute;
@@ -535,6 +586,7 @@ div.aContainer{
   left: 0;
   transition: 0.3s;
 }
+
 /* Hover on Input */
 input:hover {
   /* background: var(--input-hovered-color); */
@@ -544,17 +596,17 @@ input:hover {
 input:focus {
   outline: none;
 }
+
 /* here is code of animated border */
 input:focus ~ .input-border {
   width: 100%;
 }
+
 /* ########### FIN INPUT IMPORTADO ########### */
-
-
 /* ############## Botón "ROSA" ############## */
 /* botones importados de uiverse.io*/
 /* https://uiverse.io/Madflows/terrible-catfish-72 */
-button{
+button {
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -563,14 +615,14 @@ button{
   vertical-align: middle;
   text-decoration: none;
   /* font-family: inherit; */
-  font-family: 'Chivo Mono', monospace;
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Chivo Mono", monospace;
+  font-family: "Varela Round", sans-serif;
   font-size: 15px;
 }
 
 button.learn-more {
   font-weight: 600;
-  color: #07022e; 
+  color: #07022e;
   text-transform: uppercase;
   padding: 1.25em 2em;
   /* background: #fff0f0; */
@@ -582,9 +634,10 @@ button.learn-more {
   -webkit-transition: background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
   transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
 }
+
 button.learn-more::before {
   position: absolute;
-  content: '';
+  content: "";
   width: 100%;
   height: 100%;
   top: 0;
@@ -593,12 +646,13 @@ button.learn-more::before {
   bottom: 0;
   background: white;
   border-radius: inherit;
-  -webkit-box-shadow: 0 0 0 2px #4985e01f, 0 0.625em 0 0 #ffe3e2; 
-  box-shadow: 0 0 0 2px #4985e01f, 0 0.625em 0 0 #ec741d;
+  -webkit-box-shadow: 0 0 0 2px rgba(73, 133, 224, 0.1215686275), 0 0.625em 0 0 #ffe3e2;
+  box-shadow: 0 0 0 2px rgba(73, 133, 224, 0.1215686275), 0 0.625em 0 0 #ec741d;
   -webkit-transform: translate3d(0, 0.75em, -1em);
   transform: translate3d(0, 0.75em, -1em);
   transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
 }
+
 button.learn-more:hover {
   background: white;
   -webkit-transform: translate(0, 0.25em);
@@ -624,9 +678,8 @@ button.learn-more:active::before {
   -webkit-transform: translate3d(0, 0, -1em);
   transform: translate3d(0, 0, -1em);
 }
+
 /* ############ FIN Botón "ROSA" ############ */
-
-
 /* CUADRO DE TEXTO IMPORTADO */
 /* https://uiverse.io/ahmed150up/chilly-rattlesnake-8 */
 .card {
@@ -689,7 +742,7 @@ button.learn-more:active::before {
 }
 
 /* input text area */
-.textArea{
+.textArea {
   padding: 10px;
   border-top: none;
   border-bottom: none;
@@ -705,58 +758,7 @@ button.learn-more:active::before {
   box-shadow: none;
   transition: all 0.5s;
 }
+
 /* ############## FIN FORM ################## */
 
-
-/* ############ MEDIA QUERYS ################ */
-/* Condición: para vistas HASTA 600px */
-@media screen and (max-width: 600px){
-  /* navbar: que no se vea el logo*/
-  header nav .logoHeader{
-    display: none;
-  }
-
-  /* navbar: aunque el logo no se muestre, quedaba un margin extra debido a este elemento, así que lo compenso con un margin negativo */
-  .navbar{
-    margin-left: -10px;
-  }
-
-  /* navbar: achico la fuente para que quede en una sola fila */
-  .fuenteMobile{
-    font-size: 12px;
-  }
-
-  /* navbar: que haya menos margen/separacion entre los elementos */
-  .navbar div,
-  .navbar a{
-    display: flex;
-    margin: 0;
-  }
-
-  /* los titulos de las páginas tienen un margen de 100 en desktop.
-  En mobile, como navbar mas chico, hay más separación, achico un poco */
-  .marginTop100{
-    margin-top: 70px;
-  }
-
-  /* pag servicios */
-  .servicioContainer{
-    flex-direction: column;
-  }
-
-  /* footer: los botones que se dispongan en columnas en lugar de fila */
-  .botones-container{
-    flex-direction: column;
-    margin-right: 30px;
-    /* justify-content: start; */
-  }
-
-  /* footer: cambio a borde superior en lugar de borde izquierdo */
-  /* aumento separación entre filas*/
-  .borderTop{
-    border-left: none;
-    border-top: solid 1px black;
-    margin-top: 20px;
-  }
-}
-/* ########## FIN MEDIA QUERYS ############### */
+/*# sourceMappingURL=style.css.map */
