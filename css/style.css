@@ -330,7 +330,7 @@ div.carousel-item.active {
 }
 
 .servicios {
-  height: 500px;
+  width: 50%;
 }
 
 .agrandar {
@@ -426,6 +426,9 @@ button:focus:not(:focus-visible) {
   /* pag servicios */
   .servicioContainer {
     flex-direction: column;
+  }
+  .servicios {
+    width: 80%;
   }
 }
 /* ########## FIN MEDIA QUERYS ############### */

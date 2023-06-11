@@ -10,7 +10,7 @@
 }
 
 .servicios{
-    height: 500px;
+    width: 50%;
 }
 
 .agrandar{
@@ -121,5 +121,9 @@ button:focus:not(:focus-visible) {
     .servicioContainer{
         flex-direction: column;
     }
+    .servicios{
+        width: 80%;
+    }
 }
+
 /* ########## FIN MEDIA QUERYS ############### */
