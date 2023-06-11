@@ -1,0 +1,909 @@
+@charset "UTF-8";
+/* TODO! */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Chivo Mono", monospace;
+  font-family: "Varela Round", sans-serif;
+}
+
+/* USAR UN GIF DE LOADER */
+/* fuente: https://www.youtube.com/watch?v=b9zyKCsUJfY */
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  overflow: visible;
+  background: white url(/imgs/gifs/puntitosLoading3.gif) no-repeat center center;
+}
+
+/* durante el loader, que oculte el contenido de la página */
+.hidden {
+  overflow: hidden;
+}
+
+/* ############## HEADER ################## */
+/* headerv3: hover subrayado, animación y shadow */
+.logoHeader {
+  width: 50px;
+  height: 50px;
+}
+
+.logoTitulo {
+  width: 100px;
+  height: 100px;
+}
+
+.imagenMain {
+  top: 10px;
+  box-shadow: 0 0 15px #383838;
+}
+
+.imagenMainContainer {
+  background-color: #ec741d;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 25px;
+}
+
+/* navbar: cambio el color de bootstrap */
+.navColor {
+  background-color: white;
+  justify-content: space-evenly;
+  transition: 0.3s;
+}
+
+/* navbar: agrego sombra */
+.navShadow {
+  box-shadow: 0 0 15px #383838;
+}
+
+/* navbar: animacion underline when hover */
+/* fuente: https://www.youtube.com/watch?v=wQx6fIkmJpM */
+.navAEffect {
+  transition: 0.3;
+  text-shadow: 0 0 0.2px rgb(32, 32, 32);
+}
+
+.navAEffect:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ec741d;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.navAEffect,
+.navAEffect:hover:after {
+  transform: scale(1);
+  transform-origin: bottom left;
+}
+
+/* ############ FIN DE HEADER ############ */
+.skew {
+  transition: transform 1s;
+}
+
+.skew:hover {
+  transform: skew(-1deg);
+}
+
+/* ############# CONFIG GRAL ############# */
+/* TEXTOS */
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 20px;
+  padding: 10px;
+  top: 0;
+}
+
+h3 {
+  padding-right: 0;
+  margin-right: 0;
+  top: 0;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.textoNews {
+  font-size: x-large;
+}
+
+.orange {
+  color: #ec741d;
+}
+
+.black {
+  color: #000000;
+}
+
+.cursiva {
+  font-style: oblique;
+}
+
+.negrita {
+  font-weight: bold;
+}
+
+.alineaIzq {
+  text-align: start;
+}
+
+/* FIN TEXTOS */
+/* IMÁGENES */
+.cotaImagenSection {
+  height: 500px;
+  width: 280px;
+}
+
+.imagenResponsive {
+  max-width: 100%;
+  height: auto;
+}
+
+/* achicar imágenes en forma proporcional */
+.scaled-8 {
+  transform: scale(0.8);
+  /* Igual que: scaleX(0.5) scaleY(0.5) */
+}
+
+.imageBorder {
+  padding: 0;
+  box-shadow: 0 0 10px rgb(39, 41, 37);
+}
+
+/* FIN IMÁGENES */
+/* PADDING */
+.padding10 {
+  padding: 10px;
+}
+
+.padding20 {
+  padding: 20px;
+}
+
+.padding0100 {
+  padding: 0 100px;
+}
+
+.paddingTop10 {
+  padding-top: 10;
+}
+
+.paddingTop20 {
+  padding-top: 20;
+}
+
+.paddingBottom10 {
+  padding-bottom: 10px;
+}
+
+.paddingBottom20 {
+  padding-bottom: 20px;
+}
+
+/* FIN PADDING */
+/* MARGIN */
+.margin10 {
+  margin: 10px;
+}
+
+.margin20 {
+  margin: 20px;
+}
+
+.marginLeft20 {
+  margin-left: 20px;
+}
+
+.marginLeft50 {
+  margin-left: 50px;
+}
+
+.margin050 {
+  margin: 0 50px;
+}
+
+.marginTop10 {
+  margin-top: 10px;
+}
+
+.marginTop20 {
+  margin-top: 20px;
+}
+
+.marginTop30 {
+  margin-top: 30px;
+}
+
+.marginTop50 {
+  margin-top: 50px;
+}
+
+.marginTop70 {
+  margin-top: 70px;
+}
+
+.marginTop100 {
+  margin-top: 100px;
+}
+
+.marginBottom20 {
+  margin-bottom: 20px;
+}
+
+.marginBottom50 {
+  margin-bottom: 50px;
+}
+
+/* FIN MARGIN */
+/* ########### FIN CONFIG GRAL ########### */
+/* ########### CONTAINERS ########### */
+.imagesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  row-gap: 20px;
+}
+
+.ContainerNews {
+  display: flex;
+  flex-direction: row;
+}
+
+/* ######### FIN CONTAINERS ######### */
+/* ############ MEDIA QUERYS ################ */
+/* Condición: para vistas HASTA 600px */
+@media screen and (max-width: 600px) {
+  /* navbar: que no se vea el logo*/
+  header nav .logoHeader {
+    display: none;
+  }
+  /* navbar: aunque el logo no se muestre, quedaba un margin extra debido a este elemento, así que lo compenso con un margin negativo */
+  .navbar {
+    margin-left: -10px;
+  }
+  /* navbar: achico la fuente para que quede en una sola fila */
+  .fuenteMobile {
+    font-size: 12px;
+  }
+  /* navbar: que haya menos margen/separacion entre los elementos */
+  .navbar div,
+  .navbar a {
+    display: flex;
+    margin: 0;
+  }
+  /* los titulos de las páginas tienen un margen de 100 en desktop.
+  En mobile, como navbar mas chico, hay más separación, achico un poco */
+  .marginTop100 {
+    margin-top: 70px;
+  }
+  .ContainerNews {
+    flex-direction: column;
+  }
+}
+/* ########## FIN MEDIA QUERYS ############### */
+/* ########### PAG AUTOGESTION ############ */
+/* CAROUSEL */
+/* el fondo es blanco, los botones no se ven, así que invierto sus colores*/
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  filter: invert(108%);
+}
+
+div.carousel-item.active {
+  padding-top: 0;
+  margin-top: 0;
+  /* background-color: #ec741d; */
+}
+
+/* ME QUEDA MUCHO MARGEN entre la imagen y container */
+/* CORREGIR */
+.carouselContainer {
+  padding: 0;
+  box-shadow: 0 0 10px rgb(39, 41, 37);
+}
+
+/* FIN CAROUSEL */
+/* ######### FIN PAG AUTOGESTION ########### */
+/* ############# PAG SERVICIOS ############# */
+.botones-container {
+  display: flex;
+}
+
+.servicioContainer {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+.servicios {
+  width: 50%;
+}
+
+.agrandar {
+  transition: transform 2s;
+}
+
+.agrandar:hover {
+  transform: scale(1.1);
+  /* se puede agregar mas de un transform a un elemento, poniendo espacio */
+}
+
+/* ############ BOTON DESCARGA PROPUESTA ############ */
+button {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsla(0, 0%, 0%, 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(to left, #eb7927 0%, #f87a20 8%, #f87a20 92%, #eb7927 100%);
+}
+
+.front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: #ec741d;
+  will-change: transform;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+button:hover .front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+button:active .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+button:hover .shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+button:active .shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ########### FIN PAG SERVICIOS ########### */
+/* ############ MEDIA QUERYS ################ */
+/* Condición: para vistas HASTA 600px */
+@media screen and (max-width: 600px) {
+  /* pag servicios */
+  .servicioContainer {
+    flex-direction: column;
+  }
+  .servicios {
+    width: 80%;
+  }
+}
+/* ########## FIN MEDIA QUERYS ############### */
+/* ################ FOOTER ################ */
+#footer {
+  background-color: #ec741d;
+  background-size: cover;
+}
+
+/* custom clase bootstrap */
+.row {
+  margin-right: 0;
+  row-gap: 25px;
+}
+
+.rowFooter {
+  row-gap: 0;
+}
+
+/* logo del footer mas grande */
+.logoBigger {
+  width: 150px;
+  height: 150px;
+}
+
+.logoFooterContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerContainerNoIndex {
+  padding: 15px 0;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+div.logoFooterContainer {
+  height: 100%;
+}
+
+.logoFooter {
+  width: 50px;
+  height: 50px;
+}
+
+/* custom clase bootstrap */
+div.col-4 {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.irArribaContainer {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: start;
+  align-items: start;
+  justify-content: start;
+  justify-items: start;
+}
+
+.footerText {
+  margin-top: 20px;
+  color: #000000;
+}
+
+.paddingBottom10,
+#footer div h4 {
+  padding-bottom: 10px;
+}
+
+/* borde izquierdo en footer */
+.borderLeft {
+  border-left: solid 1px black;
+  padding-left: 50px;
+}
+
+/* links comunicate con nosotros */
+div.aContainer {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: start;
+  align-items: start;
+  justify-items: end;
+}
+
+/* clase para los a del footer*/
+.links {
+  text-decoration: none;
+  color: black;
+}
+
+/* iconos de las redes en el footer */
+.iconos {
+  display: flex;
+  width: 30px;
+  height: 30px;
+}
+
+/* derechos de autor iconos footer */
+.derechos {
+  color: white;
+  margin-top: 20px;
+}
+
+/* comodin */
+.inline {
+  display: inline;
+}
+
+/* ############## FIN FOOTER ############## */
+/* ############ MEDIA QUERYS ################ */
+/* Condición: para vistas HASTA 600px */
+@media screen and (max-width: 600px) {
+  /* footer: los botones que se dispongan en columnas en lugar de fila */
+  .botones-container {
+    flex-direction: column;
+    margin-right: 30px;
+    /* justify-content: start; */
+  }
+}
+@media screen and (max-width: 767px) {
+  /* footer: cambio a borde superior en lugar de borde izquierdo */
+  /* aumento separación entre filas*/
+  .borderTop {
+    border-left: none;
+    border-top: solid 1px black;
+  }
+  .borderLeft {
+    padding-left: 10px;
+  }
+  .logoBigger {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+/* ########## FIN MEDIA QUERYS ############### */
+/* ############## FORM #################### */
+.formulario {
+  background-color: #ec741d;
+  background-size: contain;
+  background-position: center;
+  /* width: 400px; */
+}
+
+.formulario div {
+  padding: 5px;
+}
+
+/* ############# INPUT IMPORTADO ############# */
+/* https://uiverse.io/eslam-hany/strange-goose-48#fromHistory */
+.input {
+  padding: 10px;
+  height: 40px;
+  border: 2px solid #0B2447;
+  border-top: none;
+  border-bottom: none;
+  font-size: 16px;
+  background: white;
+  outline: none;
+  box-shadow: 7px 7px 0px 0px #0B2447;
+  transition: all 0.5s;
+}
+
+.input:focus {
+  box-shadow: none;
+  transition: all 0.5s;
+}
+
+.label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #0B2447;
+  transition: all 0.5s;
+  transform: scale(0);
+  z-index: -1;
+}
+
+.input-container .topline {
+  position: absolute;
+  content: "";
+  background-color: #0B2447;
+  width: 0%;
+  height: 2px;
+  right: 0;
+  top: 0;
+  transition: all 0.5s;
+}
+
+.input-container input[type=text]:focus ~ .topline {
+  width: 35%;
+  transition: all 0.5s;
+}
+
+.input-container .underline {
+  position: absolute;
+  content: "";
+  background-color: #0B2447;
+  width: 0%;
+  height: 2px;
+  right: 0;
+  bottom: 0;
+  transition: all 0.5s;
+}
+
+.input-container input[type=text]:focus ~ .underline {
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.input-container input[type=text]:focus ~ .label {
+  top: -10px;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+
+.form {
+  --width-of-input: 200px;
+  --border-height: 1px;
+  --border-before-color: rgb(255, 255, 255);
+  --border-after-color: #ec741d;
+  --input-hovered-color: #4985e01f;
+  position: relative;
+  width: var(--width-of-input);
+}
+
+/* styling of Input */
+.input {
+  color: #000000;
+  font-size: 0.9rem;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  box-sizing: border-box;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+  border-bottom: var(--border-height) solid var(--border-before-color);
+}
+
+/* styling of animated border */
+.input-border {
+  position: absolute;
+  background: var(--border-after-color);
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s;
+}
+
+/* Hover on Input */
+input:hover {
+  /* background: var(--input-hovered-color); */
+  background: white;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* here is code of animated border */
+input:focus ~ .input-border {
+  width: 100%;
+}
+
+/* ########### FIN INPUT IMPORTADO ########### */
+/* ############## Botón "ROSA" ############## */
+/* botones importados de uiverse.io*/
+/* https://uiverse.io/Madflows/terrible-catfish-72 */
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  /* font-family: inherit; */
+  font-family: "Chivo Mono", monospace;
+  font-family: "Varela Round", sans-serif;
+  font-size: 15px;
+}
+
+button.learn-more {
+  font-weight: 600;
+  color: #07022e;
+  text-transform: uppercase;
+  padding: 1.25em 2em;
+  /* background: #fff0f0; */
+  background: white;
+  border: 2px solid #b18597;
+  border-radius: 0.75em;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button.learn-more::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  border-radius: inherit;
+  -webkit-box-shadow: 0 0 0 2px rgba(73, 133, 224, 0.1215686275), 0 0.625em 0 0 #ffe3e2;
+  box-shadow: 0 0 0 2px rgba(73, 133, 224, 0.1215686275), 0 0.625em 0 0 #ec741d;
+  -webkit-transform: translate3d(0, 0.75em, -1em);
+  transform: translate3d(0, 0.75em, -1em);
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button.learn-more:hover {
+  background: white;
+  -webkit-transform: translate(0, 0.25em);
+  transform: translate(0, 0.25em);
+}
+
+button.learn-more:hover::before {
+  -webkit-box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #e2ffe7;
+  box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ec741d;
+  -webkit-transform: translate3d(0, 0.5em, -1em);
+  transform: translate3d(0, 0.5em, -1em);
+}
+
+button.learn-more:active {
+  background: #ffe9e9;
+  -webkit-transform: translate(0em, 0.75em);
+  transform: translate(0em, 0.75em);
+}
+
+button.learn-more:active::before {
+  -webkit-box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+  box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+  -webkit-transform: translate3d(0, 0, -1em);
+  transform: translate3d(0, 0, -1em);
+}
+
+/* ############ FIN Botón "ROSA" ############ */
+/* CUADRO DE TEXTO IMPORTADO */
+/* https://uiverse.io/ahmed150up/chilly-rattlesnake-8 */
+.card {
+  width: 260px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat-header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  font-size: 18px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.chat-window {
+  height: 220px;
+  overflow-y: scroll;
+}
+
+.message-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.message-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.send-button {
+  border: none;
+  outline: none;
+  background-color: #333;
+  color: #fff;
+  font-size: 14px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* input text area */
+.textArea {
+  padding: 10px;
+  border-top: none;
+  border-bottom: none;
+  font-size: 16px;
+  background: white;
+  outline: none;
+  resize: none;
+  box-shadow: 7px 7px 0px 0px #0B2447;
+  transition: all 0.5s;
+}
+
+.textArea:focus {
+  box-shadow: none;
+  transition: all 0.5s;
+}
+
+/* ############## FIN FORM ################## */
+.nosotrosContainer {
+  align-items: flex-start;
+}
+
+.nosotros {
+  font-size: x-large;
+  margin-left: 20px;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: center;
+}
+
+/* cursor arriba del accodion */
+.cursor {
+  width: 50px;
+  height: 50px;
+}
+
+/* ############### ACCORDION ############### */
+/* acordeon / accordion custom colores bootstrap index */
+.accordion-button:not(.collapsed) {
+  background-color: #ec741d;
+  --bs-accordion-btn-focus-box-shadow: white;
+  color: black;
+}
+
+.accordion-button:focus {
+  border: solid 3px #ec741d;
+  --bs-accordion-btn-focus-box-shadow: white;
+}
+
+/* ########### FIN ACCORDION ############ */
+/* ############## VIDEOS ################ */
+.videoContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.videos {
+  height: 500px;
+  width: auto;
+}
+
+/* ############ FIN VIDEOS ############## */
+
+/*# sourceMappingURL=style.csss.map */
