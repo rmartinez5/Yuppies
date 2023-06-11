@@ -1,0 +1,37 @@
+.nosotrosContainer{
+    align-items: flex-start;
+}
+
+.nosotros{
+    font-size: x-large;
+    margin-left: 20px;
+}
+
+.flexContainer{
+    display: flex;
+    justify-content: center;
+}
+
+/* cursor arriba del accodion */
+.cursor{
+    width: 50px;
+    height: 50px;
+}
+/* ############### ACCORDION ############### */
+/* acordeon / accordion custom colores bootstrap index */
+.accordion-button:not(.collapsed) {
+    background-color: #ec741d;
+    --bs-accordion-btn-focus-box-shadow: white;
+    color: black;
+}
+
+.accordion-button:focus {
+    border: solid 3px #ec741d;
+    --bs-accordion-btn-focus-box-shadow: white;
+}
+/* ########### FIN ACCORDION ############ */
+
+.videos{
+    height: 500px;
+    width: auto;
+}

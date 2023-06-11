@@ -5,7 +5,6 @@ window.onload = function(){
     // $('#nav').addClass('fixed');
     $('body').removeClass('hidden');
     $('#navBar').removeClass('hidden');
-
 }
 
 // SCROLL down: no navbar
@@ -34,7 +33,7 @@ function loadNow(opacity){
     else{
         loader.style.opacity = opacity;
         window.setTimeout(function(){
-            loadNow(opacity - 0.05)
+            loadNow(opacity - 0.03)
         },100);
     }
 }

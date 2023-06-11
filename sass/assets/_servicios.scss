@@ -1,9 +1,4 @@
 /* ############# PAG SERVICIOS ############# */
-.lista li{
-    padding-left: 20px;
-    list-style: inside;
-}
-
 .botones-container{
     display: flex;
 }
@@ -13,6 +8,20 @@
     justify-content: center;
     column-gap: 10px;
 }
+
+.servicios{
+    height: 500px;
+}
+
+.agrandar{
+    transition: transform 2s;
+}
+
+.agrandar:hover{
+    transform: scale(1.1);
+    /* se puede agregar mas de un transform a un elemento, poniendo espacio */
+}
+
 /* ########### FIN PAG SERVICIOS ########### */
 
 /* ############ MEDIA QUERYS ################ */

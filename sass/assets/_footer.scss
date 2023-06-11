@@ -28,8 +28,11 @@
 
 .footerContainerNoIndex{
     padding: 15px 0;
+    display: flex;
+    justify-items: center;
     justify-content: center;
     align-items: center;
+    align-content: center;
 }
 
 div.logoFooterContainer{
@@ -119,13 +122,23 @@ div.aContainer{
         margin-right: 30px;
         /* justify-content: start; */
     }
+}
 
-    /* footer: cambio a borde superior en lugar de borde izquierdo */
+@media screen and (max-width: 767px){
+     /* footer: cambio a borde superior en lugar de borde izquierdo */
     /* aumento separación entre filas*/
     .borderTop{
         border-left: none;
         border-top: solid 1px black;
-        margin-top: 20px;
+        // margin-top: 20px;
+    }
+    .borderLeft{
+        padding-left: 10px;
+    }
+
+    .logoBigger{
+        padding-bottom: 0;
+        margin-bottom: 0;
     }
 }
 /* ########## FIN MEDIA QUERYS ############### */

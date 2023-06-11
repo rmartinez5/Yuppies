@@ -15,7 +15,7 @@
   height: 100vh;
   z-index: 1;
   overflow: visible;
-  background: white url(../imgs/gifs/sharksLoader.gif) no-repeat center center;
+  background: white url(/imgs/gifs/puntitosLoading3.gif) no-repeat center center;
 }
 
 /* durante el loader, que oculte el contenido de la página */
@@ -30,6 +30,11 @@
   height: 50px;
 }
 
+.logoTitulo {
+  width: 100px;
+  height: 100px;
+}
+
 .imagenMain {
   top: 10px;
   box-shadow: 0 0 15px #383838;
@@ -39,7 +44,8 @@
   background-color: #ec741d;
   display: flex;
   justify-content: center;
-  padding: 40px;
+  padding-top: 40px;
+  padding-bottom: 25px;
 }
 
 /* navbar: cambio el color de bootstrap */
@@ -81,6 +87,109 @@
 }
 
 /* ############ FIN DE HEADER ############ */
+/* ############ BOTON DESCARGA ############ */
+button {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsla(0, 0%, 0%, 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(to left, #eb7927 0%, #f87a20 8%, #f87a20 92%, #eb7927 100%);
+}
+
+.front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: #ec741d;
+  will-change: transform;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+button:hover .front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+button:active .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+button:hover .shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+button:active .shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.contenedor {
+  position: relative;
+  height: 290px;
+  width: 290px;
+  margin: 50px 20px;
+  float: left;
+}
+
+.contenedor img {
+  position: absolute;
+  left: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.contenedor img.top:hover {
+  opacity: 0;
+}
+
+.skew {
+  transition: transform 1s;
+}
+
+.skew:hover {
+  transform: skew(-1deg);
+}
+
 /* ############# CONFIG GRAL ############# */
 /* TEXTOS */
 h1 {
@@ -109,10 +218,6 @@ p {
 
 .black {
   color: #000000;
-}
-
-.centerText {
-  text-align: center;
 }
 
 .cursiva {
@@ -219,6 +324,10 @@ p {
   margin-top: 20px;
 }
 
+.marginTop30 {
+  margin-top: 30px;
+}
+
 .marginTop50 {
   margin-top: 50px;
 }
@@ -240,27 +349,7 @@ p {
 }
 
 /* FIN MARGIN */
-/* cursor arriba del accodion */
-.cursor {
-  width: 50px;
-  height: 50px;
-}
-
 /* ########### FIN CONFIG GRAL ########### */
-/* ############### ACCORDION ############### */
-/* acordeon / accordion custom colores bootstrap index */
-.accordion-button:not(.collapsed) {
-  background-color: #ec741d;
-  --bs-accordion-btn-focus-box-shadow: white;
-  color: black;
-}
-
-.accordion-button:focus {
-  border: solid 3px #ec741d;
-  --bs-accordion-btn-focus-box-shadow: white;
-}
-
-/* ########### FIN ACCORDION ############ */
 /* ############## VIDEOS ################ */
 .videoContainer {
   display: flex;
@@ -319,11 +408,6 @@ div.carousel-item.active {
 /* FIN CAROUSEL */
 /* ######### FIN PAG AUTOGESTION ########### */
 /* ############# PAG SERVICIOS ############# */
-.lista li {
-  padding-left: 20px;
-  list-style: inside;
-}
-
 .botones-container {
   display: flex;
 }
@@ -332,6 +416,19 @@ div.carousel-item.active {
   display: flex;
   justify-content: center;
   column-gap: 10px;
+}
+
+.servicios {
+  height: 500px;
+}
+
+.agrandar {
+  transition: transform 2s;
+}
+
+.agrandar:hover {
+  transform: scale(1.1);
+  /* se puede agregar mas de un transform a un elemento, poniendo espacio */
 }
 
 /* ########### FIN PAG SERVICIOS ########### */
@@ -374,8 +471,11 @@ div.carousel-item.active {
 
 .footerContainerNoIndex {
   padding: 15px 0;
+  display: flex;
+  justify-items: center;
   justify-content: center;
   align-items: center;
+  align-content: center;
 }
 
 div.logoFooterContainer {
@@ -464,12 +564,20 @@ div.aContainer {
     margin-right: 30px;
     /* justify-content: start; */
   }
+}
+@media screen and (max-width: 767px) {
   /* footer: cambio a borde superior en lugar de borde izquierdo */
   /* aumento separación entre filas*/
   .borderTop {
     border-left: none;
     border-top: solid 1px black;
-    margin-top: 20px;
+  }
+  .borderLeft {
+    padding-left: 10px;
+  }
+  .logoBigger {
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
 }
 /* ########## FIN MEDIA QUERYS ############### */
@@ -760,5 +868,43 @@ button.learn-more:active::before {
 }
 
 /* ############## FIN FORM ################## */
+.nosotrosContainer {
+  align-items: flex-start;
+}
+
+.nosotros {
+  font-size: x-large;
+  margin-left: 20px;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: center;
+}
+
+/* cursor arriba del accodion */
+.cursor {
+  width: 50px;
+  height: 50px;
+}
+
+/* ############### ACCORDION ############### */
+/* acordeon / accordion custom colores bootstrap index */
+.accordion-button:not(.collapsed) {
+  background-color: #ec741d;
+  --bs-accordion-btn-focus-box-shadow: white;
+  color: black;
+}
+
+.accordion-button:focus {
+  border: solid 3px #ec741d;
+  --bs-accordion-btn-focus-box-shadow: white;
+}
+
+/* ########### FIN ACCORDION ############ */
+.videos {
+  height: 500px;
+  width: auto;
+}
 
 /*# sourceMappingURL=style.css.map */
