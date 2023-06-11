@@ -183,11 +183,6 @@ p{
     padding: 0;
     box-shadow: 0 0 10px rgb(39, 41, 37);
 }
-
-.offerContainer{
-    display: flex;
-    justify-content: center;
-}
   /* FIN IMÁGENES */
 
   /* PADDING */
@@ -275,7 +270,7 @@ p{
 /* FIN MARGIN */
 /* ########### FIN CONFIG GRAL ########### */
 
-
+/* ########### CONTAINERS ########### */
 .imagesContainer{
     display: flex;
     justify-content: center;
@@ -287,11 +282,9 @@ p{
 .ContainerNews{
     display: flex;
     flex-direction: row;
-    // justify-content: center;
-    // justify-items: center;
-    // align-items: center;
-    // align-content: center;
 }
+/* ######### FIN CONTAINERS ######### */
+
 
 /* ############ MEDIA QUERYS ################ */
 /* Condición: para vistas HASTA 600px */
@@ -326,18 +319,6 @@ p{
 
     .ContainerNews{
         flex-direction: column;
-        // justify-content: center;
-        // justify-items: center;
-        // align-content: center;
     }
 }
-
-// @media (min-width: 576px){
-//     .ContainerNews{
-//         flex-direction: column;
-//         justify-content: center;
-//         justify-items: center;
-//         align-content: center;
-//     }
-// }
 /* ########## FIN MEDIA QUERYS ############### */

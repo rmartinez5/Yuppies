@@ -182,11 +182,6 @@ p {
   box-shadow: 0 0 10px rgb(39, 41, 37);
 }
 
-.offerContainer {
-  display: flex;
-  justify-content: center;
-}
-
 /* FIN IMÁGENES */
 /* PADDING */
 .padding10 {
@@ -273,6 +268,7 @@ p {
 
 /* FIN MARGIN */
 /* ########### FIN CONFIG GRAL ########### */
+/* ########### CONTAINERS ########### */
 .imagesContainer {
   display: flex;
   justify-content: center;
@@ -286,6 +282,7 @@ p {
   flex-direction: row;
 }
 
+/* ######### FIN CONTAINERS ######### */
 /* ############ MEDIA QUERYS ################ */
 /* Condición: para vistas HASTA 600px */
 @media screen and (max-width: 600px) {
