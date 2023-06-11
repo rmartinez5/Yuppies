@@ -84,95 +84,6 @@
 }
 /* ############ FIN DE HEADER ############ */
 
-/* ############ BOTON DESCARGA ############ */
-button {
-    position: relative;
-    border: none;
-    background: transparent;
-    padding: 0;
-    cursor: pointer;
-    outline-offset: 4px;
-    transition: filter 250ms;
-    user-select: none;
-    touch-action: manipulation;
-}
-.shadow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    background: hsl(0deg 0% 0% / 0.25);
-    will-change: transform;
-    transform: translateY(2px);
-    transition: transform
-    600ms
-    cubic-bezier(.3, .7, .4, 1);
-}
-
-.edge {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    background: linear-gradient(
-    to left,
-        #eb7927 0%,
-        #f87a20 8%,
-        #f87a20 92%,
-        #eb7927 100%
-    );
-}
-
-.front {
-    display: block;
-    position: relative;
-    padding: 12px 27px;
-    border-radius: 12px;
-    font-size: 1.1rem;
-    color: white;
-    background: #ec741d;
-    will-change: transform;
-    transform: translateY(-4px);
-    transition: transform
-        600ms
-        cubic-bezier(.3, .7, .4, 1);
-}
-
-button:hover {
-    filter: brightness(110%);
-}
-
-button:hover .front {
-    transform: translateY(-6px);
-    transition: transform
-        250ms
-        cubic-bezier(.3, .7, .4, 1.5);
-}
-
-button:active .front {
-    transform: translateY(-2px);
-    transition: transform 34ms;
-}
-
-button:hover .shadow {
-    transform: translateY(4px);
-    transition: transform
-        250ms
-        cubic-bezier(.3, .7, .4, 1.5);
-}
-
-button:active .shadow {
-    transform: translateY(1px);
-    transition: transform 34ms;
-}
-
-button:focus:not(:focus-visible) {
-    outline: none;
-}
 
 // imagen wapp hover
 .contenedor {
@@ -193,7 +104,7 @@ button:focus:not(:focus-visible) {
     opacity: 0;
 }
 
-// animación
+// animación 
 .skew{
     // margin-top: 10px;
     transition: transform 1s;
@@ -224,6 +135,10 @@ h3{
 
 p{
     margin-bottom: 0;
+}
+
+.textoNews{
+    font-size: x-large;
 }
 
 .orange{
@@ -269,14 +184,6 @@ p{
     box-shadow: 0 0 10px rgb(39, 41, 37);
 }
 
-.imagesContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    row-gap: 20px;
-}
-
 .offerContainer{
     display: flex;
     justify-content: center;
@@ -314,6 +221,10 @@ p{
 /* FIN PADDING */
 
 /* MARGIN */
+.margin10{
+    margin: 10px;
+}
+
 .margin20{
     margin: 20px;
 }
@@ -365,13 +276,22 @@ p{
 /* ########### FIN CONFIG GRAL ########### */
 
 
-/* ############## VIDEOS ################ */
-.videoContainer{
+.imagesContainer{
     display: flex;
     justify-content: center;
+    align-items: center;
+    align-content: center;
+    row-gap: 20px;
 }
 
-/* ############ FIN VIDEOS ################ */
+.ContainerNews{
+    display: flex;
+    flex-direction: row;
+    // justify-content: center;
+    // justify-items: center;
+    // align-items: center;
+    // align-content: center;
+}
 
 /* ############ MEDIA QUERYS ################ */
 /* Condición: para vistas HASTA 600px */
@@ -403,5 +323,21 @@ p{
     .marginTop100{
         margin-top: 70px;
     }
+
+    .ContainerNews{
+        flex-direction: column;
+        // justify-content: center;
+        // justify-items: center;
+        // align-content: center;
+    }
 }
+
+// @media (min-width: 576px){
+//     .ContainerNews{
+//         flex-direction: column;
+//         justify-content: center;
+//         justify-items: center;
+//         align-content: center;
+//     }
+// }
 /* ########## FIN MEDIA QUERYS ############### */

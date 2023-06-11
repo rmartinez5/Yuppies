@@ -87,7 +87,283 @@
 }
 
 /* ############ FIN DE HEADER ############ */
-/* ############ BOTON DESCARGA ############ */
+.contenedor {
+  position: relative;
+  height: 290px;
+  width: 290px;
+  margin: 50px 20px;
+  float: left;
+}
+
+.contenedor img {
+  position: absolute;
+  left: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.contenedor img.top:hover {
+  opacity: 0;
+}
+
+.skew {
+  transition: transform 1s;
+}
+
+.skew:hover {
+  transform: skew(-1deg);
+}
+
+/* ############# CONFIG GRAL ############# */
+/* TEXTOS */
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 20px;
+  padding: 10px;
+  top: 0;
+}
+
+h3 {
+  padding-right: 0;
+  margin-right: 0;
+  top: 0;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.textoNews {
+  font-size: x-large;
+}
+
+.orange {
+  color: #ec741d;
+}
+
+.black {
+  color: #000000;
+}
+
+.cursiva {
+  font-style: oblique;
+}
+
+.negrita {
+  font-weight: bold;
+}
+
+.alineaIzq {
+  text-align: start;
+}
+
+/* FIN TEXTOS */
+/* IMÁGENES */
+.cotaImagenSection {
+  height: 500px;
+  width: 280px;
+}
+
+.imagenResponsive {
+  max-width: 100%;
+  height: auto;
+}
+
+/* achicar imágenes en forma proporcional */
+.scaled-8 {
+  transform: scale(0.8);
+  /* Igual que: scaleX(0.5) scaleY(0.5) */
+}
+
+.imageBorder {
+  padding: 0;
+  box-shadow: 0 0 10px rgb(39, 41, 37);
+}
+
+.offerContainer {
+  display: flex;
+  justify-content: center;
+}
+
+/* FIN IMÁGENES */
+/* PADDING */
+.padding10 {
+  padding: 10px;
+}
+
+.padding20 {
+  padding: 20px;
+}
+
+.padding0100 {
+  padding: 0 100px;
+}
+
+.paddingTop10 {
+  padding-top: 10;
+}
+
+.paddingTop20 {
+  padding-top: 20;
+}
+
+.paddingBottom10 {
+  padding-bottom: 10px;
+}
+
+.paddingBottom20 {
+  padding-bottom: 20px;
+}
+
+/* FIN PADDING */
+/* MARGIN */
+.margin10 {
+  margin: 10px;
+}
+
+.margin20 {
+  margin: 20px;
+}
+
+.marginLeft20 {
+  margin-left: 20px;
+}
+
+.marginLeft50 {
+  margin-left: 50px;
+}
+
+.margin050 {
+  margin: 0 50px;
+}
+
+.marginTop10 {
+  margin-top: 10px;
+}
+
+.marginTop20 {
+  margin-top: 20px;
+}
+
+.marginTop30 {
+  margin-top: 30px;
+}
+
+.marginTop50 {
+  margin-top: 50px;
+}
+
+.marginTop70 {
+  margin-top: 70px;
+}
+
+.marginTop100 {
+  margin-top: 100px;
+}
+
+.marginBottom20 {
+  margin-bottom: 20px;
+}
+
+.marginBottom50 {
+  margin-bottom: 50px;
+}
+
+/* FIN MARGIN */
+/* ########### FIN CONFIG GRAL ########### */
+.imagesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  row-gap: 20px;
+}
+
+.ContainerNews {
+  display: flex;
+  flex-direction: row;
+}
+
+/* ############ MEDIA QUERYS ################ */
+/* Condición: para vistas HASTA 600px */
+@media screen and (max-width: 600px) {
+  /* navbar: que no se vea el logo*/
+  header nav .logoHeader {
+    display: none;
+  }
+  /* navbar: aunque el logo no se muestre, quedaba un margin extra debido a este elemento, así que lo compenso con un margin negativo */
+  .navbar {
+    margin-left: -10px;
+  }
+  /* navbar: achico la fuente para que quede en una sola fila */
+  .fuenteMobile {
+    font-size: 12px;
+  }
+  /* navbar: que haya menos margen/separacion entre los elementos */
+  .navbar div,
+  .navbar a {
+    display: flex;
+    margin: 0;
+  }
+  /* los titulos de las páginas tienen un margen de 100 en desktop.
+  En mobile, como navbar mas chico, hay más separación, achico un poco */
+  .marginTop100 {
+    margin-top: 70px;
+  }
+  .ContainerNews {
+    flex-direction: column;
+  }
+}
+/* ########## FIN MEDIA QUERYS ############### */
+/* ########### PAG AUTOGESTION ############ */
+/* CAROUSEL */
+/* el fondo es blanco, los botones no se ven, así que invierto sus colores*/
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  filter: invert(108%);
+}
+
+div.carousel-item.active {
+  padding-top: 0;
+  margin-top: 0;
+  /* background-color: #ec741d; */
+}
+
+/* ME QUEDA MUCHO MARGEN entre la imagen y container */
+/* CORREGIR */
+.carouselContainer {
+  padding: 0;
+  box-shadow: 0 0 10px rgb(39, 41, 37);
+}
+
+/* FIN CAROUSEL */
+/* ######### FIN PAG AUTOGESTION ########### */
+/* ############# PAG SERVICIOS ############# */
+.botones-container {
+  display: flex;
+}
+
+.servicioContainer {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+.servicios {
+  height: 500px;
+}
+
+.agrandar {
+  transition: transform 2s;
+}
+
+.agrandar:hover {
+  transform: scale(1.1);
+  /* se puede agregar mas de un transform a un elemento, poniendo espacio */
+}
+
+/* ############ BOTON DESCARGA PROPUESTA ############ */
 button {
   position: relative;
   border: none;
@@ -162,273 +438,6 @@ button:active .shadow {
 
 button:focus:not(:focus-visible) {
   outline: none;
-}
-
-.contenedor {
-  position: relative;
-  height: 290px;
-  width: 290px;
-  margin: 50px 20px;
-  float: left;
-}
-
-.contenedor img {
-  position: absolute;
-  left: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.contenedor img.top:hover {
-  opacity: 0;
-}
-
-.skew {
-  transition: transform 1s;
-}
-
-.skew:hover {
-  transform: skew(-1deg);
-}
-
-/* ############# CONFIG GRAL ############# */
-/* TEXTOS */
-h1 {
-  font-size: 30px;
-}
-
-h2 {
-  font-size: 20px;
-  padding: 10px;
-  top: 0;
-}
-
-h3 {
-  padding-right: 0;
-  margin-right: 0;
-  top: 0;
-}
-
-p {
-  margin-bottom: 0;
-}
-
-.orange {
-  color: #ec741d;
-}
-
-.black {
-  color: #000000;
-}
-
-.cursiva {
-  font-style: oblique;
-}
-
-.negrita {
-  font-weight: bold;
-}
-
-.alineaIzq {
-  text-align: start;
-}
-
-/* FIN TEXTOS */
-/* IMÁGENES */
-.cotaImagenSection {
-  height: 500px;
-  width: 280px;
-}
-
-.imagenResponsive {
-  max-width: 100%;
-  height: auto;
-}
-
-/* achicar imágenes en forma proporcional */
-.scaled-8 {
-  transform: scale(0.8);
-  /* Igual que: scaleX(0.5) scaleY(0.5) */
-}
-
-.imageBorder {
-  padding: 0;
-  box-shadow: 0 0 10px rgb(39, 41, 37);
-}
-
-.imagesContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  row-gap: 20px;
-}
-
-.offerContainer {
-  display: flex;
-  justify-content: center;
-}
-
-/* FIN IMÁGENES */
-/* PADDING */
-.padding10 {
-  padding: 10px;
-}
-
-.padding20 {
-  padding: 20px;
-}
-
-.padding0100 {
-  padding: 0 100px;
-}
-
-.paddingTop10 {
-  padding-top: 10;
-}
-
-.paddingTop20 {
-  padding-top: 20;
-}
-
-.paddingBottom10 {
-  padding-bottom: 10px;
-}
-
-.paddingBottom20 {
-  padding-bottom: 20px;
-}
-
-/* FIN PADDING */
-/* MARGIN */
-.margin20 {
-  margin: 20px;
-}
-
-.marginLeft20 {
-  margin-left: 20px;
-}
-
-.marginLeft50 {
-  margin-left: 50px;
-}
-
-.margin050 {
-  margin: 0 50px;
-}
-
-.marginTop10 {
-  margin-top: 10px;
-}
-
-.marginTop20 {
-  margin-top: 20px;
-}
-
-.marginTop30 {
-  margin-top: 30px;
-}
-
-.marginTop50 {
-  margin-top: 50px;
-}
-
-.marginTop70 {
-  margin-top: 70px;
-}
-
-.marginTop100 {
-  margin-top: 100px;
-}
-
-.marginBottom20 {
-  margin-bottom: 20px;
-}
-
-.marginBottom50 {
-  margin-bottom: 50px;
-}
-
-/* FIN MARGIN */
-/* ########### FIN CONFIG GRAL ########### */
-/* ############## VIDEOS ################ */
-.videoContainer {
-  display: flex;
-  justify-content: center;
-}
-
-/* ############ FIN VIDEOS ################ */
-/* ############ MEDIA QUERYS ################ */
-/* Condición: para vistas HASTA 600px */
-@media screen and (max-width: 600px) {
-  /* navbar: que no se vea el logo*/
-  header nav .logoHeader {
-    display: none;
-  }
-  /* navbar: aunque el logo no se muestre, quedaba un margin extra debido a este elemento, así que lo compenso con un margin negativo */
-  .navbar {
-    margin-left: -10px;
-  }
-  /* navbar: achico la fuente para que quede en una sola fila */
-  .fuenteMobile {
-    font-size: 12px;
-  }
-  /* navbar: que haya menos margen/separacion entre los elementos */
-  .navbar div,
-  .navbar a {
-    display: flex;
-    margin: 0;
-  }
-  /* los titulos de las páginas tienen un margen de 100 en desktop.
-  En mobile, como navbar mas chico, hay más separación, achico un poco */
-  .marginTop100 {
-    margin-top: 70px;
-  }
-}
-/* ########## FIN MEDIA QUERYS ############### */
-/* ########### PAG AUTOGESTION ############ */
-/* CAROUSEL */
-/* el fondo es blanco, los botones no se ven, así que invierto sus colores*/
-.carousel-control-prev-icon, .carousel-control-next-icon {
-  filter: invert(108%);
-}
-
-div.carousel-item.active {
-  padding-top: 0;
-  margin-top: 0;
-  /* background-color: #ec741d; */
-}
-
-/* ME QUEDA MUCHO MARGEN entre la imagen y container */
-/* CORREGIR */
-.carouselContainer {
-  padding: 0;
-  box-shadow: 0 0 10px rgb(39, 41, 37);
-}
-
-/* FIN CAROUSEL */
-/* ######### FIN PAG AUTOGESTION ########### */
-/* ############# PAG SERVICIOS ############# */
-.botones-container {
-  display: flex;
-}
-
-.servicioContainer {
-  display: flex;
-  justify-content: center;
-  column-gap: 10px;
-}
-
-.servicios {
-  height: 500px;
-}
-
-.agrandar {
-  transition: transform 2s;
-}
-
-.agrandar:hover {
-  transform: scale(1.1);
-  /* se puede agregar mas de un transform a un elemento, poniendo espacio */
 }
 
 /* ########### FIN PAG SERVICIOS ########### */
@@ -902,9 +911,17 @@ button.learn-more:active::before {
 }
 
 /* ########### FIN ACCORDION ############ */
+/* ############## VIDEOS ################ */
+.videoContainer {
+  display: flex;
+  justify-content: center;
+}
+
 .videos {
   height: 500px;
   width: auto;
 }
+
+/* ############ FIN VIDEOS ############## */
 
 /*# sourceMappingURL=style.css.map */
