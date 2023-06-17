@@ -24,6 +24,7 @@
     <div id="loader"></div>
     <!-- FIN DEL LOADER -->
     <header id="inicio">
+        <!-- navbar de bootstrap -->
         <nav class="navbar fixed-top navbar-light navColor navShadow" id="navBar">
             <div><a href="#footer"><img src="./imgs/logoRedondo.png" alt="yuppies" class="logoHeader"></a></div>
             <a class="navbar-brand navAEffect fuenteMobile" href="#inicio">Inicio</a>
@@ -32,10 +33,40 @@
             <a class="navbar-brand navAEffect fuenteMobile" href="./pages/autogestion.html">Autogestión</a>
             <a class="navbar-brand navAEffect fuenteMobile" href="./pages/contacto.html">Contacto</a>
         </nav>
-        <div class="imagenMainContainer marginTop50">
-            <img src="./imgs/logoYuppies.png" alt="yuppies" class="logoBigger">
-        </div>
     <header>
+
+    <div id="carouselExampleIndicators" class="carousel slide marginTop30 marginTop0" data-bs-ride="true">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <video class="img-fluid d-block w-100" autoplay loop>
+                    <source src="./media/auditoresEspecialistas.mp4" type="">
+                </video>
+            </div>
+            <div class="carousel-item">
+                <video class="img-fluid d-block w-100" autoplay loop>
+                    <source src="./media/stockEmpresa.mp4" type="">
+                </video>
+            </div>
+            <div class="carousel-item ">
+                <video class="img-fluid d-block w-100" autoplay loop>
+                    <source src="./media/necesidadesNegocio.mp4" type="">
+                </video>
+            </div>
+        </div> 
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
     <main id="content" class="marginTop30">
         <div class="container-fluid">
@@ -45,7 +76,7 @@
         </div>
     </main>
     
-    <section>
+    <!-- <section>
         <div class="container marginTop50">
             <div class="row imagesContainer">
                 <div class="col-12 col-sm-6 col-lg-6 col-xl-3">
@@ -64,9 +95,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <section>
+    <!-- <section>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 flexContainer">
@@ -91,7 +122,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <footer id="footer" class="marginTop50">
         <div class="container-fluid">
@@ -115,7 +146,7 @@
                     <!-- whatsapp -->
                     <div class="aContainer borderLeft borderTop">
                         <p class="negrita black paddingBottom10">Comunicate con nosotros:</p>
-                        <a href="https://api.whatsapp.com/send?phone=5493795180062&text=Hola%2C+quiero+obtener+m%C3%A1s+informaci%C3%B3n+de+Yuppies+" target="_blank" class="links block"> 
+                        <a href="https://api.whatsapp.com/send?phone=5493795180062&text=Hola.%20Quisiera%20coordinar%20una%20reuni%C3%B3n%20con%20Yuppies." target="_blank" class="links block"> 
                             <img src="./imgs/iconos/whatsapp1.png" alt="whatsapp" class="iconos inline"> +54 9 3795 18-0062
                         </a>
                         <a href="./pages/contacto.html" target="_blank" class="links block"> 

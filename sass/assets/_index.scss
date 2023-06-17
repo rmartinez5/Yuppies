@@ -301,4 +301,15 @@ p{
         flex-direction: column;
     }
 }
+
+@media screen and (min-width: 600px){
+    div.marginTop0{
+        margin-top: 50px;
+    }
+}
+@media screen and (min-width: 992px){
+    div.marginTop0{
+        margin-top: 0px;
+    }
+}
 /* ########## FIN MEDIA QUERYS ############### */
