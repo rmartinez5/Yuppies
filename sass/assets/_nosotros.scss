@@ -12,6 +12,28 @@
     justify-content: center;
 }
 
+
+.imagenMain{
+    top: 10px; 
+    box-shadow: 0 0 15px #383838;
+}
+
+.imagesContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    row-gap: 20px;
+}
+
+.imagenMainContainer{
+    background-color: #ec741d;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 25px;
+}
+
 /* cursor arriba del accodion */
 .cursor{
     width: 50px;

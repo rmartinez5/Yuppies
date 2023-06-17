@@ -10,10 +10,13 @@
     <!-- Cambio de ícono en chrome -->
     <link rel="shortcut icon" href="./imgs/iconos/yuppies-favicon-32x32.png" type="image/x-icon">
     <!-- Google Font: Montserrat -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital@1&family=Varela+Round&display=swap" rel="stylesheet">
+    <!-- link css iconos (wapp titilando, ubicacion) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- link https://michalsnik.github.io/aos/ -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- link bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">    
     <!-- link css -->
@@ -26,7 +29,7 @@
     <header id="inicio">
         <!-- navbar de bootstrap -->
         <nav class="navbar fixed-top navbar-light navColor navShadow" id="navBar">
-            <div><a href="#footer"><img src="./imgs/logoRedondo.png" alt="yuppies" class="logoHeader"></a></div>
+            <div><a href="#footer"><img src="./imgs/logoRedondoY.png" alt="yuppies" class="logoHeader"></a></div>
             <a class="navbar-brand navAEffect fuenteMobile" href="#inicio">Inicio</a>
             <a class="navbar-brand navAEffect fuenteMobile" href="./pages/nosotros.html">Nosotros</a>
             <a class="navbar-brand navAEffect fuenteMobile" href="./pages/servicios.html">Servicios</a>
@@ -76,53 +79,26 @@
         </div>
     </main>
     
-    <!-- <section>
+    <section>
         <div class="container marginTop50">
             <div class="row imagesContainer">
-                <div class="col-12 col-sm-6 col-lg-6 col-xl-3">
-                    <img src="./imgs/historias/control.jpg" alt="" class="cotaImagenSection imageBorder d-block mx-auto skew">
+                <div class="col-12 col-sm-12 col-lg-4 col-xl-4 separacion contenedorImgIndex" data-aos="zoom-out-right">
+                    <img src="./imgs/index/stock.jpeg" alt="stock" class="cotaImagenSection imageBorder imgIndex d-block mx-auto img-fluid">
                 </div>
-                <div class="col-12 col-sm-6 col-lg-6 col-xl-3">
-                    <img src="./imgs/historias/correcciones.jpg" alt="" class="cotaImagenSection imageBorder d-block mx-auto skew">
+                <div class="col-12 col-sm-12 col-lg-4 col-xl-4 separacion contenedorImgIndex" data-aos="zoom-out">
+                    <img src="./imgs/index/vencimientos.jpeg" alt="vencimientos" class="cotaImagenSection imageBorder imgIndex d-block mx-auto img-fluid">
                 </div>
-                <div class="col-12 col-sm-6 col-lg-6 col-xl-3">
-                    <img src="./imgs/historias/control2.jpg" alt="" class="cotaImagenSection imageBorder d-block mx-auto skew">
-                </div>
-                <div class="col-12 col-sm-6 col-lg-6 col-xl-3">
-                    <a href="https://api.whatsapp.com/send?phone=5493794278325&text=Hola%2C+quiero+obtener+m%C3%A1s+informaci%C3%B3n+de+Yuppies+" target="_blank" class="links block">                         
-                        <img src="./imgs/historias/contacto.jpg" alt="" class="text-center cotaImagenSection imageBorder d-block mx-auto skew">
-                    </a>
+                <div class="col-12 col-sm-12 col-lg-4 col-xl-4 separacion contenedorImgIndex" data-aos="zoom-out-left">
+                    <img src="./imgs/index/desvios.jpeg" alt="desvios" class="text-center cotaImagenSection imageBorder imgIndex d-block mx-auto img-fluid" >
                 </div>
             </div>
         </div>
-    </section> -->
-
-    <!-- <section>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 flexContainer">
-                    <img src="./imgs/gifs/breaking-news.gif" alt="breaking-news" class="img-fluid">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <p class="textoNews text-center negrita marginBottom20"> Adquirimos nuevas herramientas para brindarte un mejor servicio que cubra todas tus necesidades</p>
-                </div>
-            </div>
-            <div class="row ContainerNews">
-                <div class="col-12 col-sm-6 col-lg-6">
-                    <video class="marginBottom20 imageBorder ratio ratio-1x1 videos d-block mx-auto"controls controlslist="nodownload">
-                        <source src="./media/novedad1.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-6">
-                    <video class="marginBottom20 imageBorder ratio ratio-1x1 videos d-block mx-auto"controls controlslist="nodownload">
-                        <source src="./media/novedad2.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
+        <div id="whatsapp">
+            <a href="https://api.whatsapp.com/send?phone=5493795180062&text=Hola.%20Quisiera%20coordinar%20una%20reuni%C3%B3n%20con%20Yuppies." target="_blank" id="toggle1" class="whatsapp">
+                <i class="fa fa-whatsapp"></i>
+            </a>
         </div>
-    </section> -->
+    </section>
 
     <footer id="footer" class="marginTop50">
         <div class="container-fluid">
@@ -134,30 +110,32 @@
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 marginTop20">
                     <div class="irArribaContainer borderLeft borderTop">
-                        <a href="#inicio" class="links negrita paddingBottom10">Ir arriba ↑</a>
+                        <a href="#inicio" class="links negrita paddingBottom10 linkHover">Ir arriba ↑</a>
                         <p>Experto #PYME 🤓</p>
                         <p>🔍 #auditoriaExterna</p>
                         <p>🦺 #controlDeStock</p>
                         <p>📋 #inventario</p>
-                        <p>💡 #Mejora Continua</p>
+                        <p class="paddingBottom10">💡 #Mejora Continua</p>
+                        <a href="https://goo.gl/maps/gyCtmPWnL7RdACGd8" target="_blank" class="links ">
+                            <i class="fa fa-map-marker ubicacion negrita" aria-hidden="true"> <p class="inline black linkHover">Corrientes Capital</p></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-5 col-sm-12 marginTop20">
                     <!-- whatsapp -->
                     <div class="aContainer borderLeft borderTop">
                         <p class="negrita black paddingBottom10">Comunicate con nosotros:</p>
-                        <a href="https://api.whatsapp.com/send?phone=5493795180062&text=Hola.%20Quisiera%20coordinar%20una%20reuni%C3%B3n%20con%20Yuppies." target="_blank" class="links block"> 
+                        <a href="https://api.whatsapp.com/send?phone=5493795180062&text=Hola.%20Quisiera%20coordinar%20una%20reuni%C3%B3n%20con%20Yuppies." target="_blank" class="links block linkHover"> 
                             <img src="./imgs/iconos/whatsapp1.png" alt="whatsapp" class="iconos inline"> +54 9 3795 18-0062
                         </a>
-                        <a href="./pages/contacto.html" target="_blank" class="links block"> 
+                        <a href="./pages/contacto.html" target="_blank" class="links block linkHover"> 
                             <img src="./imgs/iconos/form6.png" alt="form" class="iconos inline"> Formulario web
                         </a>
                         <!-- email -->
-                        <a href="mailto:yuppies1930@gmail.com" target="_blank" class="links block"> 
+                        <a href="mailto:yuppiesge@gmail.com" target="_blank" class="links block linkHover"> 
                             <img src="./imgs/iconos/email6.png" alt="email" class="iconos inline"> yuppiesge@gmail.com
                         </a>
                         <!-- instagram -->
-                        <a href="https://www.instagram.com/yuppies1930/" target="_blank" class="links block"> 
+                        <a href="https://www.instagram.com/yuppies1930/" target="_blank" class="links block linkHover"> 
                             <img src="./imgs/iconos/instagram1.png" alt="instagram" class="iconos inline"> @yuppies1930
                         </a>
                     </div>
@@ -171,8 +149,14 @@
 
     <!-- js bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <!-- link https://michalsnik.github.io/aos/ -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <!-- jquery para scroll -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="./js/codigo.js"></script>
+    
 </body>
 </html>

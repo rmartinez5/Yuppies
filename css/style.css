@@ -26,8 +26,8 @@
 /* ############## HEADER ################## */
 /* headerv3: hover subrayado, animación y shadow */
 .logoHeader {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 .logoTitulo {
@@ -35,24 +35,15 @@
   height: 100px;
 }
 
-.imagenMain {
-  top: 10px;
-  box-shadow: 0 0 15px #383838;
-}
-
-.imagenMainContainer {
-  background-color: #ec741d;
-  display: flex;
-  justify-content: center;
-  padding-top: 40px;
-  padding-bottom: 25px;
-}
-
 /* navbar: cambio el color de bootstrap */
 .navColor {
   background-color: white;
   justify-content: space-evenly;
   transition: 0.3s;
+}
+
+.navbar {
+  padding: 5px;
 }
 
 /* navbar: agrego sombra */
@@ -77,22 +68,23 @@
   background-color: #ec741d;
   transform: scaleX(0);
   transform-origin: bottom right;
-  transition: transform 0.3s ease-out;
+  transition: transform 0.4s ease-out;
 }
 
 .navAEffect,
 .navAEffect:hover:after {
   transform: scale(1);
   transform-origin: bottom left;
+  text-shadow: 0 0 0.2px rgb(32, 32, 32);
 }
 
 /* ############ FIN DE HEADER ############ */
-.skew {
-  transition: transform 1s;
+.contenedorImgIndex:hover .imgIndex {
+  filter: saturate(120%);
 }
 
-.skew:hover {
-  transform: skew(-1deg);
+.contenedorImgIndex {
+  overflow: hidden;
 }
 
 /* ############# CONFIG GRAL ############# */
@@ -144,8 +136,8 @@ p {
 /* FIN TEXTOS */
 /* IMÁGENES */
 .cotaImagenSection {
-  height: 500px;
-  width: 280px;
+  height: 370px;
+  width: 370px;
 }
 
 .imagenResponsive {
@@ -153,15 +145,9 @@ p {
   height: auto;
 }
 
-/* achicar imágenes en forma proporcional */
-.scaled-8 {
-  transform: scale(0.8);
-  /* Igual que: scaleX(0.5) scaleY(0.5) */
-}
-
 .imageBorder {
   padding: 0;
-  box-shadow: 0 0 10px rgb(39, 41, 37);
+  box-shadow: 0 0 5px rgb(39, 41, 37);
 }
 
 /* FIN IMÁGENES */
@@ -250,21 +236,58 @@ p {
 
 /* FIN MARGIN */
 /* ########### FIN CONFIG GRAL ########### */
-/* ########### CONTAINERS ########### */
-.imagesContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  row-gap: 20px;
+#whatsapp .whatsapp {
+  position: fixed;
+  transform: all 0.5s ease;
+  background-color: #25d366;
+  display: block;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 50px;
+  border-right: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 30px;
+  bottom: 10px;
+  Right: 20px;
+  border: 0;
+  z-index: 9999;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
 }
 
-.ContainerNews {
-  display: flex;
-  flex-direction: row;
+#whatsapp .whatsapp:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  -webkit-animation: pulse-border 1500ms ease-out infinite;
+  animation: pulse-border 1500ms ease-out infinite;
 }
 
-/* ######### FIN CONTAINERS ######### */
+#whatsapp .whatsapp:focus {
+  border: none;
+  outline: none;
+}
+
+@keyframes pulse-border {
+  0% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    opacity: 0;
+  }
+}
 /* ############ MEDIA QUERYS ################ */
 /* Condición: para vistas HASTA 600px */
 @media screen and (max-width: 600px) {
@@ -295,9 +318,21 @@ p {
     flex-direction: column;
   }
 }
+@media screen and (max-width: 410px) {
+  .cotaImagenSection {
+    width: 250px;
+    height: 250px;
+  }
+}
 @media screen and (min-width: 600px) {
   div.marginTop0 {
     margin-top: 50px;
+  }
+}
+@media screen and (min-width: 720px) {
+  .cotaImagenSection {
+    height: 350px;
+    width: 350px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -446,6 +481,7 @@ button:focus:not(:focus-visible) {
 #footer {
   background-color: #ec741d;
   background-size: cover;
+  box-shadow: 0 0 15px #383838;
 }
 
 /* custom clase bootstrap */
@@ -542,6 +578,27 @@ div.aContainer {
   display: flex;
   width: 30px;
   height: 30px;
+}
+
+.iconos:hover {
+  transform: scale(1.2);
+  transition: transform 0.5s;
+}
+
+.ubicacion {
+  color: red;
+}
+
+.black {
+  color: black;
+}
+
+.linkHover:hover {
+  color: white;
+}
+.linkHover:hover .iconos {
+  transform: scale(1.2);
+  transition: transform 0.5s;
 }
 
 /* derechos de autor iconos footer */
@@ -933,6 +990,27 @@ button.learn-more:active::before {
 .flexContainer {
   display: flex;
   justify-content: center;
+}
+
+.imagenMain {
+  top: 10px;
+  box-shadow: 0 0 15px #383838;
+}
+
+.imagesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  row-gap: 20px;
+}
+
+.imagenMainContainer {
+  background-color: #ec741d;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 25px;
 }
 
 /* cursor arriba del accodion */

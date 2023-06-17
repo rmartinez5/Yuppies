@@ -2,6 +2,7 @@
 #footer{
     background-color: #ec741d;
     background-size: cover;
+    box-shadow: 0 0 15px #383838;
 }
 
 /* custom clase bootstrap */
@@ -98,6 +99,29 @@ div.aContainer{
     display: flex;
     width: 30px;
     height: 30px;
+}
+
+.iconos:hover{
+    transform: scale(1.2);
+    transition: transform .5s;
+}
+
+// icono de ubicacion
+.ubicacion{
+    color: red;
+}
+
+// texto en ubicacion
+.black{
+    color: black;
+}
+
+.linkHover:hover{
+    color: white;
+    .iconos{
+        transform: scale(1.2);
+        transition: transform .5s;
+    }
 }
 
 /* derechos de autor iconos footer */

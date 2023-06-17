@@ -23,17 +23,47 @@
 <body>
     <header id="inicio">
         <nav class="navbar fixed-top navbar-light navColor navShadow" id="navBar">
-            <div><a href="#footer"><img src="../imgs/logoRedondo.png" alt="yuppies" class="logoHeader"></a></div>
+            <div><a href="#footer"><img src="../imgs/logoRedondoY.png" alt="yuppies" class="logoHeader"></a></div>
             <a class="navbar-brand navAEffect fuenteMobile" href="../index.html">Inicio</a>
             <a class="navbar-brand navAEffect fuenteMobile" href="../pages/nosotros.html">Nosotros</a>
             <a class="navbar-brand navAEffect fuenteMobile" href="../pages/servicios.html">Servicios</a>
             <a class="navbar-brand navAEffect fuenteMobile" href="../pages/autogestion.html">Autogestión</a>
             <a class="navbar-brand navAEffect fuenteMobile" href="../pages/contacto.html">Contacto</a>
         </nav>
-        <div class="imagenMainContainer marginTop50">
-            <img src="../imgs/logoYuppies.png" alt="yuppies" class="logoBigger">
-        </div>
     <header>
+
+    <div id="carouselExampleIndicators" class="carousel slide marginTop30 marginTop0" data-bs-ride="true">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <video class="img-fluid d-block w-100" autoplay loop>
+                    <source src="../media/auditoresEspecialistas.mp4" type="">
+                </video>
+            </div>
+            <div class="carousel-item">
+                <video class="img-fluid d-block w-100" autoplay loop>
+                    <source src="../media/stockEmpresa.mp4" type="">
+                </video>
+            </div>
+            <div class="carousel-item ">
+                <video class="img-fluid d-block w-100" autoplay loop>
+                    <source src="../media/necesidadesNegocio.mp4" type="">
+                </video>
+            </div>
+        </div> 
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
     <main id="content" class="marginTop30 paddingBottom50">
         <div class="container-fluid">
@@ -99,30 +129,31 @@
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 marginTop20">
                     <div class="irArribaContainer borderLeft borderTop">
-                        <a href="#inicio" class="links negrita paddingBottom10">Ir arriba ↑</a>
+                        <a href="#inicio" class="links negrita paddingBottom10 linkHover">Ir arriba ↑</a>
                         <p>Experto #PYME 🤓</p>
                         <p>🔍 #auditoriaExterna</p>
                         <p>🦺 #controlDeStock</p>
-                        <p>📋 #inventario</p>
-                        <p>💡 #Mejora Continua</p>
+                        <p class="paddingBottom10">📋 #inventario</p>
+                        <a href="https://goo.gl/maps/gyCtmPWnL7RdACGd8" target="_blank" class="links ">
+                            <i class="fa fa-map-marker ubicacion negrita" aria-hidden="true"> <p class="inline black linkHover">Corrientes Capital</p></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-5 col-sm-12 marginTop20">
                     <!-- whatsapp -->
                     <div class="aContainer borderLeft borderTop">
                         <p class="negrita black paddingBottom10">Comunicate con nosotros:</p>
-                        <a href="https://api.whatsapp.com/send?phone=5493795180062&text=Hola.%20Quisiera%20coordinar%20una%20reuni%C3%B3n%20con%20Yuppies." target="_blank" class="links block"> 
+                        <a href="https://api.whatsapp.com/send?phone=5493795180062&text=Hola.%20Quisiera%20coordinar%20una%20reuni%C3%B3n%20con%20Yuppies." target="_blank" class="links block linkHover"> 
                             <img src="../imgs/iconos/whatsapp1.png" alt="whatsapp" class="iconos inline"> +54 9 3795 18-0062
                         </a>
-                        <a href="./contacto.html" target="_blank" class="links block"> 
+                        <a href="./contacto.html" target="_blank" class="links block linkHover"> 
                             <img src="../imgs/iconos/form6.png" alt="form" class="iconos inline"> Formulario web
                         </a>
                         <!-- email -->
-                        <a href="mailto:yuppiesge@gmail.com" target="_blank" class="links block"> 
+                        <a href="mailto:yuppiesge@gmail.com" target="_blank" class="links block linkHover"> 
                             <img src="../imgs/iconos/email6.png" alt="email" class="iconos inline"> yuppiesge@gmail.com
                         </a>
                         <!-- instagram -->
-                        <a href="https://www.instagram.com/yuppies1930/" target="_blank" class="links block"> 
+                        <a href="https://www.instagram.com/yuppies1930/" target="_blank" class="links block linkHover"> 
                             <img src="../imgs/iconos/instagram1.png" alt="instagram" class="iconos inline"> @yuppies1930
                         </a>
                     </div>
