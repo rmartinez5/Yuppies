@@ -1,11 +1,34 @@
 // loader
 // fuente: https://www.youtube.com/watch?v=nq0vAO6SDlI
-window.onload = function(){
-    // $('#onload').fadeOut();
-    // $('#nav').addClass('fixed');
-    $('body').removeClass('hidden');
-    $('#navBar').removeClass('hidden');
-}
+// window.onload = function(){
+//     $('body').removeClass('hidden');
+//     $('#navBar').removeClass('hidden');
+// }
+
+
+
+// var loader;
+// function loadNow(opacity){
+//     if(opacity <=0){
+//         displayContent();
+//     }
+//     else{
+//         loader.style.opacity = opacity;
+//         window.setTimeout(function(){
+//             loadNow(opacity - 0.03)
+//         },100);
+//     }
+// }
+
+// function displayContent(){
+//     loader.style.display = 'none';
+//     Document.getElementById('content').style.display = 'block';
+// }
+
+// document.addEventListener("DOMContentLoaded", function(){
+//     loader = document.getElementById('loader');
+//     loadNow(1);
+// })
 
 // SCROLL down: no navbar
 // SCROLL up: si navbar
@@ -23,27 +46,4 @@ window.addEventListener('scroll', function(){
         navbar.style.top = '0'
     }
     theEnd = scrollTop;
-})
-
-var loader;
-function loadNow(opacity){
-    if(opacity <=0){
-        displayContent();
-    }
-    else{
-        loader.style.opacity = opacity;
-        window.setTimeout(function(){
-            loadNow(opacity - 0.03)
-        },100);
-    }
-}
-
-function displayContent(){
-    loader.style.display = 'none';
-    Document.getElementById('content').style.display = 'block';
-}
-
-document.addEventListener("DOMContentLoaded", function(){
-    loader = document.getElementById('loader');
-    loadNow(1);
 })
