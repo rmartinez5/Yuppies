@@ -5,8 +5,6 @@
 //     $('#navBar').removeClass('hidden');
 // }
 
-
-
 // var loader;
 // function loadNow(opacity){
 //     if(opacity <=0){
