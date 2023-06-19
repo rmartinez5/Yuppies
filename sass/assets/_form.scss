@@ -124,32 +124,31 @@ input:focus ~ .input-border {
 }
 /* ########### FIN INPUT IMPORTADO ########### */
 
-/* ############ Botón "Rojo" ############ */
+/* ############ Botón "Rojo" customizados ############ */
+// fuente: https://uiverse.io/satyamchaudharydev/purple-rat-85 
 form fieldset div button.boton {
     --bg: white;
     --text-color: black;
     position: relative;
-    width: 150px;
+    width: 145px;
     border: none;
     background: var(--bg);
-    color: var(--text-color);
+    color: black;
     padding: 1em;
     font-weight: bold;
     text-transform: uppercase;
     transition: 0.2s;
-    border-radius: 5px;
-    // opacity: 0.8;
     letter-spacing: 1px;
-    box-shadow: #4985e01f 0px 7px 2px, #000 0px 8px 5px;
+    box-shadow: 7px 7px 0px 0px #0B2447
 }
 
 button.boton:hover {
-    opacity: 1;
+    color: #ec741d;
 }
 
 button.boton:active {
     top: 4px;
-    box-shadow: #4985e01f 0px 3px 2px,#000 0px 3px 5px;
+    box-shadow: 7px 7px 0px 0px #0B2447
 }
 /* ############ FIN Botón "Rojo" ############ */
 
@@ -233,59 +232,4 @@ button.boton:active {
     transition: all 0.5s;
 }
 
-// whatsapp titilando
-// fuente: https://www.youtube.com/watch?v=700m8-yu5Hw&list=LL&index=7
-#whatsapp .whatsapp{
-    position: fixed;
-    transform: all .5s ease;
-    background-color: #25d366;
-    display: block;
-    text-align: center;
-    box-shadow: 0 0 20px rgba(0,0,0,0.15);
-    border-radius: 50px;
-    border-right: none;
-    color: #fff;
-    font-weight: 700;
-    font-size: 30px;
-    bottom: 70px;
-    Right: 20px;
-    border: 0;
-    z-index: 9999;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-}
-
-#whatsapp .whatsapp:before{
-    content: "";
-    position: absolute;
-    z-index: -1;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    display: block;
-    width: 60px;
-    height: 60px;
-    background-color: #25d366;
-    border-radius: 50%;
-    -webkit-animation: pulse-border 1500ms ease-out infinite;
-    animation: pulse-border 1500ms ease-out infinite;
-}
-
-#whatsapp .whatsapp:focus{
-    border: none;
-    outline: none;
-}
-
-@keyframes pulse-border{
-    0%{
-        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-        opacity: 1;
-    }
-    100%{
-        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
-        opacity: 0;
-    }
-
-}
   /* ############## FIN FORM ################## */

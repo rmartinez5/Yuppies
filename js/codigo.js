@@ -39,7 +39,7 @@ window.addEventListener('scroll', function(){
     documentElement.scrollTop;
     if(scrollTop > theEnd){
         navbar.style.top = '-70px';
-    }
+    }       
     else{
         navbar.style.top = '0'
     }

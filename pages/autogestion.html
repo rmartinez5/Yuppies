@@ -24,41 +24,50 @@
 
 <body>
   <header id="inicio">
-    <nav class="navbar fixed-top navbar-light navColor navShadow" id="navBar">
-        <div><a href="#footer"><img src="../imgs/logoRedondoY.png" alt="yuppies" class="logoHeader"></a></div>
-        <a class="navbar-brand navAEffect fuenteMobile" href="../index.html">Inicio</a>
-        <a class="navbar-brand navAEffect fuenteMobile" href="../pages/nosotros.html">Nosotros</a>
-        <a class="navbar-brand navAEffect fuenteMobile" href="../pages/servicios.html">Servicios</a>
-        <a class="navbar-brand navAEffect fuenteMobile" href="../pages/autogestion.html">Autogestión</a>
-        <a class="navbar-brand navAEffect fuenteMobile" href="../pages/contacto.html">Contacto</a>
+    <nav class="navbar navbar-expand-md bg-body-tertiary navColor navShadow">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html"><img class="logoHeader" src="../imgs/logoRedondoY.png" alt="yuppies"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../index.html"><span class="underline">Inicio</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./nosotros.html"><span class="underline">Nosotros</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./servicios.html"><span class="underline">Servicios</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./autogestion.html"><span class="underline">Autogestión</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./contacto.html"><span class="underline">Contacto</span></a>
+                </li>
+            </ul>
+        </div>
+        </div>
     </nav>
-    <div class="imagenMainContainer marginTop50 sombra">
-      <img src="../imgs/logoYuppies.png" alt="yuppies" class="logoBigger">
-    </div>
-  <header>
+</header>
     
   <main id="content" class="marginTop30 paddingBottom50">
-    <div class="container-fluid">
-        <div class="col-12">
-          <h1 class="margin050 text-center negrita">Autogestión para tu empresa</h1>
-        </div>
+    <h1 class="text-center negrita">Autogestión para tu empresa</h1>
+    <div>
+      <ul class="margin050">
+        <li><a href="#aprendizaje" class="links">
+          <p class="negrita cursiva">¿Cómo convertir un error laboral en un aprendizaje?</p>
+        </a></li>
+        <li><a href="#competitiva" class="links">
+          <p class="negrita cursiva">¿Cómo hacer una empresa más competitiva?</p>
+        </a></li>
+    </ul>
     </div>
   </main>
 
-    <section class="margin050 marginTop20">
-      <nav>
-        <ul>
-            <li><a href="#aprendizaje" class="links">
-              <p class="negrita cursiva">¿Cómo convertir un error laboral en un aprendizaje?</p>
-            </a></li>
-            <li><a href="#competitiva" class="links">
-              <p class="negrita cursiva">¿Cómo hacer una empresa más competitiva?</p>
-            </a></li>
-        </ul>
-    </nav>
-    </section>
-
-    <section id="aprendizaje" class="container carouselContainer">
+    <section id="aprendizaje" class="container carouselContainer marginTop30">
         <div id="carouselExample" class="carousel slide">
             <div class="carousel-inner">
               <div class="carousel-item active">
