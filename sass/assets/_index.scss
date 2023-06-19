@@ -6,9 +6,6 @@
     font-family: 'Varela Round', sans-serif;
 }
 
-// variables SASS
-$orange-color: #ec741d;
-
 /* USAR UN GIF DE LOADER */
 /* fuente: https://www.youtube.com/watch?v=b9zyKCsUJfY */
 // #loader{
@@ -24,77 +21,6 @@ $orange-color: #ec741d;
 // .hidden{
 //     overflow: hidden;
 // }
-
-/* ############## HEADER ################## */
-.logoHeader{
-    width: 40px;
-    height: 40px;
-}
-
-.logoTitulo{
-    width: 100px;
-    height: 100px;
-}
-
-/* navbar: cambio el color de bootstrap */
-.navColor{
-    background-color: white;
-    justify-content: space-evenly;
-    --bs-bg-opacity: 0;
-    // transition: .3s;
-}
-
-// navbar: cambio el padding Y
-.navbar{
-    padding: 5px;
-}
-
-/* navbar: agrego sombra */
-.navShadow{
-    box-shadow: 0 0 15px #383838;
-}
-
-// menu hamburguesa borde
-.navbar-toggler{
-    color: $orange-color;
-}
-
-// color de los links
-.nav-link{
-    color: #000000;
-}
-
-/* navbar: que siempre se vea el logo*/
-.navbar-brand{
-    display: contents;
-}
-
-/* navbar: animacion underline when hover */
-/* fuente: https://www.youtube.com/watch?v=wQx6fIkmJpM */
-.underline{
-    display: inline-block;
-    position: relative;
-    margin: 0 20px;
-}
-
-.underline:after{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: $orange-color;
-    transform: scale(0);
-    transform-origin: bottom right;
-    transition: transform 0.6s ease-out;
-}
-
-.underline:hover:after{
-    transform: scale(1);
-    transform-origin: bottom left;
-}
-/* ############ FIN DE HEADER ############ */
 
 // quedaba un margen desparejo en las imagenes
 .row {
@@ -303,31 +229,10 @@ p{
 /* ############ MEDIA QUERYS ################ */
 /* Condición: para vistas HASTA 600px */
 @media screen and (max-width: 600px){
-    /* navbar: aunque el logo no se muestre, quedaba un margin extra debido a este elemento, así que lo compenso con un margin negativo */
-    .navbar{
-        margin-left: -10px;
-    }
-
-    /* navbar: achico la fuente para que quede en una sola fila */
-    .fuenteMobile{
-        font-size: 12px;
-    }
-
-    /* navbar: que haya menos margen/separacion entre los elementos */
-    .navbar div,
-    .navbar a{
-        display: flex;
-        margin: 0;
-    }
-
     /* los titulos de las páginas tienen un margen de 100 en desktop.
     En mobile, como navbar mas chico, hay más separación, achico un poco */
     .marginTop100{
         margin-top: 70px;
-    }
-
-    .ContainerNews{
-        flex-direction: column;
     }
 }
 
@@ -346,10 +251,6 @@ p{
 }
 
 @media screen and (min-width: 992px){
-    // .cotaImagenSection{
-    //     height: 300px;
-    //     width: 300px;
-    // }
     div.marginTop0{
         margin-top: 0px;
     }
