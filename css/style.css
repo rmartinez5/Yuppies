@@ -601,6 +601,10 @@ div.aContainer {
   transition: transform 0.5s;
 }
 
+.paddingBotomFooter {
+  padding-bottom: 20px;
+}
+
 /* derechos de autor iconos footer */
 /* comodin */
 .inline {
@@ -626,13 +630,16 @@ div.aContainer {
     margin-right: 30px;
     /* justify-content: start; */
   }
+  .paddingBottomMobile {
+    padding-bottom: 30px;
+  }
 }
 @media screen and (max-width: 767px) {
   /* footer: cambio a borde superior en lugar de borde izquierdo */
   /* aumento separación entre filas*/
   .borderTop {
     border-left: none;
-    border-top: solid 1px black;
+    border-top: ridge 1px black;
   }
   .borderLeft {
     padding-left: 10px;

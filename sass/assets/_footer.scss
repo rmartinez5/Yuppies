@@ -129,6 +129,10 @@ div.aContainer{
     }
 }
 
+.paddingBotomFooter{
+    padding-bottom: 20px;
+}
+
 /* derechos de autor iconos footer */
 
 
@@ -157,6 +161,9 @@ div.aContainer{
         margin-right: 30px;
         /* justify-content: start; */
     }
+    .paddingBottomMobile{
+        padding-bottom: 30px;
+    }
 }
 
 @media screen and (max-width: 767px){
@@ -164,7 +171,7 @@ div.aContainer{
     /* aumento separación entre filas*/
     .borderTop{
         border-left: none;
-        border-top: solid 1px black;
+        border-top: ridge 1px black;
         // margin-top: 20px;
     }
     .borderLeft{
