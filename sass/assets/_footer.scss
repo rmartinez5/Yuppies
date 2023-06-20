@@ -1,8 +1,16 @@
+/* ########### variables SASS ############# */
+// colores
+$orange-color: #ec741d;
+$white-color: white;
+$black-color: black;
+$red-color: red;
+$shadow-color: #383838;
+
 /* ################ FOOTER ################ */
 #footer{
-    background-color: #ec741d;
+    background-color: $orange-color;
     background-size: cover;
-    box-shadow: 0 0 15px #383838;
+    box-shadow: 0 0 15px $shadow-color;
 }
 
 /* custom clase bootstrap */
@@ -64,7 +72,7 @@ div.col-4{
 
 .footerText{
     margin-top: 20px;
-    color: #000000;
+    color: $black-color;
 }
 
 .paddingBottom10,
@@ -96,7 +104,7 @@ div.aContainer{
 /* clase para los a del footer*/
 .links{
     text-decoration: none;
-    color: black;
+    color: $black-color;
 }
 
 /* iconos de las redes en el footer */
@@ -113,16 +121,16 @@ div.aContainer{
 
 // icono de ubicacion
 .ubicacion{
-    color: red;
+    color: $red-color;
 }
 
 // texto en ubicacion
 .black{
-    color: black;
+    color: $black-color;
 }
 
 .linkHover:hover{
-    color: white;
+    color: $white-color;
     .iconos{
         transform: scale(1.2);
         transition: transform .5s;
@@ -146,7 +154,7 @@ div.aContainer{
 }
 
 .derechos{
-    color: white;
+    color: $white-color;
     font-size: 10px;
 }
   /* ############## FIN FOOTER ############## */
@@ -166,7 +174,7 @@ div.aContainer{
     /* aumento separación entre filas*/
     .borderTop{
         border-left: none;
-        border-top: ridge 1px black;
+        border-top: ridge 1px $black-color;
         // margin-top: 20px;
     }
     .borderLeft{

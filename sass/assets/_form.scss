@@ -1,6 +1,13 @@
+/* ########### variables SASS ############# */
+// colores
+$orange-color: #ec741d;
+$white-color: white;
+$black-color: black;
+$darkblue-color: #0B2447;
+
 /* ############## FORM #################### */
 .formulario{
-    background-color: #ec741d;
+    background-color: $orange-color;
 
 }
 
@@ -8,11 +15,13 @@
     margin: 20px;
 }
 
+// centrado los botones
 .botones-container{
     display: flex;
     justify-content: center;
 }
 
+// que las imágenes se acomoden una debajo de otra
 .wrap{
     flex-wrap: wrap;
 }
@@ -22,13 +31,13 @@
 .input {
     padding: 10px;
     height: 40px;
-    border: 2px solid #0B2447;
+    border: 2px solid $darkblue-color;
     border-top: none;
     border-bottom: none;
     font-size: 16px;
     background: white;
     outline: none;
-    box-shadow: 7px 7px 0px 0px #0B2447;
+    box-shadow: 7px 7px 0px 0px $darkblue-color;
     transition: all 0.5s;
 }
 
@@ -41,7 +50,7 @@
     position: absolute;
     top: 10px;
     left: 10px;
-    color: #0B2447;
+    color: $darkblue-color;
     transition: all 0.5s;
     transform: scale(0);
     z-index: -1;
@@ -50,7 +59,7 @@
 .input-container .topline {
     position: absolute;
     content: "";
-    background-color: #0B2447;
+    background-color: $darkblue-color;
     width: 0%;
     height: 2px;
     right: 0;
@@ -66,7 +75,7 @@
 .input-container .underline {
     position: absolute;
     content: "";
-    background-color: #0B2447;
+    background-color: $darkblue-color;
     width: 0%;
     height: 2px;
     right: 0;
@@ -88,9 +97,9 @@
 .form {
     --width-of-input: auto;
     --border-height: 1px;
-    --border-before-color: rgb(255, 255, 255);
-    --border-after-color: #ec741d;
-    --input-hovered-color: #4985e01f;
+    --border-before-color: $white-color;
+    --border-after-color: $orange-color;
+    --input-hovered-color: $darkblue-color;
     position: relative;
     width: var(--width-of-input);
 }
@@ -104,9 +113,9 @@ textarea {
 }
 /* styling of Input */
 .input {
-    color: #000000;
+    color: $black-color;
     font-size: 0.9rem;
-    background-color: rgb(255, 255, 255);;
+    background-color: $white-color;
     width: 100%;
     box-sizing: border-box;
     padding-inline: 0.5em;
@@ -127,7 +136,7 @@ textarea {
 /* Hover on Input */
 input:hover {
     /* background: var(--input-hovered-color); */
-    background: white;
+    background: $white-color;
 }
 
 input:focus {
@@ -137,50 +146,48 @@ input:focus {
 input:focus ~ .input-border {
     width: 100%;
 }
-/* ########### FIN INPUT IMPORTADO ########### */
+/* ############## FIN INPUT IMPORTADO ################ */
 
 /* ############ Botón "Rojo" customizados ############ */
 // fuente: https://uiverse.io/satyamchaudharydev/purple-rat-85 
 form fieldset div button.boton {
-    --bg: white;
-    --text-color: black;
     position: relative;
     width: 145px;
     border: none;
-    background: var(--bg);
-    color: black;
+    background: $white-color;
+    color: $black-color;
     padding: 1em;
     font-weight: bold;
     text-transform: uppercase;
     transition: 0.2s;
     letter-spacing: 1px;
-    box-shadow: 7px 7px 0px 0px #0B2447
+    box-shadow: 7px 7px 0px 0px $darkblue-color;
 }
 
 button.boton:hover {
-    color: #ec741d;
+    color: $orange-color;
 }
 
 button.boton:active {
     top: 4px;
-    box-shadow: 7px 7px 0px 0px #0B2447
+    box-shadow: 7px 7px 0px 0px $darkblue-color;
 }
 /* ############ FIN Botón "Rojo" ############ */
 
 
-/* CUADRO DE TEXTO IMPORTADO */
+/* ############ CUADRO DE TEXTO IMPORTADO ############ */
 /* https://uiverse.io/ahmed150up/chilly-rattlesnake-8 */
 .card {
     width: 260px;
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background-color: $white-color;
+    border: 1px solid $white-color;
     border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 5px $darkblue-color;
 }
 
 .chat-header {
-    background-color: #333;
-    color: #fff;
+    background-color: $darkblue-color;
+    color: $white-color;
     padding: 10px;
     font-size: 18px;
     border-top-left-radius: 5px;
@@ -202,7 +209,7 @@ button.boton:active {
     display: flex;
     align-items: center;
     padding: 10px;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid $white-color;
 }
 
 .message-input {
@@ -216,17 +223,17 @@ button.boton:active {
 .send-button {
     border: none;
     outline: none;
-    background-color: #333;
-    color: #fff;
+    background-color: $darkblue-color;
+    color: $white-color;
     font-size: 14px;
     padding: 5px 10px;
     cursor: pointer;
 }
 
 .send-button:hover {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+    background-color: $white-color;
+    color: $black-color;
+    box-shadow: 0 4px 18px 0 $darkblue-color;
 }
 
 /* input text area */
@@ -235,10 +242,10 @@ button.boton:active {
     border-top: none;
     border-bottom: none;
     font-size: 16px;
-    background: white;
+    background: $white-color;
     outline: none;
     resize: none;
-    box-shadow: 7px 7px 0px 0px #0B2447;
+    box-shadow: 7px 7px 0px 0px $darkblue-color;
     transition: all 0.5s;
 }
 
@@ -246,11 +253,13 @@ button.boton:active {
     box-shadow: none;
     transition: all 0.5s;
 }
+/* ######## FIN DE CUADRO DE TEXTO IMPORTADO ######### */
 
-  /* ############## FIN FORM ################## */
+
+  /* ################## FIN FORM #################### */
 
 
-/* ############ MEDIA QUERYS ################ */
+/* ################# MEDIA QUERYS ################### */
 /* Condición: para vistas HASTA 600px */
 @media screen and (max-width: 600px){
     /* footer: los botones que se dispongan en columnas en lugar de fila */
@@ -260,3 +269,4 @@ button.boton:active {
        /* justify-content: start; */
     }
 }
+/* ############# FIN MEDIA QUERYS ################## */

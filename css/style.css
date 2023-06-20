@@ -7,9 +7,7 @@
   font-family: "Varela Round", sans-serif;
 }
 
-/* USAR UN GIF DE LOADER */
-/* fuente: https://www.youtube.com/watch?v=b9zyKCsUJfY */
-/* durante el loader, que oculte el contenido de la página */
+/* ########### variables SASS ############# */
 .row {
   --bs-gutter-x: 0;
 }
@@ -41,7 +39,7 @@ p {
 }
 
 .black {
-  color: #000000;
+  color: black;
 }
 
 .cursiva {
@@ -75,6 +73,10 @@ p {
 
 .padding20 {
   padding: 20px;
+}
+
+.paddingTitulo {
+  padding: 30px;
 }
 
 .paddingR10 {
@@ -477,6 +479,7 @@ button:focus:not(:focus-visible) {
   }
 }
 /* ########## FIN MEDIA QUERYS ############### */
+/* ########### variables SASS ############# */
 /* ################ FOOTER ################ */
 #footer {
   background-color: #ec741d;
@@ -543,7 +546,7 @@ div.col-4 {
 
 .footerText {
   margin-top: 20px;
-  color: #000000;
+  color: black;
 }
 
 .paddingBottom10,
@@ -645,6 +648,7 @@ div.aContainer {
   }
 }
 /* ########## FIN MEDIA QUERYS ############### */
+/* ########### variables SASS ############# */
 /* ############## FORM #################### */
 .formulario {
   background-color: #ec741d;
@@ -734,9 +738,9 @@ div.aContainer {
 .form {
   --width-of-input: auto;
   --border-height: 1px;
-  --border-before-color: rgb(255, 255, 255);
-  --border-after-color: #ec741d;
-  --input-hovered-color: #4985e01f;
+  --border-before-color: $white-color;
+  --border-after-color: $orange-color;
+  --input-hovered-color: $darkblue-color;
   position: relative;
   width: var(--width-of-input);
 }
@@ -750,9 +754,9 @@ textarea {
 
 /* styling of Input */
 .input {
-  color: #000000;
+  color: black;
   font-size: 0.9rem;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   width: 100%;
   box-sizing: border-box;
   padding-inline: 0.5em;
@@ -787,15 +791,13 @@ input:focus ~ .input-border {
   width: 100%;
 }
 
-/* ########### FIN INPUT IMPORTADO ########### */
+/* ############## FIN INPUT IMPORTADO ################ */
 /* ############ Botón "Rojo" customizados ############ */
 form fieldset div button.boton {
-  --bg: white;
-  --text-color: black;
   position: relative;
   width: 145px;
   border: none;
-  background: var(--bg);
+  background: white;
   color: black;
   padding: 1em;
   font-weight: bold;
@@ -815,19 +817,19 @@ button.boton:active {
 }
 
 /* ############ FIN Botón "Rojo" ############ */
-/* CUADRO DE TEXTO IMPORTADO */
+/* ############ CUADRO DE TEXTO IMPORTADO ############ */
 /* https://uiverse.io/ahmed150up/chilly-rattlesnake-8 */
 .card {
   width: 260px;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: white;
+  border: 1px solid white;
   border-radius: 5px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 5px #0B2447;
 }
 
 .chat-header {
-  background-color: #333;
-  color: #fff;
+  background-color: #0B2447;
+  color: white;
   padding: 10px;
   font-size: 18px;
   border-top-left-radius: 5px;
@@ -849,7 +851,7 @@ button.boton:active {
   display: flex;
   align-items: center;
   padding: 10px;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid white;
 }
 
 .message-input {
@@ -863,17 +865,17 @@ button.boton:active {
 .send-button {
   border: none;
   outline: none;
-  background-color: #333;
-  color: #fff;
+  background-color: #0B2447;
+  color: white;
   font-size: 14px;
   padding: 5px 10px;
   cursor: pointer;
 }
 
 .send-button:hover {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+  background-color: white;
+  color: black;
+  box-shadow: 0 4px 18px 0 #0B2447;
 }
 
 /* input text area */
@@ -894,8 +896,9 @@ button.boton:active {
   transition: all 0.5s;
 }
 
-/* ############## FIN FORM ################## */
-/* ############ MEDIA QUERYS ################ */
+/* ######## FIN DE CUADRO DE TEXTO IMPORTADO ######### */
+/* ################## FIN FORM #################### */
+/* ################# MEDIA QUERYS ################### */
 /* Condición: para vistas HASTA 600px */
 @media screen and (max-width: 600px) {
   /* footer: los botones que se dispongan en columnas en lugar de fila */
@@ -905,6 +908,7 @@ button.boton:active {
     /* justify-content: start; */
   }
 }
+/* ############# FIN MEDIA QUERYS ################## */
 .nosotrosContainer {
   align-items: flex-start;
 }
@@ -977,13 +981,14 @@ button.boton:active {
 }
 
 /* ############ FIN VIDEOS ############## */
+/* ########### variables SASS ############# */
 /* ############## HEADER ################## */
 .logoHeader {
   width: 40px;
   height: 40px;
 }
 
-/* navbar: cambio el color de bootstrap */
+/* navbar: cambio el background color de bootstrap */
 .navColor {
   background-color: white;
   justify-content: space-evenly;
@@ -1004,14 +1009,15 @@ button.boton:active {
 }
 
 .nav-link {
-  color: #000000;
+  color: black;
 }
 
-/* navbar: que siempre se vea el logo*/
+/* navbar: que se vea el logo para todo device*/
 .navbar-brand {
   display: contents;
 }
 
+/* #################################################### */
 /* navbar: animacion underline when hover */
 /* fuente: https://www.youtube.com/watch?v=wQx6fIkmJpM */
 .underline {
@@ -1038,7 +1044,9 @@ button.boton:active {
   transform-origin: bottom left;
 }
 
-/* ############ FIN DE HEADER ############ */
+/* ########################################## */
+/* ############ FIN DE HEADER ############### */
+/* ############ MEDIA QUERYS ################ */
 @media screen and (max-width: 992px) {
   .cotaImagenSection {
     width: 250px;
@@ -1049,5 +1057,6 @@ button.boton:active {
     align-items: center;
   }
 }
+/* ########## FIN MEDIA QUERYS ############### */
 
 /*# sourceMappingURL=style.css.map */

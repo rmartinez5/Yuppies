@@ -6,23 +6,13 @@
     font-family: 'Varela Round', sans-serif;
 }
 
+/* ########### variables SASS ############# */
+// colores
 $orange-color: #ec741d;
-
-/* USAR UN GIF DE LOADER */
-/* fuente: https://www.youtube.com/watch?v=b9zyKCsUJfY */
-// #loader{
-//     position: fixed;
-//     width: 100%;
-//     height: 100vh;
-//     z-index: 1;
-//     overflow: visible;
-//     background: white url(/imgs/gifs/puntitosLoading3.gif) no-repeat center center;
-// }
-
-/* durante el loader, que oculte el contenido de la página */
-// .hidden{
-//     overflow: hidden;
-// }
+$white-color: white;
+$black-color: black;
+$shadow-color: #383838;
+$shadowImg-color: rgb(39, 41, 37);
 
 // quedaba un margen desparejo en las imagenes
 .row {
@@ -56,7 +46,7 @@ p{
 }
 
 .black{
-    color: #000000;
+    color: $black-color;
 }
 
 .cursiva{
@@ -79,7 +69,7 @@ p{
 
 .imageBorder{
     padding: 0;
-    box-shadow: 0 0 5px rgb(39, 41, 37);
+    box-shadow: 0 0 5px $shadowImg-color;
 }
 
   /* FIN IMÁGENES */
@@ -91,6 +81,14 @@ p{
 
 .padding20{
     padding: 20px;
+}
+
+@mixin paddingTitulo($size) {
+    padding: $size ;
+}
+
+.paddingTitulo{
+    @include paddingTitulo(30px)
 }
 
 .paddingR10{
@@ -243,7 +241,6 @@ p{
         margin-top: 70px;
     }
 }
-
 
 @media screen and (max-width: 992px){
     .cotaImagenSection{

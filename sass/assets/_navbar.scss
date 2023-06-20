@@ -1,44 +1,49 @@
-/* ############## HEADER ################## */
-// variables SASS
+/* ########### variables SASS ############# */
+// colores
 $orange-color: #ec741d;
+$white-color: white;
+$black-color: black;
+$shadow-color: #383838;
 
+/* ############## HEADER ################## */
 .logoHeader{
     width: 40px;
     height: 40px;
 }
 
-/* navbar: cambio el color de bootstrap */
+/* navbar: cambio el background color de bootstrap */
 .navColor{
-    background-color: white;
+    background-color: $white-color;
     justify-content: space-evenly;
     --bs-bg-opacity: 1;
 }
 
-// navbar: cambio el padding Y
+// navbar: cambio el padding
 .navbar{
     padding: 5px;
 }
 
 /* navbar: agrego sombra */
 .navShadow{
-    box-shadow: 0 0 15px #383838;
+    box-shadow: 0 0 15px $shadow-color;
 }
 
-// menu hamburguesa borde
+// menu hamburguesa (mobile) borde
 .navbar-toggler{
     color: $orange-color;
 }
 
 // color de los links
 .nav-link{
-    color: #000000;
+    color: $black-color;
 }
 
-/* navbar: que siempre se vea el logo*/
+/* navbar: que se vea el logo para todo device*/
 .navbar-brand{
     display: contents;
 }
 
+/* #################################################### */
 /* navbar: animacion underline when hover */
 /* fuente: https://www.youtube.com/watch?v=wQx6fIkmJpM */
 .underline{
@@ -64,9 +69,12 @@ $orange-color: #ec741d;
     transform: scale(1);
     transform-origin: bottom left;
 }
-/* ############ FIN DE HEADER ############ */
+// navbar: fin de animación underline
+/* ########################################## */
+/* ############ FIN DE HEADER ############### */
 
 
+/* ############ MEDIA QUERYS ################ */
 @media screen and (max-width: 992px){
     .cotaImagenSection{
         width: 250px;
@@ -76,5 +84,5 @@ $orange-color: #ec741d;
     .navbar-nav {
         align-items: center;
     }
-
 }
+/* ########## FIN MEDIA QUERYS ############### */
