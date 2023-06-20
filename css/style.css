@@ -602,10 +602,6 @@ div.aContainer {
 }
 
 /* derechos de autor iconos footer */
-.derechos {
-  color: white;
-}
-
 /* comodin */
 .inline {
   display: inline;
@@ -613,6 +609,11 @@ div.aContainer {
 
 .block {
   display: block;
+}
+
+.derechos {
+  color: white;
+  font-size: 10px;
 }
 
 /* ############## FIN FOOTER ############## */
