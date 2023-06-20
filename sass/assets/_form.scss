@@ -1,13 +1,20 @@
 /* ############## FORM #################### */
 .formulario{
     background-color: #ec741d;
-    background-size: contain;
-    background-position: center;
-    /* width: 400px; */
+
 }
 
-.formulario div{
-    padding: 5px;
+.margin20{
+    margin: 20px;
+}
+
+.botones-container{
+    display: flex;
+    justify-content: center;
+}
+
+.wrap{
+    flex-wrap: wrap;
 }
 
   /* ############# INPUT IMPORTADO ############# */
@@ -79,13 +86,21 @@
 }
 
 .form {
-    --width-of-input: 320px;
+    --width-of-input: auto;
     --border-height: 1px;
     --border-before-color: rgb(255, 255, 255);
     --border-after-color: #ec741d;
     --input-hovered-color: #4985e01f;
     position: relative;
     width: var(--width-of-input);
+}
+
+textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    width: 100%;
 }
 /* styling of Input */
 .input {
@@ -233,3 +248,15 @@ button.boton:active {
 }
 
   /* ############## FIN FORM ################## */
+
+
+/* ############ MEDIA QUERYS ################ */
+/* Condición: para vistas HASTA 600px */
+@media screen and (max-width: 600px){
+    /* footer: los botones que se dispongan en columnas en lugar de fila */
+    .botones-container{
+        flex-direction: column;
+        align-items: center;
+       /* justify-content: start; */
+    }
+}

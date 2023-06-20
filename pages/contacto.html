@@ -14,6 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital@1&family=Varela+Round&display=swap" rel="stylesheet">
     <!-- link css wapp titilando -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- link https://michalsnik.github.io/aos/ -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <!-- Link del css -->
@@ -45,61 +47,85 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./contacto.html"><span class="underline">Contacto</span></a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="./sumate.html"><span class="underline">Sumate</span></a>
+                    </li>
                 </ul>
             </div>
             </div>
         </nav>
     </header>
 
-    <main id="content" class="marginTop30 paddingBottom50">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <h1 class="margin050 text-center negrita">Página de contacto</h1>
-                    <h2 class="marginLeft50">¿Cuándo acudir a Yuppies?</h2>
-                    <p class="negrita cursiva marginLeft50">
-                    Cuando se te presenta un problema o un conflicto, una situación de desconocimiento, nuevos escenarios que tienes necesidad de resolver o simplemente porque quieres mejorar.
-                    </p>
+    <main id="content" class="paddingBottom50">
+        <div class="">
+            <img src="../imgs/Contacto/contarConVos.jpeg" alt="contarConVos" class=" img-fluid w-100">
+        </div>
+        <h1 class="text-center negrita marginTop30">Página de contacto</h1>
+        <div class="container marginTop50 ">
+            <div class="row wrap">
+                <div class="col-12 col-sm-12 col-lg-12 col-xl-12">
+                    <img src="../imgs/Contacto/pregFrec.jpeg" alt="stock" class="imageBorder mx-auto img-fluid" data-aos="fade-up" data-aos-duration="3000">
+                </div>
+                <div class="col-12 col-sm-12 col-lg-12 col-xl-12">
+                    <img src="../imgs/Contacto/auditExterna.jpeg" alt="vencimientos" class=" imageBorder  mx-auto img-fluid" data-aos="fade-right" data-aos-duration="3000">
+                </div>
+                <div class="col-12 col-sm-12 col-lg-12 col-xl-12">
+                    <img src="../imgs/Contacto/nuestroServicio.jpeg" alt="desvios" class="text-center imageBorder mx-auto img-fluid" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="3000">
+                </div>
+                <div class="col-12 col-sm-12 col-lg-12 col-xl-12">
+                    <img src="../imgs/Contacto/inversion.jpeg" alt="desvios" class="text-center imageBorder mx-auto img-fluid" data-aos="fade-right" data-aos-duration="3000">
                 </div>
             </div>
         </div>
-        <form class="formulario container-fluid marginTop20">
-            <fieldset class="paddingBottom20">
-                <div class="form marginLeft20 marginTop10">
-                    <label for="name">Nombre:</label>
-                    <input type="text" name="name" id="name" required placeholder="Ingrese su nombre" class="input block">
-                    <span class="input-border"></span>
-                </div>
-
-                <div class="form marginLeft20">
-                    <label for="apellido">Apellido:</label>
-                    <input type="text" id="apellido" class="input block" placeholder="Ingrese su apellido" required>
-                    <span class="input-border"></span>
-                </div>
-
-                <div class="form marginLeft20">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" class="input block" placeholder="Ingrese su email" required>
-                    <span class="input-border"></span>
-                </div>
-                <div class="marginLeft20">
-                    <textArea id="message" name="message" cols="30" rows="8" required="" class="textArea marginTop20" placeholder="Ingrese su consulta"></textArea>
-                </div>
-                <div class="botones-container">
-                    <button type="submit" class="boton marginTop20 marginLeft20"> Enviar consulta
-                    </button>
-                    <button type="reset" class="boton marginTop20 marginLeft20"> Limpiar
-                    </button>
-                </div>
-            </fieldset>
-        </form>
-    </main>
-
-    <section>
         <div id="whatsapp">
             <a href="https://api.whatsapp.com/send?phone=5493795180062&text=Hola.%20Quisiera%20coordinar%20una%20reuni%C3%B3n%20con%20Yuppies." target="_blank" id="toggle1" class="whatsapp">
                 <i class="fa fa-whatsapp"></i>
             </a>
+        </div>
+    </main>
+
+    <section>
+        <div class="container marginTop50">
+            <div class="row">
+                <div class="col-lg-3">
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 imageBorder">
+                    <form class="formulario paddingTop20">
+                        <h1 class="text-center negrita paddingTop10">Contá con nosotros</h1>
+                        <fieldset class="paddingBottom20">
+                            <div class=" margin20 marginTop10">
+                                <label for="name">Nombre:</label>
+                                <input type="text" name="name" id="name" required placeholder="Ingrese su nombre" class="input block">
+                                <span class="input-border"></span>
+                            </div>
+            
+                            <div class="margin20">
+                                <label for="apellido">Apellido:</label>
+                                <input type="text" id="apellido" class="input block" placeholder="Ingrese su apellido" required>
+                                <span class="input-border"></span>
+                            </div>
+            
+                            <div class="margin20">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" class="input block" placeholder="Ingrese su email" required>
+                                <span class="input-border"></span>
+                            </div>
+                            <div class="margin20">
+                                <label for="message">Mensaje:</label>
+                                <textArea id="message" name="message" cols="20" rows="8" required="" class="textArea" placeholder="Ingrese su mensaje"></textArea>
+                            </div>
+                            <div class="botones-container">
+                                <button type="submit" class="boton marginTop20 margin20"> Enviar consulta
+                                </button>
+                                <button type="reset" class="boton marginTop20 margin20"> Limpiar
+                                </button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="col-lg-3">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -150,8 +176,14 @@
         </div>
     </footer>
 
+
     <!-- js bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <!-- link https://michalsnik.github.io/aos/ -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <!-- jquery para scroll -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="../js/codigo.js"></script>

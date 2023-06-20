@@ -156,11 +156,6 @@ div.aContainer{
 /* Condición: para vistas HASTA 600px */
 @media screen and (max-width: 600px){
      /* footer: los botones que se dispongan en columnas en lugar de fila */
-    .botones-container{
-        flex-direction: column;
-        margin-right: 30px;
-        /* justify-content: start; */
-    }
     .paddingBottomMobile{
         padding-bottom: 30px;
     }
