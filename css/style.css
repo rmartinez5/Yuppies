@@ -256,7 +256,7 @@ p {
 /* ########### PAG AUTOGESTION ############ */
 /* CAROUSEL */
 /* el fondo es blanco, los botones no se ven, así que invierto sus colores*/
-.black {
+.blackIcon {
   filter: invert(108%);
 }
 
