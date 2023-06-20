@@ -86,11 +86,11 @@ p {
 }
 
 .paddingTop10 {
-  padding-top: 10;
+  padding-top: 10px;
 }
 
 .paddingTop20 {
-  padding-top: 20;
+  padding-top: 20px;
 }
 
 .paddingBottom10 {
@@ -156,6 +156,10 @@ p {
 }
 
 /* FIN MARGIN */
+.positionControlIcon {
+  justify-content: flex-start;
+}
+
 /* ########### FIN CONFIG GRAL ########### */
 #whatsapp .whatsapp {
   position: fixed;
@@ -169,7 +173,7 @@ p {
   color: #fff;
   font-weight: 700;
   font-size: 30px;
-  bottom: 30px;
+  bottom: 215px;
   Right: 20px;
   border: 0;
   z-index: 9999;
@@ -237,12 +241,22 @@ p {
     column-gap: 5px;
     flex-wrap: nowrap;
   }
+  /* carousel (index). Lo desplazo hacia arriba,
+  pero al hacerlo, hago que el navbar quede arriba del carousel
+  y opaco de color blanco 
+  */
+  .carousel {
+    margin-top: -50px;
+  }
+  .navbar {
+    z-index: 1;
+  }
 }
 /* ########## FIN MEDIA QUERYS ############### */
 /* ########### PAG AUTOGESTION ############ */
 /* CAROUSEL */
 /* el fondo es blanco, los botones no se ven, así que invierto sus colores*/
-.carousel-control-prev-icon, .carousel-control-next-icon {
+.black {
   filter: invert(108%);
 }
 
@@ -538,11 +552,6 @@ div.col-4 {
 }
 
 /* borde izquierdo en footer */
-.borderLeft {
-  border-left: solid 1px black;
-  padding-left: 50px;
-}
-
 /* links comunicate con nosotros */
 div.aContainer {
   padding-top: 20px;
@@ -551,6 +560,11 @@ div.aContainer {
   align-content: start;
   align-items: start;
   justify-items: end;
+}
+
+.infoContainer {
+  display: flex;
+  justify-content: center;
 }
 
 /* clase para los a del footer*/
@@ -590,12 +604,15 @@ div.aContainer {
 /* derechos de autor iconos footer */
 .derechos {
   color: white;
-  margin-top: 20px;
 }
 
 /* comodin */
 .inline {
   display: inline;
+}
+
+.block {
+  display: block;
 }
 
 /* ############## FIN FOOTER ############## */
@@ -944,7 +961,7 @@ button.boton:active {
 .navColor {
   background-color: white;
   justify-content: space-evenly;
-  --bs-bg-opacity: 0;
+  --bs-bg-opacity: 1;
 }
 
 .navbar {

@@ -73,10 +73,10 @@ div.col-4{
 }
 
 /* borde izquierdo en footer */
-.borderLeft{
-    border-left: solid 1px black;
-    padding-left:50px;
-}
+// .borderLeft{
+//     border-left: solid 1px black;
+//     padding-left:50px;
+// }
 
 /* links comunicate con nosotros */
 div.aContainer{
@@ -86,6 +86,11 @@ div.aContainer{
     align-content: start;
     align-items: start;
     justify-items: end;
+}
+
+.infoContainer{
+    display: flex;
+    justify-content: center;
 }
 
 /* clase para los a del footer*/
@@ -127,13 +132,17 @@ div.aContainer{
 /* derechos de autor iconos footer */
 .derechos{
     color: white;
-    margin-top: 20px;
 }
 
 /* comodin */
 .inline{
     display: inline;
 }
+
+.block{
+    display: block;
+}
+
   /* ############## FIN FOOTER ############## */
 
 

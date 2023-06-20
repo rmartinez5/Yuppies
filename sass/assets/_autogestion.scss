@@ -1,8 +1,8 @@
 /* ########### PAG AUTOGESTION ############ */
 /* CAROUSEL */
 /* el fondo es blanco, los botones no se ven, así que invierto sus colores*/
-.carousel-control-prev-icon, .carousel-control-next-icon {
-    filter: invert(108%);
+.black{
+  filter: invert(108%);
 }
 
 div.carousel-item.active{

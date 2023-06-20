@@ -56,43 +56,44 @@
 
 <!-- Carousel vid-->
 <!-- https://mdbootstrap.com/docs/standard/extended/video-carousel/#fromHistory -->
-    <!-- <div id="carouselVid"class="carousel slide marginTop30" data-bs-ride="true">
-
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselVid" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselVid" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselVid" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <main>
+        <div id="carouselVid"class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselVid" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselVid" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselVid" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+    
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <video class="img-fluid w-100" autoplay loop muted>
+                        <source src="./media/auditoresEspecialistas.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="carousel-item">
+                    <video class="img-fluid w-100" autoplay loop muted>
+                        <source src="./media/stockEmpresa.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="carousel-item">
+                    <video class="img-fluid w-100" autoplay loop muted>
+                        <source src="./media/necesidadesNegocio.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div> 
+    
+            <button class="carousel-control-prev positionControlIcon" type="button" data-bs-target="#carouselVid" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next positionControlIcon" type="button" data-bs-target="#carouselVid" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span span class="visually-hidden">Next</span>
+            </button>
         </div>
+    </main>
 
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <video class="img-fluid" autoplay loop muted>
-                    <source src="./media/auditoresEspecialistas.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="carousel-item">
-                <video class="img-fluid" autoplay loop muted>
-                    <source src="./media/stockEmpresa.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="carousel-item">
-                <video class="img-fluid" autoplay loop muted>
-                    <source src="./media/necesidadesNegocio.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div> 
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselVid" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselVid" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span span class="visually-hidden">Next</span>
-        </button>
-    </div> -->
-
-    <main id="content" class="marginTop30">
+    <section id="content" class="marginTop30">
         <h1 class="text-center negrita">Yuppies es la solución más práctica y efectiva a las necesidades de tu negocio</h1>
         <div class="container marginTop50 ">
             <div class="row">
@@ -112,29 +113,17 @@
                 <i class="fa fa-whatsapp"></i>
             </a>
         </div>
-    </main>
+    </section>
 
-    <footer id="footer" class="marginTop50">
+    <footer id="footer" class="marginTop50 paddingTop10">
         <div class="container-fluid">
             <div class="row rowFooter">
-                <div class="col-lg-4 col-md-3 col-sm-12">
+                <div class="col-lg-3 col-md-3 col-sm-12">
                     <div class="logoFooterContainer">
-                        <img src="./imgs/logoRedondo.png" class="logoBigger" alt="yuppies gestión de expertos">
+                        <img src="./imgs/logoYuppies.png" class="logoBigger" alt="yuppies gestión de expertos">
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 marginTop20">
-                    <div class="irArribaContainer borderLeft borderTop">
-                        <a href="#inicio" class="links negrita paddingBottom10 linkHover">Ir arriba ↑</a>
-                        <p>Experto #PYME 🤓</p>
-                        <p>🔍 #auditoriaExterna</p>
-                        <p>🦺 #controlDeStock</p>
-                        <p>📋 #inventario</p>
-                        <p class="paddingBottom10">💡 #Mejora Continua</p>
-                        <a href="https://goo.gl/maps/gyCtmPWnL7RdACGd8" target="_blank" class="links ">
-                            <i class="fa fa-map-marker ubicacion negrita" aria-hidden="true"> <p class="inline black linkHover">Corrientes Capital</p></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-5 col-sm-12 marginTop20">
+                <div class="col-lg-5 col-md-5 col-sm-12 marginTop20 infoContainer paddingBottom10">
                     <!-- whatsapp -->
                     <div class="aContainer borderLeft borderTop">
                         <p class="negrita black paddingBottom10">Comunicate con nosotros:</p>
@@ -152,11 +141,24 @@
                         <a href="https://www.instagram.com/yuppies1930/" target="_blank" class="links block linkHover"> 
                             <img src="./imgs/iconos/instagram1.png" alt="instagram" class="iconos inline"> @yuppies1930
                         </a>
-                    </div>
-                    <!-- derechos de autor iconos -->
-                    <div class="derechos"> Iconos diseñados por <a href="https://www.freepik.com" class="derechos links " title="Freepik" class="links inline">Freepik:</a> <a href="https://www.flaticon.es/" class="derechos links" title="Flaticon">www.flaticon.es</a>
+                        <!-- derechos de autor iconos -->
+                        <div class="derechos marginTop20"> Iconos diseñados por <a href="https://www.freepik.com" class="derechos links " title="Freepik" class="links block">Freepik:</a> <a href="https://www.flaticon.es/" class="derechos links block text-center" title="Flaticon">www.flaticon.es</a>
+                        </div>
                     </div>
                 </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 marginTop20 infoContainer">
+                    <div class="irArribaContainer borderLeft borderTop">
+                        <a href="#inicio" class="links negrita paddingBottom10 linkHover">Ir arriba ↑</a>
+                        <p>Experto #PYME 🤓</p>
+                        <p>🔍 #auditoriaExterna</p>
+                        <p>🦺 #controlDeStock</p>
+                        <p>📋 #inventario</p>
+                        <p class="paddingBottom10">💡 #Mejora Continua</p>
+                        <a href="https://goo.gl/maps/gyCtmPWnL7RdACGd8" target="_blank" class="links ">
+                            <i class="fa fa-map-marker ubicacion negrita" aria-hidden="true"> <p class="inline black linkHover">Corrientes Capital</p></i></a>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </footer>

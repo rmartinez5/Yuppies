@@ -6,6 +6,8 @@
     font-family: 'Varela Round', sans-serif;
 }
 
+$orange-color: #ec741d;
+
 /* USAR UN GIF DE LOADER */
 /* fuente: https://www.youtube.com/watch?v=b9zyKCsUJfY */
 // #loader{
@@ -50,7 +52,7 @@ p{
 }
 
 .orange{
-    color: #ec741d;
+    color: $orange-color;
 }
 
 .black{
@@ -79,6 +81,7 @@ p{
     padding: 0;
     box-shadow: 0 0 5px rgb(39, 41, 37);
 }
+
   /* FIN IMÁGENES */
 
   /* PADDING */
@@ -99,11 +102,11 @@ p{
 }
 
 .paddingTop10{
-    padding-top: 10;
+    padding-top: 10px;
 }
 
 .paddingTop20{
-    padding-top: 20;
+    padding-top: 20px;
 }
 
 .paddingBottom10{
@@ -168,6 +171,11 @@ p{
     margin-bottom: 50px;
 }
 /* FIN MARGIN */
+
+.positionControlIcon{
+    justify-content: flex-start;
+}
+
 /* ########### FIN CONFIG GRAL ########### */
 
 // whatsapp titilando
@@ -184,7 +192,7 @@ p{
     color: #fff;
     font-weight: 700;
     font-size: 30px;
-    bottom: 30px;
+    bottom: 215px;
     Right: 20px;
     border: 0;
     z-index: 9999;
@@ -258,6 +266,21 @@ p{
         column-gap: 5px;
         flex-wrap: nowrap;
     }
+
+    /* carousel (index). Lo desplazo hacia arriba,
+    pero al hacerlo, hago que el navbar quede arriba del carousel
+    y opaco de color blanco 
+    */
+    .carousel{
+        margin-top: -50px;
+    }
+    .navbar{
+        z-index: 1;
+    }
+    // body{
+    //     -webkit-tap-highlight-color: white;
+    // }
+
 }
 /* ########## FIN MEDIA QUERYS ############### */
 
