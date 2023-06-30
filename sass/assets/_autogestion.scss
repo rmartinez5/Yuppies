@@ -1,6 +1,13 @@
 /* ########### PAG AUTOGESTION ############ */
 /* CAROUSEL */
 /* el fondo es blanco, los botones no se ven, así que invierto sus colores*/
+$orange-color: #ec741d;
+$orange2-color: #ff5f4f;
+$white-color: white;
+$black-color: black;
+$shadow-color: #383838;
+
+
 .blackIcon{
   filter: invert(108%);
 }
@@ -16,6 +23,47 @@ div.carousel-item.active{
 .carouselContainer{
     padding: 0;
     box-shadow: 0 0 10px rgb(39, 41, 37);
+;
 }
+
+.flexEnd{
+  display: flex;
+  align-items: flex-end;
+}
+
   /* FIN CAROUSEL */
+
+
+//Botón ir arriba
+/* inspired form gumroad website */
+.button {
+  margin-left: 5px;
+  border-radius: 4px;
+  padding: 0em 0.3em;
+  background: $white-color;
+  transition: 0.2s;
+    &:hover {
+      color: $black-color;
+      transform: translate(-0.25rem,-0.25rem);
+      background: $white-color;
+      box-shadow: 0.25rem 0.25rem $shadow-color;
+    }
+    &:active {
+      transform: translate(0);
+      box-shadow: none;
+    }
+}
+
+.orange{
+  color: $orange-color; 
+}
+
+.orange2{
+  color: $orange2-color; 
+}
+
+.bigger{
+  font-size: 50px;
+}
+
   /* ######### FIN PAG AUTOGESTION ########### */
