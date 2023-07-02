@@ -13,6 +13,7 @@ $white-color: white;
 $black-color: black;
 $shadow-color: #383838;
 $shadowImg-color: rgb(39, 41, 37);
+$darkblue-color: rgb(12, 12, 94);
 
 // quedaba un margen desparejo en las imagenes
 .row {
@@ -47,6 +48,10 @@ p{
 
 .black{
     color: $black-color;
+}
+
+.darkblue{
+    color: $darkblue-color;
 }
 
 .cursiva{
@@ -135,6 +140,10 @@ p{
 
 .margin050{
     margin: 0 50px;
+}
+
+.marginTop5{
+    margin-top: 5px;
 }
 
 .marginTop10{

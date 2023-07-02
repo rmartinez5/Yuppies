@@ -42,6 +42,10 @@ p {
   color: black;
 }
 
+.darkblue {
+  color: rgb(12, 12, 94);
+}
+
 .cursiva {
   font-style: oblique;
 }
@@ -123,6 +127,10 @@ p {
 
 .margin050 {
   margin: 0 50px;
+}
+
+.marginTop5 {
+  margin-top: 5px;
 }
 
 .marginTop10 {
@@ -1002,18 +1010,83 @@ button.boton:active {
 }
 
 /* ########### FIN ACCORDION ############ */
-/* ############## VIDEOS ################ */
-.videoContainer {
-  display: flex;
+.centrado {
   justify-content: center;
 }
 
-.videos {
-  height: 500px;
-  width: auto;
+.stretch {
+  display: flex;
+  align-items: stretch;
 }
 
-/* ############ FIN VIDEOS ############## */
+.book {
+  position: relative;
+  border-radius: 10px;
+  width: 220px;
+  height: 300px;
+  background-color: #172236;
+  -webkit-box-shadow: 1px 1px 12px #000;
+  box-shadow: 1px 1px 12px #000;
+  -webkit-transform: preserve-3d;
+  -ms-transform: preserve-3d;
+  transform: preserve-3d;
+  -webkit-perspective: 2000px;
+  perspective: 2000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #000;
+}
+
+.cover {
+  top: 0;
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform-origin: 0;
+  -ms-transform-origin: 0;
+  transform-origin: 0;
+  -webkit-box-shadow: 1px 1px 12px #000;
+  box-shadow: 1px 1px 12px #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.book:hover .cover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: rotatey(-80deg);
+  -ms-transform: rotatey(-80deg);
+  transform: rotatey(-80deg);
+}
+
+.pBook, .pBookHover {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.pBookHover:hover {
+  font-size: 23px;
+}
+
 /* ########### variables SASS ############# */
 /* ############## HEADER ################## */
 .logoHeader {
