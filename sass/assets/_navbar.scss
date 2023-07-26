@@ -11,6 +11,11 @@ $shadow-color: #383838;
     height: 40px;
 }
 
+.logoHeader2{
+    width: 250px;
+    height: 50px;
+}
+
 /* navbar: cambio el background color de bootstrap */
 .navColor{
     background-color: $white-color;
@@ -20,7 +25,7 @@ $shadow-color: #383838;
 
 // navbar: cambio el padding
 .navbar{
-    padding: 5px;
+    padding: 7px;
 }
 
 /* navbar: agrego sombra */

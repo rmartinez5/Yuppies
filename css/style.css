@@ -348,11 +348,6 @@ div.carousel-item.active {
   /* se puede agregar mas de un transform a un elemento, poniendo espacio */
 }
 
-.logoHeader2 {
-  width: 100px;
-  height: 20px;
-}
-
 /* ############ BOTON DESCARGA PROPUESTA ############ */
 button {
   position: relative;
@@ -1099,6 +1094,11 @@ button.boton:active {
   height: 40px;
 }
 
+.logoHeader2 {
+  width: 250px;
+  height: 50px;
+}
+
 /* navbar: cambio el background color de bootstrap */
 .navColor {
   background-color: white;
@@ -1107,7 +1107,7 @@ button.boton:active {
 }
 
 .navbar {
-  padding: 5px;
+  padding: 7px;
 }
 
 /* navbar: agrego sombra */
