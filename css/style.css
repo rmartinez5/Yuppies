@@ -348,6 +348,10 @@ div.carousel-item.active {
   /* se puede agregar mas de un transform a un elemento, poniendo espacio */
 }
 
+.tituloServicio {
+  font-size: 30px;
+}
+
 /* ############ BOTON DESCARGA PROPUESTA ############ */
 button {
   position: relative;
@@ -1095,7 +1099,7 @@ button.boton:active {
 }
 
 .logoHeader2 {
-  width: 130px;
+  width: 120px;
   height: 30px;
 }
 

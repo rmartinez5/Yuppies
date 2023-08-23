@@ -61,40 +61,43 @@
     </header>
 
     <main id="content" class="paddingBottom50">
-
-        <div>
-            <img src="../media/servicios/serviciosPortada.png" alt="servicio" class=" img-fluid w-100">
-            <div class="container marginTop50 ">
-                <div class="row">
-                    <div class="col-12 col-sm-12 col-lg-4 col-xl-4">
-                        <a href="./auditoría.html" class="links"> <p class="tituloServicio"> Auditoria</p>
-                            <img src="../media/servicios/jpeg/auditoriaLink.jpeg" alt="stock" class=" imageBorder d-block mx-auto img-fluid" data-aos="fade-right">
-                        </a>
-                    </div>
-                    <div class="col-12 col-sm-12 col-lg-4 col-xl-4">
-                        <a href="./inventario.html" class="links"> <p class="tituloServicio"> Inventario por vencimientos</p>
-                            <img src="../media/servicios/jpeg/inventarioVtoLink.jpeg" alt="vencimientos" class=" imageBorder  d-block mx-auto img-fluid" data-aos="fade-up">
-                        </a>
-                    </div>
-                    <div class="col-12 col-sm-12 col-lg-4 col-xl-4">
-                        <a href="./auditoríaInf.html" class="links"><p class="tituloServicio"> Auditoría de la información</p>
-                            <img src="../media/servicios/jpeg/asesoriaInfoLink.jpeg" alt="desvios" class="text-center imageBorder  d-block mx-auto img-fluid" data-aos="fade-up-right">
-                        </a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-sm-12 col-lg-6 col-xl-4">
-                        <a href="./asesoria.html" class="links"> <p class="tituloServicio">Asesoría remota</p>
-                            <img src="../media/servicios/jpeg/asesoriaRemotaLink.jpeg" alt="stock" class=" imageBorder d-block mx-auto img-fluid" data-aos="fade-right">
-                        </a>
-                    </div>
-                    <div class="col-12 col-sm-12 col-lg-6 col-xl-4">
-                        <a href="#" class="links"> <p class="tituloServicio">Otros servicios</p>
-                            <img src="../media/servicios/jpeg/otrosServiciosLink.jpeg" alt="vencimientos" class=" imageBorder  d-block mx-auto img-fluid" data-aos="fade-up">
-                        </a>
-                    </div>
-                </div>
+        <!-- carousel -->
+        <div id="carouselVid"class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselVid" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselVid" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselVid" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
+    
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <video class="img-fluid w-100" autoplay loop muted>
+                        <source src="../media/servicios/inventario1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="carousel-item">
+                    <video class="img-fluid w-100" autoplay loop muted>
+                        <source src="../media/servicios/inventario2.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="carousel-item">
+                    <video class="img-fluid w-100" autoplay loop muted>
+                        <source src="../media/servicios/inventario3.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div> 
+    
+            <button class="carousel-control-prev positionControlIcon" type="button" data-bs-target="#carouselVid" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next positionControlIcon" type="button" data-bs-target="#carouselVid" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div>
+            <img src="../media/servicios/inventario.jpeg" alt="servicio" class=" img-fluid w-100">
             <!-- <img src="../imgs/servicios/nuevo/1" alt="servicio" class=" img-fluid w-100">
             <img src="../imgs/servicios/nuevo/2.jpeg" alt="servicio" class=" img-fluid w-100">
             <img src="../imgs/servicios/nuevo/3.jpeg" alt="servicio" class=" img-fluid w-100">
