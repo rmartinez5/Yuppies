@@ -61,9 +61,43 @@
     </header>
 
     <main id="content" class="paddingBottom50">
-
+        <!-- carousel -->
+        <div id="carouselVid"class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselVid" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselVid" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselVid" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+    
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <video class="img-fluid w-100" autoplay loop muted>
+                        <source src="../media/servicios/auditoria1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="carousel-item">
+                    <video class="img-fluid w-100" autoplay loop muted>
+                        <source src="../media/servicios/auditoria2.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="carousel-item">
+                    <video class="img-fluid w-100" autoplay loop muted>
+                        <source src="../media/servicios/auditoria3.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div> 
+    
+            <button class="carousel-control-prev positionControlIcon" type="button" data-bs-target="#carouselVid" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next positionControlIcon" type="button" data-bs-target="#carouselVid" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span span class="visually-hidden">Next</span>
+            </button>
+        </div>
         <div>
-            <a href="./auditoría.html"><img src="../media/servicios/serviciosPortada.jpeg" alt="servicio" class=" img-fluid w-100"></a>
+            <img src="../media/servicios/auditoria.jpeg" alt="servicio" class=" img-fluid w-100">
             <!-- <img src="../imgs/servicios/nuevo/1" alt="servicio" class=" img-fluid w-100">
             <img src="../imgs/servicios/nuevo/2.jpeg" alt="servicio" class=" img-fluid w-100">
             <img src="../imgs/servicios/nuevo/3.jpeg" alt="servicio" class=" img-fluid w-100">
